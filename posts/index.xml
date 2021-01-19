@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on Blog of litelinux</title>
     <link>https://ltlnx.github.io/posts/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on Blog of litelinux</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-tw</language>
     <lastBuildDate>Tue, 19 Jan 2021 02:24:56 +0000</lastBuildDate><atom:link href="https://ltlnx.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2</title>
