@@ -11,7 +11,7 @@ var openmenu = {
 var Hello = {
     view: function() {
         return m("main", [
-            m("a", {href: "#!/menu"}, "menu"),
+            m("a", {href: "#!/menu"}, "選單"),
         ])
     }
 }
