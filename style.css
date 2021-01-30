@@ -29,8 +29,9 @@ p,ol,ul {
   margin-left: 0.8em;
 }
 div.i {
-  display: inline-block;
-  margin-right: 0.2em;"
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 li {margin-left: 0.5em;}
 main.open {height:auto;min-height:7em;}
