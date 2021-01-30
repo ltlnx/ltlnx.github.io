@@ -33,7 +33,7 @@ div.i {
   margin-right: 0.2em;"
 }
 li {margin-left: 0.5em;}
-main.open {height:7em;}
+main.open {height:auto;min-height:7em;}
 a.open {writing-mode: horizontal-tb;margin: 0.3em 0.2em;}
 
 code {
