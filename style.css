@@ -2,10 +2,8 @@ html {
   font-size: 16px;
 }
 
-html,
-body {
+html,body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
-  text-align: justify;
   overflow-y: hidden;
   writing-mode: vertical-rl;
   color: #181a1b;
@@ -13,12 +11,35 @@ body {
   -webkit-font-smoothing: antialiased;
   max-height: 32em;
 }
-
-p,
-ol {
-	line-height:1.5;
-	font-family: "源流明體";
-	margin-left: 0.8em;
+a {
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+a:link, a:visited {
+  color: blue;
+}
+a:hover, a:active {
+  color: red;
+}
+p,ol,ul,div {
+  font-family: "源流明體";
+}
+p,ol,ul { 
+  line-height:1.5;
+  margin-left: 0.8em;
+}
+div.i {
+  display: inline-block;
+  margin-right: 0.2em;"
 }
 li {margin-left: 0.5em;}
-a.class {writing-mode: horizontal-tb;}
+main.open {height:7em;}
+a.open {writing-mode: horizontal-tb;margin: 0.3em 0.2em;}
+
+code {
+  background-color: #ddd;
+  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0.5em 0;
+  padding: 3px 4px 1px;
+  border-radius: 4px;
+}
