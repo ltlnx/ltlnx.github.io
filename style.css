@@ -28,6 +28,9 @@ p,ol,ul {
   line-height:1.5;
   margin-left: 0.8em;
 }
+ol > li:before {
+  writing-mode: horizontal-tb;
+}
 div.i {
   display: flex;
   flex-direction: row;
