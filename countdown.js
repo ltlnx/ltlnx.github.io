@@ -2,7 +2,7 @@ const deadline = '2021-07-01';
 
 function getTimeRemaining(endtime){
   const total = Date.parse(endtime) - Date.parse(new Date());
-  const days = Math.floor( total/(1000*60*60*24)+1 );
+  const days = Math.floor( total/(1000*60*60*24) );
 
   return {
     total,
