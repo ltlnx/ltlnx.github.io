@@ -21,9 +21,6 @@ a:link, a:visited {
 a:hover, a:active {
   color: red;
 }
-p,ol,ul,div {
-  font-family: "Helvetica Neue";
-}
 p,ol,ul { 
   line-height:1.5;
   margin-left: 0.8em;
@@ -49,10 +46,9 @@ div.i {
   align-items: center;
 }
 li {margin-left: 0.5em;}
-main.open {height:auto;min-height:7em;}
-a.open {writing-mode: horizontal-tb;margin: 0.3em 0.2em;}
-
-span {writing-mode: horizontal-tb;}
+main.open {margin-top:0.5em;height:auto;min-height:7em;}
+a.open {margin: 0.1em 0.1em;}
+a.open,span {writing-mode: horizontal-tb;}
 
 code {
   background-color: #ddd;
