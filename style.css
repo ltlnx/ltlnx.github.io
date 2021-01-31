@@ -28,8 +28,17 @@ p,ol,ul {
   line-height:1.5;
   margin-left: 0.8em;
 }
-ol > li:before {
+ol {
+  list-style: none;
+  counter-reset: horiznums;
+}
+ol li {
+  counter-increment: horiznums;
+}
+ol li:before {
+  content: counter(horiznums) ".";
   writing-mode: horizontal-tb;
+  margin-top: -1.5em;
 }
 div.i {
   display: flex;
