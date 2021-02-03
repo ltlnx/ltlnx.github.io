@@ -22,7 +22,10 @@ a:link, a:visited {
 a:hover, a:active {
   color: red;
 }
-h3 {
+h1 {
+  margin-left: 2em;
+}
+p + h3 {
   margin-right: 2em;
 }
 p,ol,ul,div { 
@@ -46,6 +49,12 @@ ol li:before {
 }
 strong {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang TC", "Microsoft YaHei", sans-serif;
+  font-weight: bold;
+}
+em {
+  font-family:monospace;
+  color:darkred;
+  font-style: normal;
 }
 div.i {
   display: flex;

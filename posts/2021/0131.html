@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>關於直書</title>
+	<title>vh與vw</title>
 	<meta charset=utf-8>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../../style.css">
@@ -9,8 +9,11 @@
 </head>
 <body>
 <div id="menu"></div>
-<h1>直書，以及為什麼直書</h1>
-<p>This is a template.</p>
+<h5>以螢幕大小為基準的寬度單位</h5>
+<h1>&lt;vw&gt; 與 &lt;vh&gt;</h1>
+<p>　　是這樣的，這個網站使用直書，所以滑到最後，內容會在最左邊。在手機上這樣不太直覺也不好讀。因此
+   我在內容最後加了一個<em>&lt;p&gt;</em>，並定義一個寬度（那時用了32em），然後就git push完洗洗睡了。但隔天我在公車上用手機看自己的網站時，發現一個缺點：在文章最後的空白太長，導致我滑到底時文字整個消失。普通人見狀一定會覺得網站（或網站設計師的腦袋）壞掉了。</p>
+<p style="margin-left: 30vw;"></p>
 <script src="https://unpkg.com/mithril@2.0.4/mithril.js"></script>
 <script src="../../js.js"></script>
 </body>
