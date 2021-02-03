@@ -8,11 +8,30 @@
 	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
 </head>
 <body>
-<div id="menu"></div>
+<div id="menu">
+	<main class="open">
+		<a class="open" href="ltlnx.github.io/posts/posts.html">貼文</a>
+		<a class="open" href="ltlnx.github.io/about.html">關於我</a>
+		<a class="open" href="ltlnx.github.io/index.html">回首頁</a>
+	</main>
+</div>
 <h5>以螢幕大小為基準的寬度單位</h5>
 <h1>&lt;vw&gt; 與 &lt;vh&gt;</h1>
-<p>　　是這樣的，這個網站使用直書，所以滑到最後，內容會在最左邊。在手機上這樣不太直覺也不好讀。因此
-   我在內容最後加了一個<em>&lt;p&gt;</em>，並定義一個寬度（那時用了32em），然後就git push完洗洗睡了。但隔天我在公車上用手機看自己的網站時，發現一個缺點：在文章最後的空白太長，導致我滑到底時文字整個消失。普通人見狀一定會覺得網站（或網站設計師的腦袋）壞掉了。</p>
+
+<h3>說在前面</h3>
+<p>　　是這樣的，這個網站大多在電腦上用文字編輯軟體創作、修訂，爾後利用Github桌面版程式將寫的內容推上網。
+	但個人頗介意網站在各個裝置上的協調性，因此每次更新完網站，我習慣用手機再刷一遍內容，確認是否跟在電腦
+	上閱讀一樣舒適。但因為ＣＳＳ對於直書文字一直以來缺少完整的說明及問題解決方案，（我也沒有要做的意思），
+	排版上的困難總是特別多。</p>
+
+<p>　　最近打完了一月三十一日的網站維護流水帳。隔天用電腦一看，發現滑到最後，最後一行在最左邊。對於橫式網站
+	來講，文章滑到底部，再往下看，頂多看到鍵盤或是電腦Logo；但直排網頁就不一樣了，滑到最左邊只有單薄的螢幕
+	邊框，再往左看就看到別處去了；如此一來，便無法專注在螢幕內容上。因此我在所有網頁最後加了一個<em>&lt;p&gt;</em>，
+	設個寬度（那時用了32em），<em>git push</em>完就洗洗睡了。</p>
+
+<p>　　但隔天一早，我在公車上用手機看自己的網站時，發現：文章最後的空白實在太長，我滑到底，只見一片空白。
+	普通人見狀一定會覺得網站（或站長的腦袋）壞了吧！沒辦法，我只好在顛頗的公車上，再次開啟尋找正確語法之路。</p>
+
 <p style="margin-left: 30vw;"></p>
 <script src="https://unpkg.com/mithril@2.0.4/mithril.js"></script>
 <script src="../../js.js"></script>
