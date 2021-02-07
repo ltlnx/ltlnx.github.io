@@ -56,9 +56,25 @@ strong {
 }
 em {
   font-family:monospace;
-  color:darkred;
   font-style: normal;
+  border: 1px solid;
 }
+em, code {
+  margin: 0.5em 0.5em;
+  padding: 4px;
+  border-radius: 4px;
+}
+code {
+  font-family: serif, monospace;
+  font-size: 0.7em;
+  color: darkred;
+}
+code.em {
+  background-color: darkred;
+  color: white;
+}
+code.time {
+  color: black;
 div.i {
   display: flex;
   flex-direction: row;
@@ -69,20 +85,6 @@ main.open {margin-top:0.5em;height:auto;min-height:7em;}
 a.open {margin: 0.1em 0.1em;}
 a.open,span {writing-mode: horizontal-tb;}
 
-code {
-  font-family: serif, monospace;
-  font-size: 0.7em;
-  margin: 0.5em 0.5em;
-  padding: 4px;
-  border-radius: 4px;
-  color: darkred;
-}
-code.em {
-  background-color: darkred;
-  color: white;
-}
-code.time {
-  color: black;
   background-color: #ddd;
   letter-spacing: 0.2em;
 }
