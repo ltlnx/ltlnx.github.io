@@ -51,11 +51,11 @@ ol li:before {
   transform: rotate(270deg);
 }
 strong {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang TC", "Microsoft YaHei", sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
 }
 em {
-  font-family:monospace;
+  font-family: monospace;
   font-style: normal;
   border: 1px solid;
 }
@@ -75,6 +75,8 @@ code.em {
 }
 code.time {
   color: black;
+  background-color: #ddd;
+  letter-spacing: 0.2em;
 }
 div.i {
   display: flex;
@@ -85,7 +87,3 @@ li {margin-left: 0.5em;}
 main.open {margin-top:0.5em;height:auto;min-height:7em;}
 a.open {margin: 0.1em 0.1em;}
 a.open,span {writing-mode: horizontal-tb;}
-
-  background-color: #ddd;
-  letter-spacing: 0.2em;
-}
