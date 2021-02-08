@@ -28,7 +28,7 @@ h1 {
 p + h3 {
   margin-right: 2em;
 }
-p,ol,ul,div { 
+p,ol,ul,div,blockquote { 
   font-family: serif, sans-serif;
   line-height:1.5;
   margin-left: 0.8em;
@@ -54,26 +54,31 @@ strong {
   font-family: sans-serif;
   font-weight: bold;
 }
-em {
+blockquote {
+  margin-top: 0;
+  border: 1px solid black;
+  padding: 1em;
+}
+code {
   font-family: monospace;
   font-style: normal;
-  border: 1px solid;
+  border: 1px solid black;
 }
-em, code {
+code, small {
   margin: 0.5em 0.5em;
   padding: 4px;
   border-radius: 4px;
 }
-code {
+small {
   font-family: serif, monospace;
   font-size: 0.7em;
   color: darkred;
 }
-code.em {
+small.em {
   background-color: darkred;
   color: white;
 }
-code.time {
+small.time {
   color: black;
   background-color: #ddd;
   letter-spacing: 0.2em;

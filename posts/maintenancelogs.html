@@ -16,7 +16,7 @@
 	</main>
 </div>
 <h1>網站維護流水帳</h1>
-<code class="time">一月三十一日</code>
+<small class="time">一月三十一日</small>
 <p>
 　　因為這是第一天打流水帳，所以打得詳細一點。</p>
 <p>
@@ -43,18 +43,18 @@
 		<p style="writing-mode: horizontal-tb;">
 			ol {<br>
 			  list-style: none;<br>
-			  counter-reset: cupcake;<code>⬅ 重設Cupcake計數器</code><br>
+			  counter-reset: cupcake;<small>⬅ 重設Cupcake計數器</small><br>
 			}<br>
 			ol li {<br>
-			  counter-increment: cupcake;<code>⬅ 設定一個計數器，命名為Cupcake</code><br>
+			  counter-increment: cupcake;<small>⬅ 設定一個計數器，命名為Cupcake</small><br>
 			}<br>
-			ol li:before {<code>⬅ 神奇的before參數（請見<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">參考網站</a>）</code><br>
-			  content: counters(cupcake, '.') '.';<code class="em">（詳見補充）</code><br>
-			  position: absolute;<code>⬅ 設定為絕對位置，很重要</code><br>
-			  margin-top: -1.2em;<code>⬅ 為了讓排版不跑掉</code><br>
-			  transform: rotate(270deg);<code>⬅ 轉回橫的</code><br>
+			ol li:before {<small>⬅ 神奇的before參數（請見<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">參考網站</a>）</small><br>
+			  content: counters(cupcake, '.') '.';<small class="em">（詳見補充）</small><br>
+			  position: absolute;<small>⬅ 設定為絕對位置，很重要</small><br>
+			  margin-top: -1.2em;<small>⬅ 為了讓排版不跑掉</small><br>
+			  transform: rotate(270deg);<small>⬅ 轉回橫的</small><br>
 		}<br>/* 如果要拿去用記得把註解刪掉！ */</p>
-		<p><code class="em">補充</code>
+		<p><small class="em">補充</small>
 			<ul>
 				<li><strong>第一個「'.'」</strong>是數字跟數字之間要填充的東西，<br>以「二之一之二」為例：
 				<ul style="margin: 0 0.5em 0 1em;"><li>如果是句點就會顯示「2.1.2」；</li>
