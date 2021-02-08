@@ -5,7 +5,6 @@ var openMenu = {
 		m("a.horiz", {href:baseURL+"/index.html"}, "首頁"),
 		m("a.horiz", {href:baseURL+"/about.html"}, "關於我"),
 		m("a.horiz", {href:baseURL+"/posts/posts.html"}, "貼文"),
-		m("a.horiz", {href:baseURL+"/tools.html"}, "工具"),
 		])
 	}
 }
