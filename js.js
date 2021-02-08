@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#box').scrollLeft($(this).height())
+    $('#box').scrollRight($(this).height())
 })
 var baseURL = window.location.href.match(/(.*?)\.io/i)[1]+'.io'
 var openmenu = {
