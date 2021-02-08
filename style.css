@@ -29,7 +29,7 @@ p + h3 {
   margin-right: 2em;
 }
 p,ol,ul,div { 
-  font-family:"源流明體","源樣明體","蘋果儷細宋","思源宋體",serif;
+  font-family: serif, sans-serif;
   line-height:1.5;
   margin-left: 0.8em;
 }
