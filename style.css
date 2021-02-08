@@ -60,6 +60,14 @@ blockquote {
   border: 1px solid black;
   padding: 1em;
 }
+blockquote.chrome-warning {
+  display: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+  .chrome blockquote.chrome-warning {
+      display: block;
+  }
+}
 code {
   font-family: monospace;
   font-style: normal;
