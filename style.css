@@ -96,9 +96,3 @@ li {margin-left: 0.5em;}
 main.open {display:flex;align-items:flex-end;height:auto;min-height:7em;}
 a.open {margin: 0.1em 0.1em;}
 a.open,span#day {writing-mode: horizontal-tb;}
-a.close {display:none;}
-@media only screen and (max-width: 600px) {
-  a.close {
-    display: initial;
-  }
-}
