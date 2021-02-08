@@ -63,8 +63,8 @@ blockquote {
 blockquote.chrome-warning {
   display: none;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-  .chrome blockquote.chrome-warning {
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  .selector:not(*:root), .chrome-warning {
       display: block;
   }
 }
