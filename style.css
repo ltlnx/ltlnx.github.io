@@ -92,4 +92,4 @@ div.i {
 li {margin-left: 0.5em;}
 main.open {margin-top:0.5em;height:auto;min-height:7em;}
 a.open {margin: 0.1em 0.1em;}
-a.open,span {writing-mode: horizontal-tb;}
+a.open,span#day {writing-mode: horizontal-tb;}
