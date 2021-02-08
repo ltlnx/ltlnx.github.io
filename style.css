@@ -93,7 +93,7 @@ small.time {
   letter-spacing: 0.2em;
 }
 li {margin-left: 0.5em;}
-main.open {display:flex;align-items:end;height:auto;min-height:7em;}
+main.open {display:flex;align-items:flex-end;height:auto;min-height:7em;}
 a.open {margin: 0.1em 0.1em;}
 a.open,span#day {writing-mode: horizontal-tb;}
 a.close {display:none;}
