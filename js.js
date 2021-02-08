@@ -2,10 +2,10 @@ var baseURL = window.location.href.match(/(.*?)\.io/i)[1]+'.io';
 var openMenu = {
 	view: function() {
 	return m("main.open", [
-		m("a.open", {href:baseURL+"/index.html"}, "首頁"),
-		m("a.open", {href:baseURL+"/about.html"}, "關於我"),
-		m("a.open", {href:baseURL+"/posts/posts.html"}, "貼文"),
-		m("a.open", {href:baseURL+"/tools.html"}, "工具"),
+		m("a.horiz", {href:baseURL+"/index.html"}, "首頁"),
+		m("a.horiz", {href:baseURL+"/about.html"}, "關於我"),
+		m("a.horiz", {href:baseURL+"/posts/posts.html"}, "貼文"),
+		m("a.horiz", {href:baseURL+"/tools.html"}, "工具"),
 		])
 	}
 }
