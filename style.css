@@ -11,6 +11,7 @@ html,body {
   background-color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
   max-height: 33em;
+  margin-bottom: 1em;
 }
 a {
   text-decoration: none;
