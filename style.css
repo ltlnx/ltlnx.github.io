@@ -24,10 +24,7 @@ a:hover, a:active {
   color: red;
 }
 h1 {
-  margin-left: 0.8em;
-}
-h1 + p {
-  margin-right: 1.2em;
+  margin-left: 2em;
 }
 p + h3 {
   margin-right: 2em;
