@@ -1,2 +1,4 @@
-# ltlnx.github.io
-The main website.
+Welcome here :)
+To see properly styled contents 
+please visit https://ltlnx.github.io
+The website is created by myself in the help of ssg[1], which in turm uses lowdown[2] to parse markdown files.
