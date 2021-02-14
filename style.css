@@ -1,3 +1,39 @@
+@font-face {
+    font-family: DFPKingGothic-TC-Light;
+    src: url('font/TC/DFKingGothicTC13-Light.eot'); /* IE9 Compat Modes */
+    src: url('font/TC/DFKingGothicTC13-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/TC/DFPKingGothic-TC-Light.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: DFPKingGothic-TC-Medium;
+    src: url('font/TC/DFPKingGothicTC-Medium.eot'); /* IE9 Compat Modes */
+    src: url('font/TC/DFPKingGothicTC-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/TC/DFPKingGothicTC-Medium.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: DFPKingGothic-TC-Regular;
+    src: url('font/TC/DFKingGothicTC13-Regular.eot'); /* IE9 Compat Modes */
+    src: url('font/TC/DFKingGothicTC13-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/TC/DFKingGothicTC13-Regular.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: DFPKingGothic-TC-Semibold;
+    src: url('font/TC/DFPKingGothicTC-Semibold.eot'); /* IE9 Compat Modes */
+    src: url('font/TC/DFPKingGothicTC-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/TC/DFPKingGothicTC-Semibold.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: DFPKingGothic-TC-Thin;
+    src: url('font/TC/DFKingGothicTC13-Thin.eot'); /* IE9 Compat Modes */
+    src: url('font/TC/DFKingGothicTC13-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/TC/DFPKingGothic-TC-Thin.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: DFPKingGothic-TC-Ultralight;
+    src: url('font/TC/DFKingGothicTC13-Ultralight.eot'); /* IE9 Compat Modes */
+    src: url('font/TC/DFKingGothicTC13-Ultralight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/TC/DFKingGothicTC13-Ultralight.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
 html {
   font-size: 16px;
 }
@@ -30,7 +66,7 @@ p + h3 {
   margin-right: 2em;
 }
 p,ol,ul,div,blockquote { 
-  font-family: serif, sans-serif;
+  font-family: DFPKingGothic-TC-Regular, serif, sans-serif;
   line-height:1.5;
   margin-left: 0.8em;
 }
