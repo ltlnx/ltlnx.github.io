@@ -1,39 +1,3 @@
-@font-face {
-    font-family: DFPKingGothic-TC-Light;
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Light.eot'); /* IE9 Compat Modes */
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothic-TC-Light.woff') format('woff'); /* Pretty Modern Browsers */
-}
-
-@font-face {
-    font-family: DFPKingGothic-TC-Medium;
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothicTC-Medium.eot'); /* IE9 Compat Modes */
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothicTC-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothicTC-Medium.woff') format('woff'); /* Pretty Modern Browsers */
-}
-
-@font-face {
-    font-family: DFPKingGothic-TC-Regular;
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Regular.eot'); /* IE9 Compat Modes */
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Regular.woff') format('woff'); /* Pretty Modern Browsers */
-}
-
-@font-face {
-    font-family: DFPKingGothic-TC-Semibold;
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothicTC-Semibold.eot'); /* IE9 Compat Modes */
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothicTC-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothicTC-Semibold.woff') format('woff'); /* Pretty Modern Browsers */
-}
-
-@font-face {
-    font-family: DFPKingGothic-TC-Thin;
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Thin.eot'); /* IE9 Compat Modes */
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://www.dynacw.com.tw/king/css/font/TC/DFPKingGothic-TC-Thin.woff') format('woff'); /* Pretty Modern Browsers */
-}
-
-@font-face {
-    font-family: DFPKingGothic-TC-Ultralight;
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Ultralight.eot'); /* IE9 Compat Modes */
-    src: url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Ultralight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://www.dynacw.com.tw/king/css/font/TC/DFKingGothicTC13-Ultralight.woff') format('woff'); /* Pretty Modern Browsers */
-}
-
 html {
   font-size: 16px;
 }
