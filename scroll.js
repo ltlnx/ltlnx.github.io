@@ -3,7 +3,7 @@ function transformScroll(event) {
     return;
   }
 
-  event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+  event.currentTarget.scrollLeft += event.deltaY * -1 + event.deltaX;
   event.preventDefault();
 }
 
