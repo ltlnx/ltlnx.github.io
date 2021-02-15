@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Noto+Serif+TC&display=swap');
-
 html {
   font-size: 16px;
 }
 
 html,body {
   padding-top: 1em;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-y: hidden;
   writing-mode: vertical-rl;
   color: #181a1b;
@@ -32,8 +30,8 @@ p + h3 {
   margin-right: 2em;
 }
 p,ol,ul,div,blockquote { 
-  font-family: "Noto Serif TC", serif, sans-serif;
-  line-height:1.5;
+  font-family: serif, sans-serif;
+  line-height: 1.5;
   margin-left: 0.8em;
 }
 ul.posts li {
