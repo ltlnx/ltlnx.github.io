@@ -1,12 +1,10 @@
-./js.js
 ./scroll.js
 ./index.html
 ./posts/misc/websitenotes.md
 ./posts/misc/roadmap.html
-./posts/posts.html
+./posts/index.html
 ./posts/2021/0130.html
 ./posts/2021/0131.html
-./posts/2021/template.html
 ./posts/2021/0208.html
 ./about.html
 ./countdown.js
