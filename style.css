@@ -80,6 +80,7 @@ small.em {
   color: white;
 }
 small.time {
+  font-family: monospace;
   color: #666;
 }
 li {margin-left: 0.5em;}
