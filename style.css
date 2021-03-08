@@ -1,10 +1,10 @@
 @import url('https://rsms.me/inter/inter.css');
 html {
-	font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', sans-serif; 
 }
 @supports (font-variation-settings: normal) {
   html { 
-  	font-family: 'Inter var', sans-serif; 
+    font-family: 'Inter var', sans-serif; 
   }
 }
 
@@ -14,14 +14,11 @@ html {
 
 html,body {
   padding-top: 1em;
-  overflow-y: hidden;
-  writing-mode: vertical-rl;
   color: #181a1b;
   background-color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
   max-height: 33em;
   padding-bottom: 1em;
-  letter-spacing: 0.2em;
 }
 a {
   text-decoration: none;
@@ -46,20 +43,6 @@ p,ol,ul,div,blockquote {
 ul.posts li {
   margin-left: 1.2em;
 }
-ol {
-  list-style: none;
-  counter-reset: cupcake;
-}
-ol li {
-  counter-increment: cupcake;
-}
-ol li:before {
-  content: counters(cupcake, '.') '.';
-  /* Whatever custom styles you want here */
-  position: absolute;
-  margin-top: -1.2em;
-  transform: rotate(270deg);
-}
 strong {
   font-family: sans-serif;
   font-weight: bold;
@@ -68,14 +51,6 @@ blockquote {
   margin-top: 0;
   border: 1px solid black;
   padding: 1em;
-}
-blockquote.chrome-warning {
-  display: none;
-}
-@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-  .selector:not(*:root), blockquote.chrome-warning {
-      display: block;
-  }
 }
 code {
   font-family: monospace;
@@ -102,6 +77,3 @@ small.time {
   letter-spacing: 0.2em;
 }
 li {margin-left: 0.5em;}
-main.open {display:flex;align-items:flex-end;height:auto;min-height:7em;}
-a.horiz,span.horiz {margin: 0.1em 0.1em;}
-.horiz {writing-mode: horizontal-tb;}
