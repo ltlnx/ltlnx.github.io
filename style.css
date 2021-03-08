@@ -72,7 +72,7 @@ code {
   padding: 2em;
 }
 small {
-  font-size: 0.7em;
+  font-size: 1em;
   color: lightcoral;
 }
 small.em {
@@ -81,8 +81,5 @@ small.em {
 }
 small.time {
   color: #666;
-  border: 1px solid #666;
-  position: relative;
-  top: -7%;
 }
 li {margin-left: 0.5em;}
