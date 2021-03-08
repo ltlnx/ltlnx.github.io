@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant"><title>使用ＣＳＳ<br>將直書網頁編號轉正 &mdash; Blog of Litelinux</title>
+<html lang="zh-Hant"><title>使用CSS<br>將直書網頁編號轉正 &mdash; Blog of Litelinux</title>
 <head>
 	<meta charset=utf-8>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +17,15 @@
 			</td>
 			<td style="font-weight:900; font-size:5.2em; line-height: -0.05em;">ltlnx</td></tr>
 	</tbody></table></span>
-<h1>使用ＣＳＳ<br>將直書網頁編號轉正</h1>
-<p>　　這個部落格第一個網頁就是<a href="2021/0130.html">「研究生評論」</a>。在稍微修改完格式之後，我將網頁連結貼到ＩＧ上。朋友看了反映，1. 2.等編號跟英文一起被轉了九十度，如果能轉回來變成橫的，會更好看。於是我找到時間，著手進行改造。</p>
+<h1>使用CSS<br>將直書網頁編號轉正</h1>
+<p>　　這個部落格第一個網頁就是<a href="2021/0130.html">「研究生評論」</a>。在稍微修改完格式之後，我將網頁連結貼到IG上。朋友看了反映，1. 2.等編號跟英文一起被轉了九十度，如果能轉回來變成橫的，會更好看。於是我找到時間，著手進行改造。</p>
 <p>　　首先參考了<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">Josh Comeau的網站</a>，裡頭寫道：</p>
 	<ol>
-		<li>ＣＳＳ無法控制編號的樣式，頂多規定要從哪一號開始、要順著數還是倒著數，還有padding、margin等參數。</li>
+		<li>CSS無法控制編號的樣式，頂多規定要從哪一號開始、要順著數還是倒著數，還有padding、margin等參數。</li>
 		<li>但有個東西叫「Counter」，它是個能記錄號碼的變數，我們只要呼叫它就可以顯示目前的數值。</li>
-		<li>接下來只要在ＣＳＳ的「ol li:before」中呼叫Counter，就可以套格式了！</li>
+		<li>接下來只要在CSS的「ol li:before」中呼叫Counter，就可以套格式了！</li>
 	</ol>
-<p>　　在複製那段ＣＳＳ過來後，一開始想說直接套上「writing-mode: horizontal-tb」（書寫方向：橫向）就好了，畢竟這個參數就是讓整個網站成為直書的秘辛。這個方法在火狐中奏效，在Chrome與Safari中就沒那麼幸運了。因此必須找比較通用的辦法。</p>
+<p>　　在複製那段CSS過來後，一開始想說直接套上「writing-mode: horizontal-tb」（書寫方向：橫向）就好了，畢竟這個參數就是讓整個網站成為直書的秘辛。這個方法在火狐中奏效，在Chrome與Safari中就沒那麼幸運了。因此必須找比較通用的辦法。</p>
 <p>　　接下來想到了要旋轉文字，參考<a href=https://css-tricks.com/snippets/css/text-rotation/>css-tricks的介紹</a>，終於成功了。以下是最後試成功的ＣＳＳ：</p>
 <p style="writing-mode: horizontal-tb;">
 	ol {<br>
@@ -56,7 +56,11 @@
 	</ul>
 </p>
 
-<p style="margin-left: 30vw;"></p>
+<p style="text-align: center;">
+	<a href="https://ltlnx.github.io/">首頁</a><br>
+	<a href="https://ltlnx.github.io/about.html">關於我</a><br>
+	<a href="https://ltlnx.github.io/posts/">貼文</a>
+</p>
 <script src="https://ltlnx.github.io/scroll.js"></script>
 </body>
 </html>

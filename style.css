@@ -48,7 +48,7 @@ p,ol,ul,div,blockquote {
 }
 ul.posts li {
   margin-left: 1em;
-  line-height:1.5em;
+  line-height:2em;
 }
 strong {
   font-family: sans-serif;
@@ -80,8 +80,9 @@ small.em {
   color: white;
 }
 small.time {
-  color: #444;
-  border: 1px solid #444;
-  letter-spacing: 0.2em;
+  color: #666;
+  border: 1px solid #666;
+  position: relative;
+  top: -7%;
 }
 li {margin-left: 0.5em;}
