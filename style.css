@@ -47,7 +47,8 @@ p,ol,ul,div,blockquote {
   line-height: 1.5;
 }
 ul.posts li {
-  margin-left: 1.2em;
+  margin-left: 1em;
+  line-height:1.5em;
 }
 strong {
   font-family: sans-serif;
@@ -59,20 +60,18 @@ blockquote {
   padding: 1em;
 }
 code, small {
-  margin: 0.5em 0.5em;
+  margin: 0.5em;
   padding: 4px;
   border-radius: 4px;
 }
 code {
   display:block;
-  background-color: #333333;
-  
+  background-color: #333;
   font-family: monospace;
   font-style: normal;
   padding: 2em;
 }
 small {
-  font-family: serif, monospace;
   font-size: 0.7em;
   color: lightcoral;
 }
@@ -81,8 +80,8 @@ small.em {
   color: white;
 }
 small.time {
-  color: black;
-  background-color: #ddd;
+  color: #444;
+  border: 1px solid #444;
   letter-spacing: 0.2em;
 }
 li {margin-left: 0.5em;}
