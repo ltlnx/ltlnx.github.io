@@ -27,6 +27,9 @@ span.title {
     justify-content: center;
 }
 }
+@media screen and (min-width: 600px)  {
+  .mobile-break { display: none; }
+}
 a {
   text-decoration: none;
 }
