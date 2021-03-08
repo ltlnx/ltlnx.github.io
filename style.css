@@ -39,7 +39,6 @@ p + h3 {
   margin-right: 2em;
 }
 p,ol,ul,div,blockquote { 
-  font-family: serif, sans-serif;
   line-height: 1.5;
   margin-left: 0.8em;
 }
