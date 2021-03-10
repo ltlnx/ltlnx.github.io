@@ -22,6 +22,7 @@ span.title {
   flex-direction: row-reverse;
 }
 td.title {
+  font-weight: 900;
   font-size: 5.2rem;
 }
 @media only screen and (max-width: 596px) {
@@ -30,9 +31,10 @@ td.title {
     font-size: 4vw;
   }
   td.title {
-    font-weight: 900;
     font-size: 21.5vw;
   }
+}
+@media screen and (min-width: 596px) {
   .mobile-break { display: none; }
 }
 a {
