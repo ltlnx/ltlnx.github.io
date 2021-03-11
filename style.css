@@ -54,7 +54,7 @@ h1{
   line-height:1.2em;
 }
 h5 {
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 p,ol,ul,div,blockquote { 
   line-height: 1.5;
@@ -72,17 +72,14 @@ blockquote {
   border: 1px solid black;
   padding: 1em;
 }
-code, small {
-  margin: 0.5em;
-  padding: 4px;
-  border-radius: 4px;
-}
 code {
   display:block;
   background-color: #333;
   font-family: monospace;
   font-style: normal;
-  padding: 2em;
+  margin: 0.5em;
+  padding: 4px;
+  border-radius: 4px;
 }
 small {
   font-size: 1em;
@@ -92,7 +89,7 @@ small.em {
   background-color: lightcoral;
   color: white;
 }
-small.time {
+.time {
   font-family: monospace;
   color: #666;
 }
