@@ -97,3 +97,7 @@ small.em {
   color: #666;
 }
 li {margin-left: 0.5em;}
+hr {
+  border:0.5px solid #666;
+  margin-top: 5rem;
+}
