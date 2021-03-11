@@ -53,6 +53,9 @@ h1{
   max-width:12em;
   line-height:1.2em;
 }
+h1 h3,p {
+  margin-top: 1.5rem;
+}
 h5 {
   margin-bottom: 1em;
 }
