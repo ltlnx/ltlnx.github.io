@@ -53,6 +53,9 @@ h1{
   max-width:12em;
   line-height:1.2em;
 }
+h5 {
+  margin-bottom: 0;
+}
 p,ol,ul,div,blockquote { 
   line-height: 1.5;
 }
