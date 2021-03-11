@@ -2,6 +2,22 @@
 <!-- generator="Milkys Sitemap Generator, https://github.com/mcmilk/sitemap-generator" -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+ <loc>https://ltlnx.github.io/tools/sitemap_options</loc>
+ <lastmod>2021-03-11</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/tools/posts</loc>
+ <lastmod>2021-03-11</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/tools/sitemap</loc>
+ <lastmod>2021-03-11</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/tools/posts_options</loc>
+ <lastmod>2021-03-11</lastmod>
+</url>
+<url>
  <loc>https://ltlnx.github.io/posts/misc/websitenotes.html</loc>
  <lastmod>2021-03-11</lastmod>
 </url>

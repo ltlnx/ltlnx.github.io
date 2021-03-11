@@ -1,0 +1,14 @@
+-prune
+! -iname robots.txt
+! -iname sitemap.\*
+! -iname .\*
+! -iname header.html
+! -iname footer.html
+! -iname index.html
+! -path ./.git/\*
+! -path ./css/\*
+! -path ./js/\*
+! -path ./img/\*
+! -path ./tmp/\*
+! -path ./fonts/\*
+! -path ./stats/\*
