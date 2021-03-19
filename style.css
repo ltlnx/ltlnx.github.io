@@ -1,3 +1,4 @@
+/* 基本字體設定，Inter */
 @import url('https://rsms.me/inter/inter.css');
 html {
   font-family: 'Inter', sans-serif; 
@@ -7,6 +8,8 @@ html {
     font-family: 'Inter var', sans-serif; 
   }
 }
+
+/*全域*/
 html {
   font-size: 16px;
   margin:auto;
@@ -15,16 +18,19 @@ html {
   color: #F4F4F4;
   max-width: 40em;
 }
-span.title {
-  display:flex; 
-  align-items:center;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+/*最上面選單*/
+table {
+  margin-right: 0;
+  padding-left: 100%;
+}
+td {
+  min-width: 3rem;
 }
 td.title {
   font-weight: 900;
   font-size: 5.2rem;
 }
+/*最上面選單在小螢幕置中*/
 @media only screen and (max-width: 596px) {
   span.title {
     justify-content: center;
@@ -34,9 +40,11 @@ td.title {
     font-size: 21.5vw;
   }
 }
+/*以 .mobile_break 定義只在小螢幕上換行的地方（美觀）*/
 @media screen and (min-width: 596px) {
   .mobile-break { display: none; }
 }
+/*連結顏色*/
 a {
   text-decoration: none;
 }
@@ -46,10 +54,11 @@ a:link, a:visited {
 a:hover, a:active {
   color: red;
 }
+/*標題*/
 h1{
   display: inline;
   background-color: #FFCF00;
-  color:black;
+  color: black;
   max-width:12em;
   line-height:1.2em;
 }
@@ -62,35 +71,35 @@ h5 {
 p,ol,ul,div,blockquote { 
   line-height: 1.5;
 }
-ul.posts li {
+/*貼文頁面的清單排版*/
+.posts li {
   margin-left: 1em;
-  line-height:2em;
+  line-height: 2em;
 }
+/*強調文字*/
 strong {
   font-family: sans-serif;
   font-weight: bold;
 }
-blockquote {
-  margin-top: 0;
-  border: 1px solid black;
-  padding: 1em;
-}
 code {
-  display:block;
+  display: inline;
   background-color: #333;
   font-family: monospace;
   font-style: normal;
-  margin: 0.5em;
-  padding: 4px;
+  padding: 0.2em 0.3em;
   border-radius: 4px;
 }
+
 small {
   font-size: 1em;
-  color: lightcoral;
 }
-small.em {
-  background-color: lightcoral;
+.blue {
+  background-color: blue;
   color: white;
+}
+.block {
+  display:block;
+  padding: 1em;
 }
 .time {
   font-family: monospace;
