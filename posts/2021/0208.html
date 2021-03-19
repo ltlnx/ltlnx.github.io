@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
 </head>
 <body>
-	<table align="right">
+	<table>
 		<tbody><tr>
 			<td style="text-align: right;">
 	<a href="https://ltlnx.github.io/">首頁</a><br>
@@ -29,19 +29,19 @@
 <code class="block">
 	ol {<br>
 	  list-style: none;<br>
-	  counter-reset: cupcake;<small>⬅ 重設Cupcake計數器</small><br>
+	  counter-reset: cupcake;/*⬅ 重設Cupcake計數器*/<br>
 	}<br>
 	ol li {<br>
-	  counter-increment: cupcake;<small>⬅ 設定一個計數器，命名為Cupcake</small><br>
+	  counter-increment: cupcake;/*⬅ 設定一個計數器，命名為Cupcake*/<br>
 	}<br>
-	ol li:before {<small>⬅ 神奇的before參數（請見<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">參考網站</a>）</small><br>
-	  content: counters(cupcake, '.') '.';<small class="em">（詳見補充）</small><br>
-	  position: absolute;<small>⬅ 設定為絕對位置，很重要</small><br>
-	  margin-top: -1.2em;<small>⬅ 為了讓排版不跑掉</small><br>
-	  transform: rotate(270deg);<small>⬅ 轉回橫的</small><br>
+	ol li:before {/*⬅ 神奇的before參數（請見<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">參考網站</a>）*/<br>
+	  content: counters(cupcake, '.') '.';<small class="em">（詳見補充）*/<br>
+	  position: absolute;/*⬅ 設定為絕對位置，很重要*/<br>
+	  margin-top: -1.2em;/*⬅ 為了讓排版不跑掉*/<br>
+	  transform: rotate(270deg);/*⬅ 轉回橫的*/<br>
 	}<br>/* 如果要拿去用記得把註解刪掉！ */
 </code>
-<p><small class="em">補充</small>
+<p><small class="em">補充*/
 	<ul>
 		<li><strong>第一個「'.'」</strong>是數字跟數字之間要填充的東西，<br>以「二之一之二」為例：
 			<ul style="margin: 0 0.5em 0 1em;">
@@ -56,7 +56,7 @@
 	</ul>
 </p>
 <hr>
-<small class="time">02/08</small>
+<small class="time">02/08*/
 <span class="time">，litelinux</span>
 </body>
 </html>

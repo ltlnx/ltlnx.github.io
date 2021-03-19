@@ -78,7 +78,6 @@ p,ol,ul,div,blockquote {
 }
 /*強調文字*/
 strong {
-  font-family: sans-serif;
   font-weight: bold;
 }
 code {
