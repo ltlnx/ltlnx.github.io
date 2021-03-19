@@ -20,8 +20,8 @@ html {
 }
 /*最上面選單*/
 table {
-  margin-right: 0;
-  padding-left: 100%;
+  margin-right:0;
+  margin-left:auto;
 }
 td {
   min-width: 3rem;
