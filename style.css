@@ -19,7 +19,7 @@ html {
   max-width: 40em;
 }
 /*最上面選單*/
-table {
+table.title {
   margin-right:0;
   margin-left:auto;
 }
@@ -32,8 +32,8 @@ td.title {
 }
 /*最上面選單在小螢幕置中*/
 @media only screen and (max-width: 596px) {
-  span.title {
-    justify-content: center;
+  table.title {
+    margin: auto;
     font-size: 4vw;
   }
   td.title {
