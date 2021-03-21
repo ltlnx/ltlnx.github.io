@@ -1,5 +1,6 @@
 #!/bin/bash
-cd /Users/litelinux/Documents/GitHub/ltlnx.github.io/posts
+SOURCEDIR="/Users/litelinux/Documents/GitHub/ltlnx.github.io/posts"
+cd $SOURCEDIR
 # url configuration
 URL="https://ltlnx.github.io/posts/"
 
