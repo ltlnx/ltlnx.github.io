@@ -104,6 +104,9 @@ small {
   display:block;
   padding: 1em;
 }
+.extramargin {
+  margin: 1em 0 1em;
+}
 .time {
   font-family: monospace;
   color: #666;
