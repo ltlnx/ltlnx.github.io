@@ -33,7 +33,7 @@ td.title {
 /*最上面選單在小螢幕置中*/
 @media only screen and (max-width: 596px) {
   table.title {
-    margin: auto;
+    margin: auto auto 1.6rem;
     font-size: 4vw;
   }
   td.title {
