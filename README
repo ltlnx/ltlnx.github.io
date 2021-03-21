@@ -1,7 +1,6 @@
 Welcome here :)
 To see properly styled contents 
 please visit https://ltlnx.github.io
-The website is created by myself in the help of ssg[1], which in turn uses lowdown[2] to parse markdown files.
+The website is created by myself with a sitemap generator[1], and a modified version to generate the posts page.
 
-[1]:https://www.romanzolotarev.com/ssg.html
-[2]:https://kristaps.bsd.lv/lowdown/
+[1]:https://github.com/mcmilk/sitemap-generator
