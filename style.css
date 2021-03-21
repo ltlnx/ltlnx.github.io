@@ -71,6 +71,10 @@ h5 {
 p,ol,ul,div,blockquote { 
   line-height: 1.5;
 }
+/*最後一個<p>*/
+p:last-of-type {
+  margin-bottom: 5em;
+}
 /*貼文頁面的清單排版*/
 .posts li {
   margin-left: 1em;
@@ -107,5 +111,4 @@ small {
 li {margin-left: 0.5em;}
 hr {
   border:0.5px solid #666;
-  margin-top: 5rem;
 }
