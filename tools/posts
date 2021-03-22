@@ -13,7 +13,7 @@ exec 1> index.html
 # print head
 cat header.html
 # print urls
-IFS=$'\r\n' GLOBIGNORE='*' command eval "OPTIONS=($(cat $0_options))"
+IFS=$'\r\n' GLOBIGNORE='*' command eval "OPTIONS=($(cat posts_options))"
 echo "<h5>2021</h5>"
 cd 2021
 gfind . -type f "${OPTIONS[@]}" -printf "%TY-%Tm-%Td%p\n" | sort -r -k11 | \
