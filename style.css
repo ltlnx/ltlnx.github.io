@@ -30,6 +30,9 @@ td.title {
   font-weight: 900;
   font-size: 5.2rem;
 }
+td.title > a {
+  color:white;
+}
 /*最上面選單在小螢幕置中*/
 @media only screen and (max-width: 596px) {
   table.title {
