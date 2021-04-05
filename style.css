@@ -1,13 +1,8 @@
 /* 基本字體設定，Inter */
-@import url('https://rsms.me/inter/inter.css');
-html {
-  font-family: '徐明', 'Inter', sans-serif; 
-}
-@supports (font-variation-settings: normal) {
-  html { 
-    font-family: '徐明', 'Inter var', sans-serif; 
-  }
-}
+@import "https://webfont.now.sh/shuei-maru-fallback/fallback-test.css";
+@import "https://webfont.now.sh/Fallback-TenMincho-20200318/css.css";
+@import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/css.css";
+@import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/supp.css";
 
 /*全域*/
 html {
@@ -18,6 +13,23 @@ html {
   color: #F4F4F4;
   max-width: 40em;
   letter-spacing: 0.1rem;
+}
+blockquote {
+  font-family:ten-mincho, "Ten Mincho Fallback", serif
+}
+body {
+  font-family:GlowSansTC-Normal-Regular, sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family:"Shuei NijimiMGo B JIS2004", "Shuei Maru Fallback", sans-serif;
+ font-weight:normal;
+ font-style:normal
 }
 /*最上面選單*/
 table.title {
