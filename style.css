@@ -1,32 +1,21 @@
 /* 基本字體設定，Inter */
-@import "https://cdnjs.cloudflare.com/ajax/libs/Han/3.3.0/han.min.css";
 @import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/css.css";
 @import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/supp.css";
 
 /*全域*/
 html {
-  font-size: 14px;
+  font-size: 16px;
   margin: auto;
   padding: 1em;
   background-color:black;
   color:#f9f9f9;
-  max-width: 40em;
+  max-height: 40rem;
   writing-mode: vertical-rl;
 }
 body {
   font-family:GlowSansTC-Normal-Regular, sans-serif
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
- font-family:"Shuei NijimiMGo B JIS2004", "Shuei Maru Fallback", sans-serif;
- font-weight:normal;
- font-style:normal
-}
 /*最上面選單*/
 table.title {
   margin-right:0;
@@ -106,7 +95,7 @@ ol li:before {
 }
 
 .posts li {
-  margin-left: 1em;
+  margin-top: 1em;
   line-height: 2em;
 }
 /*強調文字*/
@@ -134,12 +123,13 @@ small {
   padding: 1em;
 }
 .extramargin {
-  margin: 1em 0 1em;
+  margin: 1em;
 }
 .time {
   font-family: monospace;
   color: #666;
 }
+
 hr {
   border:0.5px solid #666;
 }
