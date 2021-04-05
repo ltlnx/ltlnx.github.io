@@ -11,6 +11,7 @@ html {
   background-color:black;
   color:#f9f9f9;
   max-width: 40em;
+  writing-mode: vertical-rl;
 }
 body {
   font-family:GlowSansTC-Normal-Regular, sans-serif
