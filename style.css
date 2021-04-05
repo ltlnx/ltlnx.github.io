@@ -1,6 +1,17 @@
 /* 基本字體設定，Inter */
-@import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/css.css";
-@import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/supp.css";
+
+@font-face {
+  font-family: 'ARPLMing';
+  src: url('arplmingu20lt.eot');
+  src:
+    url('../font/arplmingu20lt.eot?#font-spider') format('embedded-opentype'),
+    url('../font/arplmingu20lt.woff2') format('woff2'),
+    url('../font/arplmingu20lt.woff') format('woff'),
+    url('../font/arplmingu20lt.ttf') format('truetype'),
+    url('../font/arplmingu20lt.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*全域*/
 html {
@@ -13,7 +24,7 @@ html {
   writing-mode: vertical-rl;
 }
 body {
-  font-family:GlowSansTC-Normal-Regular, sans-serif
+  font-family:"ARPLMing", sans-serif
 }
 
 /*最上面選單*/
