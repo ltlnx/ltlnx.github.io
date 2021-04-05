@@ -4,11 +4,11 @@
   font-family: 'ARPLMing';
   src: url('arplmingu20lt.eot');
   src:
-    url('../font/arplmingu20lt.eot?#font-spider') format('embedded-opentype'),
-    url('../font/arplmingu20lt.woff2') format('woff2'),
-    url('../font/arplmingu20lt.woff') format('woff'),
-    url('../font/arplmingu20lt.ttf') format('truetype'),
-    url('../font/arplmingu20lt.svg') format('svg');
+    url('arplmingu20lt.eot?#font-spider') format('embedded-opentype'),
+    url('arplmingu20lt.woff2') format('woff2'),
+    url('arplmingu20lt.woff') format('woff'),
+    url('arplmingu20lt.ttf') format('truetype'),
+    url('arplmingu20lt.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
