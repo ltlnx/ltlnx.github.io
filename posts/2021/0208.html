@@ -17,14 +17,14 @@
 			<td class="title"><a href="https://ltlnx.github.io/">ltlnx</a></td></tr>
 	</tbody></table>
 <h1>使用CSS<br>將直書網頁編號轉正</h1>
-<p>　　這個部落格第一個網頁就是<a href="https://ltlnx.github.io/posts/2021/0130.html">「研究生評論」</a>。在稍微修改完格式之後，我將網頁連結貼到IG上。朋友看了反映，1. 2.等編號跟英文一起被轉了九十度，如果能轉回來變成橫的，會更好看。於是我找到時間，著手進行改造。</p>
+<p>　　這個部落格第一個網頁就是<a href="https://ltlnx.github.io/posts/2021/0130.html">﹁ 研究生評論﹂</a>。在稍微修改完格式之後，我將網頁連結貼到IG上。朋友看了反映，1. 2.等編號跟英文一起被轉了九十度，如果能轉回來變成橫的，會更好看。於是我找到時間，著手進行改造。</p>
 <p>　　首先參考了<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">Josh Comeau的網站</a>，裡頭寫道：</p>
 	<ol>
 		<li>CSS無法控制編號的樣式，頂多規定要從哪一號開始、要順著數還是倒著數，還有padding、margin等參數。</li>
-		<li>但有個東西叫「Counter」，它是個能記錄號碼的變數，我們只要呼叫它就可以顯示目前的數值。</li>
-		<li>接下來只要在CSS的「ol li:before」中呼叫Counter，就可以套格式了！</li>
+		<li>但有個東西叫﹁ Counter﹂，它是個能記錄號碼的變數，我們只要呼叫它就可以顯示目前的數值。</li>
+		<li>接下來只要在CSS的﹁ ol li:before﹂中呼叫Counter，就可以套格式了！</li>
 	</ol>
-<p>　　在複製那段CSS過來後，一開始想說直接套上「writing-mode: horizontal-tb」（書寫方向：橫向）就好了，畢竟這個參數就是讓整個網站成為直書的秘辛。這個方法在火狐中奏效，在Chrome與Safari中就沒那麼幸運了。因此必須找比較通用的辦法。</p>
+<p>　　在複製那段CSS過來後，一開始想說直接套上﹁ writing-mode: horizontal-tb﹂︵書寫方向：橫向︶就好了，畢竟這個參數就是讓整個網站成為直書的秘辛。這個方法在火狐中奏效，在Chrome與Safari中就沒那麼幸運了。因此必須找比較通用的辦法。</p>
 <p>　　接下來想到了要旋轉文字，參考<a href=https://css-tricks.com/snippets/css/text-rotation/>css-tricks的介紹</a>，終於成功了。以下是最後試成功的ＣＳＳ：</p>
 <code class="block">
 	ol {<br>
@@ -34,8 +34,8 @@
 	ol li {<br>
 	  counter-increment: cupcake;/*⬅ 設定一個計數器，命名為Cupcake*/<br>
 	}<br>
-	ol li:before {/*⬅ 神奇的before參數（請見<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">參考網站</a>）*/<br>
-	  content: counters(cupcake, '.') '.';<small class="em">（詳見補充）*/<br>
+	ol li:before {/*⬅ 神奇的before參數︵請見<a href="https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/">參考網站</a>︶*/<br>
+	  content: counters(cupcake, '.') '.';<small class="em">︵詳見補充︶*/<br>
 	  position: absolute;/*⬅ 設定為絕對位置，很重要*/<br>
 	  margin-top: -1.2em;/*⬅ 為了讓排版不跑掉*/<br>
 	  transform: rotate(270deg);/*⬅ 轉回橫的*/<br>
@@ -43,14 +43,14 @@
 </code>
 <p><small class="em">補充*/
 	<ul>
-		<li><strong>第一個「'.'」</strong>是數字跟數字之間要填充的東西，<br>以「二之一之二」為例：
+		<li><strong>第一個﹁ '.'﹂</strong>是數字跟數字之間要填充的東西，<br>以﹁ 二之一之二﹂為例：
 			<ul style="margin: 0 0.5em 0 1em;">
-				<li>如果是句點就會顯示「2.1.2」；</li>
-				<li>如果是連字號就會顯示「2-1-2」</li></ul></li>
-		<li><strong>第二個「'.'」</strong>是編號之後要顯示的東西，<br>一樣以「二之一之二」為例：<br>
+				<li>如果是句點就會顯示﹁ 2.1.2﹂；</li>
+				<li>如果是連字號就會顯示﹁ 2-1-2﹂</li></ul></li>
+		<li><strong>第二個﹁ '.'﹂</strong>是編號之後要顯示的東西，<br>一樣以﹁ 二之一之二﹂為例：<br>
 			<ul style="margin: 0 0.5em 0 1em;">
-				<li>如果是句點就會顯示「2.1.2.」；</li>
-				<li>如果是冒號就會顯示「2.1.2:」</li>
+				<li>如果是句點就會顯示﹁ 2.1.2.﹂；</li>
+				<li>如果是冒號就會顯示﹁ 2.1.2:﹂</li>
 			</ul>
 		</li>
 	</ul>

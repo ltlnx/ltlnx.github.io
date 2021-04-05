@@ -54,7 +54,7 @@ td.title > a {
     font-size: 21.5vw;
   }
 }
-/*以 .mobile_break 定義只在小螢幕上換行的地方（美觀）*/
+/*以 .mobile_break 定義只在小螢幕上換行的地方︵美觀︶*/
 @media screen and (min-width: 596px) {
   .mobile-break { display: none; }
 }
@@ -98,7 +98,7 @@ ol li {
   counter-increment: cupcake;/*⬅ 設定一個計數器，命名為Cupcake*/
 }
 ol li:before {
-  content: counters(cupcake, '.') '.';<small class="em">（詳見補充）*/
+  content: counters(cupcake, '.') '.';<small class="em">︵詳見補充︶*/
   position: absolute;/*⬅ 設定為絕對位置，很重要*/
   margin-top: -1.2em;/*⬅ 為了讓排版不跑掉*/
   transform: rotate(270deg);/*⬅ 轉回橫的*/
