@@ -1,6 +1,5 @@
 /* 基本字體設定，Inter */
-@import "https://webfont.now.sh/shuei-maru-fallback/fallback-test.css";
-@import "https://webfont.now.sh/Fallback-TenMincho-20200318/css.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/Han/3.3.0/han.min.css";
 @import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/css.css";
 @import "https://webfont.now.sh/GlowSansTC-Normal-Regular-0323/supp.css";
 
@@ -9,13 +8,9 @@ html {
   font-size: 14px;
   margin: auto;
   padding: 1em;
-  background-color: #0a0a0a;
-  color: #F4F4F4;
+  background-color:black;
+  color:#f9f9f9;
   max-width: 40em;
-  letter-spacing: 0.1rem;
-}
-blockquote {
-  font-family:ten-mincho, "Ten Mincho Fallback", serif
 }
 body {
   font-family:GlowSansTC-Normal-Regular, sans-serif
@@ -68,7 +63,7 @@ a {
   text-decoration: none;
 }
 a:link, a:visited {
-  color: #FFCF00;
+  color: #FFDF00;
 }
 a:hover, a:active {
   color: red;
@@ -88,7 +83,7 @@ h5 {
   margin-bottom: 1em;
 }
 p,ol,ul,div,blockquote { 
-  line-height: 1.5;
+  line-height: 1.75;
 }
 /*最後一個<p>*/
 p:last-of-type {
@@ -131,7 +126,7 @@ small {
 }
 .blue {
   background-color: blue;
-  color: white;
+  padding:0.5em 0 0.5em 0.1em;
 }
 .block {
   display:block;
