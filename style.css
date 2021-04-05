@@ -1,11 +1,12 @@
 /* 基本字體設定，Inter */
 
 @font-face {
-  font-family: 'ARPLMing';
+  font-family: 'arplmingu20lt.ttf';
   src: url('arplmingu20lt.ttf');
   src:
     url('arplmingu20lt.woff2') format('woff2'),
     url('arplmingu20lt.woff') format('woff'),
+    url('arplmingu20lt.ttf') format('truetype'),
     url('arplmingu20lt.svg') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -22,7 +23,7 @@ html {
   writing-mode: vertical-rl;
 }
 body {
-  font-family:"ARPLMing", sans-serif
+  font-family:"arplmingu20lt.ttf", sans-serif
 }
 
 /*最上面選單*/
