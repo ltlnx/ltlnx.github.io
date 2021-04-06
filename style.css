@@ -46,6 +46,10 @@ p,ol,ul,div,blockquote {
   line-height: 1.75;
 }
 
+ul.posts {
+  list-style-type: none;
+}
+
 div.footer {
   display: flex;
   justify-content: space-between;
