@@ -3,23 +3,19 @@
 <head>
 	<meta charset=utf-8>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="https://ltlnx.github.io/style.css">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
 </head>
 <body>
 	 
-	<table class="title">
-		<tbody><tr>
-			<td style="text-align: right;">
-	<a href="https://ltlnx.github.io/posts/">貼文</a><br>
-	<a href="https://ltlnx.github.io/about.html">關於我</a><br>
-	<a href="https://ltlnx.github.io/links.html">連結</a>
-			</td>
-			<td class="title"><a href="https://ltlnx.github.io/">ltlnx</a></td></tr>
-	</tbody> </table>
+	<a href="../../index.html">回首頁</a>
+	<a href="../../map.html">網站地圖</a>
+	<a href="../index.html">貼文</a>
+	<a href="../speednotes.html">速記</a>
+
 <h1>二月總結</h1>
 
-<p>　　二月，這個網站的介面經過全面改寫，電子書網站﹁好讀﹂收掉了，新學期正式開始，我也要進入漫長的指考備戰日子。</p>
+<p>　　二月，這個網站的介面經過全面改寫，電子書網站「好讀」收掉了，新學期正式開始，我也要進入漫長的指考備戰日子。</p>
 
 <h3>介面</h3>
 
@@ -29,25 +25,26 @@
 
 就可以將所有文字轉直。但這就是頭痛的開始。</p>
 
-<p>　　第一個遇到的問題是，編號會跟著英文一起轉90度，看起來不美觀。第二個是在Chrome上，往下滑還會有一大塊空格；而且照理來說，對於從右到左的文章，應該是從右邊開始讀，但不知為何，在Chrome上打開網頁卻是在最左邊。第一個在爬文後順利解決，過程也寫成文章：<a href="https://ltlnx.github.io/posts/2021/0208.html">使用CSS將直書網頁編號轉正</a>。第二、三卻找不到解決方案，只能多寫一段文字提醒Chrome使用者這個問題。技術上還有許多問題，這邊先不贅述，因為最大的問題還在後頭。</p>
+<p>　　第一個遇到的問題是，編號會跟著英文一起轉90度，看起來不美觀。第二個是在Chrome上，往下滑還會有一大塊空格；而且照理來說，對於從右到左的文章，應該是從右邊開始讀，但不知為何，在Chrome上打開網頁卻是在最左邊。第一個在爬文後順利解決，過程也寫成文章：<a href="0208.html">使用CSS將直書網頁編號轉正</a>。第二、三卻找不到解決方案，只能多寫一段文字提醒Chrome使用者這個問題。技術上還有許多問題，這邊先不贅述，因為最大的問題還在後頭。</p>
 
 <p>　　最大的問題是，在檢查CSS時需要一直回去看網頁，但左看右看，總覺得看起來不對勁。調了padding、margin，怎麼調就是怪。好吧，我想，我盡力了。因此我暫時轉回橫的，看起來竟順了許多。唉，那還是先算了！如果成功實驗出好讀的排法，再讓它回歸吧。</p>
 
-<small class="blue">※如果知道如何解決，或有相關經驗的的，拜託<a href="mailto:litelinux.org@gmail.com">聯絡我</a>！</small>
+<p class="emphasis">※如果知道如何解決，或有相關經驗的，拜託<a href="mailto:litelinux.org@gmail.com">聯絡我</a>！</p>
 
 <h3>更輕鬆地產生網頁</h3>
-<p style="text-decoration-line: line-through;">　　這個月也開始使用新工具——ssg來產生網頁。開站時各位所看到的網頁都是我一行一行打出來的，但到了二月中，隨著網誌的文章邁入第三篇，原本土炮的方法已不敷使用。因此我找上了簡易的﹁網誌產生器﹂，來幫我處理一些瑣碎、連結的事，讓我比較能專注在寫作上。但目前<a href="https://ltlnx.github.io/posts/">﹁貼文﹂</a>頁面依然是我自己打的，只能等sed、awk練好一點再來自己寫工具了！︵苦笑︶</p>
-
-<p>　　在寫完上段文字一個禮拜後，就暫時不使用ssg了，因為他對所有的頁面只能套用同樣的頁首跟頁尾。但我希望的是能對貼文頁面的底部多一個簽名跟﹁回貼文﹂的按鈕。ssg能做的主要有三個：</p>
+<p>　　在寫完上段文字一個禮拜後，就暫時不使用ssg了，因為他對所有的頁面只能套用同樣的頁首跟頁尾。但我希望的是能對貼文頁面的底部多一個簽名跟「回貼文」的按鈕。ssg能做的主要有三個：</p>
 	<ul>
-		<li>產生Sitemap.xml︵搜尋引擎用︶</li>
+		<li>產生Sitemap.xml（搜尋引擎用）</li>
 		<li>套用頁首、頁尾到所有網頁上</li>
 		<li>將Markdown檔案轉為html網頁</li>
 	</ul>
-<p>　　首先我從第一個開刀，找到了<a href="">產生Sitemap的Bash script</a>。修改一下原始碼後，就成為產生﹁貼文﹂頁面的工具。這邊就先不分享修改後的原始碼了，因為有些地方是用很蠢的方式解決的，大家大概不會想用吧！其他兩個三月再來解決吧。
+<p>　　首先我從第一個開刀，找到了<a href="">產生Sitemap的Bash script</a>。修改一下原始碼後，就成為產生「貼文」頁面的工具。這邊就先不分享修改後的原始碼了，因為有些地方是用很蠢的方式解決的，大家大概不會想用吧！其他兩個三月再來解決吧。
 </p>
 <hr>
-<small class="time">03/08</small>
-<span class="time">，litelinux</span>
+<div class="footer">
+	<a href="0208.html">上一篇</a>
+	<span class="time">03/08</span>
+	<a href="0314.html">下一篇</a>
+</div>
 </body>
 </html>

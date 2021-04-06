@@ -3,20 +3,16 @@
 <head>
 	<meta charset=utf-8>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="https://ltlnx.github.io/style.css">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
 </head>
 <body>
 	 
-	<table class="title">
-		<tbody><tr>
-			<td style="text-align: right;">
-	<a href="https://ltlnx.github.io/posts/">貼文</a><br>
-	<a href="https://ltlnx.github.io/about.html">關於我</a><br>
-	<a href="https://ltlnx.github.io/links.html">連結</a>
-			</td>
-			<td class="title"><a href="https://ltlnx.github.io/">ltlnx</a></td></tr>
-	</tbody> </table>
+	<a href="../../index.html">回首頁</a>
+	<a href="../../map.html">網站地圖</a>
+	<a href="../index.html">貼文</a>
+	<a href="../speednotes.html">速記</a>
+
 
 <h5>以螢幕大小為基準的寬度單位</h5>
 <h1>&lt;vw&gt; 與 &lt;vh&gt;</h1>
@@ -29,15 +25,18 @@
 <p>　　但隔天一早，我在公車上用手機看自己的網站時，發現：文章最後的空白實在太長，滑到底時，甚至看不到文字。普通人見狀，一定會覺得網站壞了吧！沒辦法，只好在顛頗的公車上，再次開啟尋找正確語法之路。
 </p>
 <h3>重點開始</h3>
-<p>　　CSS中的寬度單位分兩種：﹁絕對單位﹂與﹁相對單位﹂。<strong>絕對單位</strong>以一定的數值作為基準，如<span lang="en">in</span><span style="white-space:nowrap;">︵吋︶</span>，<span lang="en">cm</span><span style="white-space:nowrap;">︵公分︶</span>，<span lang="en">px</span><span style="white-space:nowrap;">︵像素︶</span>；<strong>相對單位</strong>則是相對於某個會改變的值，如﹁em﹂是相對於字型大小，﹁vh﹂、﹁vw﹂相對於視窗大小。他們的好處就是能隨著裝置的不同而改變；也就是說，用它就能在不同裝置上獲得相似的排版。在網路標準權威W3C的網站上有<a href="https://www.w3schools.com/cssref/css_units.asp">更詳盡的說明。</a>
+<p>　　CSS中的寬度單位分兩種：「絕對單位」與「相對單位」。<strong>絕對單位</strong>以一定的數值作為基準，如<span lang="en">in</span><span style="white-space:nowrap;">（吋）</span>，<span lang="en">cm</span><span style="white-space:nowrap;">（公分）</span>，<span lang="en">px</span><span style="white-space:nowrap;">（像素）</span>；<strong>相對單位</strong>則是相對於某個會改變的值，如「em」是相對於字型大小，「vh」、「vw」相對於視窗大小。他們的好處就是能隨著裝置的不同而改變；也就是說，用它就能在不同裝置上獲得相似的排版。在網路標準權威W3C的網站上有<a href="https://www.w3schools.com/cssref/css_units.asp">更詳盡的說明。</a>
 </p>
-<p>　　在這個網站上，為了適應不同視窗大小，我選用了<span lang="en">vw</span>︵相對於視窗寬度︶作為單位。值得注意的是，vw是相對於﹁百分之一﹂的視窗寬度，因此打數值的時候不必加﹁％﹂。</p>
+<p>　　在這個網站上，為了適應不同視窗大小，我選用了<span lang="en">vw</span>（相對於視窗寬度）作為單位。值得注意的是，vw是相對於「百分之一」的視窗寬度，因此打數值的時候不必加「％」。</p>
 <p>　　附上最終採用的code：</p>
 <p>
 <code class="block">&lt;p style="margin-left: 30vw;"&gt;&lt;/p&gt;</code>
 </p>
 <hr>
-<small class="time">01/31</small>
-<span class="time">，litelinux</span>
+<div class="footer">
+	<a href="0130.html">上一篇</a>
+	<span class="time">01/31</span>
+	<a href="0208.html">下一篇</a>
+</div>
 </body>
 </html>
