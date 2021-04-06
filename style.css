@@ -61,14 +61,15 @@ div.footer {
 }
 .block {
   display:block;
-  padding: 1em;
+  padding: 1rem;
 }
 .extramargin {
-  margin: 1em;
+  margin: 1rem;
 }
 .time {
   font-family: monospace;
   color: #666;
+  font-size: 1rem;
 }
 
 hr {
