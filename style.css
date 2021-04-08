@@ -55,6 +55,9 @@ div.footer {
   display: flex;
   justify-content: space-between;
 }
+br + a {
+  margin-top: 0.25rem;
+}
 
 .emphasis {
   background-color: lightgoldenrodyellow;
