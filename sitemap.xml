@@ -2,76 +2,92 @@
 <!-- generator="Milkys Sitemap Generator, https://github.com/mcmilk/sitemap-generator" -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
- <loc>https://ltlnx.github.io/sitemap_options</loc>
- <lastmod>2021-03-11</lastmod>
+ <loc>https://ltlnx.github.io/MeiryoUI.woff</loc>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/tools/posts</loc>
- <lastmod>2021-03-31</lastmod>
+ <loc>https://ltlnx.github.io/map.html</loc>
+ <lastmod>2021-04-07</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/I.MingCP-7.01.svg</loc>
+ <lastmod>2020-12-27</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/tools/sitemap_options</loc>
+ <lastmod>2021-03-11</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/tools/sitemap</loc>
  <lastmod>2021-03-27</lastmod>
 </url>
 <url>
+ <loc>https://ltlnx.github.io/style copy.css</loc>
+ <lastmod>2021-04-07</lastmod>
+</url>
+<url>
  <loc>https://ltlnx.github.io/index.html</loc>
- <lastmod>2021-03-27</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/posts/misc/websitenotes.html</loc>
- <lastmod>2021-03-22</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/posts/misc/roadmap.html</loc>
- <lastmod>2021-03-22</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/index.html</loc>
- <lastmod>2021-04-01</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/speednotes.html</loc>
- <lastmod>2021-03-27</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0314.html</loc>
- <lastmod>2021-03-22</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0308.html</loc>
- <lastmod>2021-03-22</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0130.html</loc>
- <lastmod>2021-03-22</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0131.html</loc>
- <lastmod>2021-03-22</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0208.html</loc>
- <lastmod>2021-03-27</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/posts/posts_options</loc>
- <lastmod>2021-03-11</lastmod>
+ <loc>https://ltlnx.github.io/.font-spider/MeiryoUI.ttf</loc>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/posts/footer.html</loc>
- <lastmod>2021-03-11</lastmod>
+ <loc>https://ltlnx.github.io/.font-spider/I.MingCP-7.01.ttf</loc>
+ <lastmod>2020-12-27</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/posts/header.html</loc>
- <lastmod>2021-03-22</lastmod>
+ <loc>https://ltlnx.github.io/.font-spider/dejima-mincho-r227.ttf</loc>
+ <lastmod>2021-04-01</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/I.MingCP-7.01.woff</loc>
+ <lastmod>2020-12-27</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/about.html</loc>
- <lastmod>2021-03-27</lastmod>
+ <lastmod>2021-04-07</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/MeiryoUI.ttf</loc>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/README</loc>
  <lastmod>2021-03-21</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/I.MingCP-7.01.woff2</loc>
+ <lastmod>2020-12-27</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/countdown.js</loc>
@@ -79,10 +95,22 @@
 </url>
 <url>
  <loc>https://ltlnx.github.io/links.html</loc>
- <lastmod>2021-03-27</lastmod>
+ <lastmod>2021-04-07</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/style.css</loc>
- <lastmod>2021-03-27</lastmod>
+ <lastmod>2021-04-07</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/I.MingCP-7.01.ttf</loc>
+ <lastmod>2020-12-27</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/MeiryoUI.svg</loc>
+ <lastmod>2021-04-07</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/MeiryoUI.woff2</loc>
+ <lastmod>2021-04-07</lastmod>
 </url>
 </urlset>
