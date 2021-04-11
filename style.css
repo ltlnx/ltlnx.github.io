@@ -13,35 +13,58 @@
 }
 
 @font-face {
-  font-family: 'H-SS15';
-  src: url('H-SS15.eot');
+  font-family: '更紗黑體 CL';
+  src: url('Sarasa-UI-CL-Light.eot');
   src:
-    url('H-SS15.woff2') format('woff2'),
-    url('H-SS15.woff') format('woff'),
-    url('H-SS15.ttf') format('truetype'),
-    url('H-SS15.svg') format('svg');
+    url('Sarasa-UI-CL-Light.woff2') format('woff2'),
+    url('Sarasa-UI-CL-Light.woff') format('woff'),
+    url('Sarasa-UI-CL-Light.ttf') format('truetype'),
+    url('Sarasa-UI-CL-Light.svg') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: '更紗黑體 CL';
+  src: url('Sarasa-UI-CL-Bold.eot');
+  src:
+    url('Sarasa-UI-CL-Bold.woff2') format('woff2'),
+    url('Sarasa-UI-CL-Bold.woff') format('woff'),
+    url('Sarasa-UI-CL-Bold.ttf') format('truetype'),
+    url('Sarasa-UI-CL-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
 
 /*全域*/
 html {
   margin: auto;
   max-width: 40rem;
+  padding: 1rem;
 }
 body {
-  font-family:"I.MingCP-7.01", sans-serif
+  font-family:"I.MingCP-7.01", sans-serif;
 }
 
 /*以 .mobile_break 定義只在小螢幕上換行的地方（美觀）*/
-@media screen and (min-width: 596px) {
+@media screen and (min-width: 500px) {
   .mobile-break { display: none; }
+}
+
+@media screen and (max-width: 750px) {
+  html {
+    max-width: 30rem;
+  }
 }
 
 /*標題*/
 h1,h2,h3,h4,h5,h6,strong {
-  font-family: "H-SS15", sans-serif;
+  font-family: "更紗黑體 CL", sans-serif;
 }
-
-p,ol,ul,div,blockquote { 
+h3,h4,h5,h6,strong {
+  font-weight:lighter;
+}
+p,ol,ul,div,blockquote {
   line-height: 1.75;
   text-align: justify;
 }
@@ -53,9 +76,6 @@ ul.posts {
 div.footer {
   display: flex;
   justify-content: space-between;
-}
-br + a {
-  margin-top: 0.25rem;
 }
 
 .emphasis {
