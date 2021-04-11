@@ -13,13 +13,13 @@
 }
 
 @font-face {
-  font-family: 'chogokubosogothic_5';
-  src: url('chogokubosogothic_5.eot');
+  font-family: 'H-SS15';
+  src: url('H-SS15.eot');
   src:
-    url('chogokubosogothic_5.woff2') format('woff2'),
-    url('chogokubosogothic_5.woff') format('woff'),
-    url('chogokubosogothic_5.ttf') format('truetype'),
-    url('chogokubosogothic_5.svg') format('svg');
+    url('H-SS15.woff2') format('woff2'),
+    url('H-SS15.woff') format('woff'),
+    url('H-SS15.ttf') format('truetype'),
+    url('H-SS15.svg') format('svg');
 }
 
 /*全域*/
@@ -38,7 +38,7 @@ body {
 
 /*標題*/
 h1,h2,h3,h4,h5,h6,strong {
-  font-family: "chogokubosogothic_5", sans-serif;
+  font-family: "H-SS15", sans-serif;
 }
 
 p,ol,ul,div,blockquote { 
