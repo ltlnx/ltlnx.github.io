@@ -69,6 +69,13 @@ p,ol,ul,div,blockquote {
   text-align: justify;
 }
 
+a {
+  text-decoration: none;
+  padding-bottom: 0.15rem;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
 ul.posts {
   list-style-type: none;
 }
