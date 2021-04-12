@@ -74,12 +74,12 @@ a {
   border-bottom-width: 1px;
 }
 
-ul.posts {
+.posts {
   list-style-type: none;
-  margin-left: 0;
+  padding-left: 0;
 }
 
-div.footer {
+.footer {
   display: flex;
   justify-content: space-between;
 }
