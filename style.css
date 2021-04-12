@@ -21,7 +21,6 @@
     url('Sarasa-UI-CL-Light.ttf') format('truetype'),
     url('Sarasa-UI-CL-Light.svg') format('svg');
     font-weight: lighter;
-    font-style: normal;
 }
 
 @font-face {
@@ -33,7 +32,6 @@
     url('Sarasa-UI-CL-Bold.ttf') format('truetype'),
     url('Sarasa-UI-CL-Bold.svg') format('svg');
     font-weight: bold;
-    font-style: normal;
 }
 
 /*全域*/
