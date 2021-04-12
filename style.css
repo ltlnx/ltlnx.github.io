@@ -76,6 +76,7 @@ a {
 
 ul.posts {
   list-style-type: none;
+  margin-left: 0;
 }
 
 div.footer {
