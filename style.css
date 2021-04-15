@@ -56,13 +56,13 @@ body {
 }
 
 /*標題*/
-h1,h2,h3,h4,h5,h6,strong {
+h1,h2,h3,h4,h5,h6,strong,.time {
   font-family: "更紗黑體 CL", sans-serif;
 }
-h3,h4,h5,h6,strong {
+h3,h4,h5,h6,strong,.time {
   font-weight:lighter;
 }
-p,ol,ul,div,blockquote,span {
+p,ol,ul,div,blockquote {
   line-height: 1.75;
   text-align: justify;
 }
@@ -97,7 +97,8 @@ a {
 }
 .time {
   color: #000;
-  font-size: 11px;
+  font-size: 10px;
+  padding: 3px;
   border-radius: 5px;
   border:0.5px solid #000;
 }
