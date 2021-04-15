@@ -62,7 +62,7 @@ h1,h2,h3,h4,h5,h6,strong {
 h3,h4,h5,h6,strong {
   font-weight:lighter;
 }
-p,ol,ul,div,blockquote {
+p,ol,ul,div,blockquote,span {
   line-height: 1.75;
   text-align: justify;
 }
@@ -96,9 +96,8 @@ a {
   margin: 1rem;
 }
 .time {
-  font-family: monospace;
   color: #000;
-  font-size: 14px;
+  font-size: 11px;
   border-radius: 5px;
   border:0.5px solid #000;
 }
