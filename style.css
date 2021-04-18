@@ -67,7 +67,8 @@ h3 {
 }
 p,ol,ul,div,blockquote {
   line-height: 1.75;
-  text-align: justify;
+  text-align: left;
+  word-break: keep-all;
 }
 
 a {
