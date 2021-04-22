@@ -91,13 +91,12 @@ a {
   background-color: lightgoldenrodyellow;
   padding:0.5rem;
 }
-.block {
-  display:block;
-  padding: 1rem;
+
+.caption {
+  background-color: gainsboro;
+  padding: 0.5rem;;
 }
-.extramargin {
-  margin: 1rem;
-}
+
 .time {
   color: #000;
   font-size: 10px;
@@ -105,21 +104,18 @@ a {
   border-radius: 5px;
   border:0.5px solid #000;
 }
+
 hr.notes {
-    margin-top: 1em;
     overflow: visible; /* For IE */
-    padding: 0;
-    border: none;
-    border-top: medium double #333;
     color: #333;
     text-align: center;
 }
+
 hr.notes:after {
     content: " ∗ ∗ ∗ ";
     display: inline-block;
     position: relative;
-    top: -0.95em;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 0 0.25em;
     background: white;
 }
