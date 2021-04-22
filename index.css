@@ -15,7 +15,9 @@ h3.title {
     margin-top: 0;
     font-size:calc(3vw * 4 / 6.3);
 }
-
+a > h1 {
+    color:initial;
+}
 div {
     position: relative;
     /*border: 1px solid black;*/

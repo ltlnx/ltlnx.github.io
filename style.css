@@ -62,7 +62,7 @@ h3,h4,h5,h6,strong,.time {
 h3 {
   padding-top: 1rem;
 }
-p,ol,ul,blockquote {
+p,ol,ul,blockquote,div.nav {
   font-family: "I.MingCP-7.01", sans-serif;
   line-height: 1.75;
   text-align: left;
