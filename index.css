@@ -1,0 +1,100 @@
+html,body {
+    padding:0;
+    max-width: 100%;
+}
+.title {
+    text-align: center;
+}
+h1.title {
+    font-weight:bold;
+    font-size:3vw;
+    line-height:1em;
+    margin-bottom: 0;
+}
+h3.title {
+    margin-top: 0;
+    font-size:calc(3vw * 4 / 6.3);
+}
+
+div {
+    position: relative;
+    /*border: 1px solid black;*/
+    overflow:scroll;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    width: 97%;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.small-width {
+    max-width: 20vw;
+}
+.small-height {
+    max-height:59vh;
+}
+.tiny-height {
+    max-height:26vh;
+    height:26vh;
+}
+.tiny-height,.small-height,.normal {
+    border-radius:5px;
+    border:1px solid black;
+    margin:0.5rem;
+    padding:0.5rem;
+}
+@media screen and (max-width: 700px) {
+    html,body {
+    max-width:initial;
+    width: initial;
+    }
+    div {
+        margin: auto;
+    }
+    .flex,.flex-column {
+        display: block;
+    }
+    .small-width {
+        max-width:500px;
+    }
+    .tiny-height,.small-height,.normal {
+        max-height: max-content;
+        height: max-content;
+        border:none;
+    }
+    h1.title {
+        font-size:18vw;
+    }
+    h3.title {
+        padding-top: 0;
+        font-size:12vw;
+    }
+    div.hide-on-mobile{
+        display: none;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 700px) {
+    h1.title {
+        font-size:90px;
+    }
+    h3.title {
+        padding-top: 0;
+        font-size:60px;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+
+    .small-width {
+        max-width:30vw;
+    }
+    h1.title {
+        font-size:5vw;
+    }
+    h3.title {
+        padding-top: 0;
+        font-size:3.2vw;
+    }
+}
