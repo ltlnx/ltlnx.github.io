@@ -37,6 +37,7 @@ div {
 }
 .small-height {
     max-height:59vh;
+    height:59vh;
 }
 .tiny-height {
     max-height:26vh;
