@@ -26,7 +26,6 @@ div {
 .flex {
     display: flex;
     justify-content: center;
-    /*width: 97%;*/
 }
 .flex-column {
     display: flex;
