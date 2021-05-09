@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><title>用Mac下載iOS或iPadOS更新時，如何判斷下載進度 &mdash; Blog of Litelinux</title>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+</head>
+<body>
+	 <div class="nav">
+	<a href="../../index.html">回首頁</a>
+	<a href="../../map.html">網站地圖</a>
+	<a href="../../about.html">關於我</a>
+	<a href="../index.html">貼文</a>
+	<a href="../speednotes.html">速記</a>
+	<a href="../../links.html">連結</a>
+	</div>
+
+
+<h1>用Mac下載<br class="mobile-break">iOS或iPadOS更新時，<br class="mobile-break">如何判斷下載進度</h1>
+<p>　　最近為了<a href="https://ios.gadgethacks.com/how-to/unjailbreak-your-iphone-restore-back-factory-settings-0155798/">解除iPadOS越獄</a>，我將iPad連上電腦，並準備下載更新。殊不知，因為線接觸不良，在下載更新時與iPad斷了連線。在連回電腦後，Mac上只有顯示「您的Mac正在下載iPad的軟體更新」，原本在下面的進度條卻不見了。</p>
+<div class="img-conatiner"><img src="Resources/0509-Finder更新示意圖.png" alt="就只是個示意圖"></div>
+<p>↑從<a href="https://www.mobile01.com/topicdetail.php?f=481&t=5927405">某討論串</a>偷個圖，大概長這樣。</p>
+<p>　　Google一下之後發現好東西：在一個<a href="https://discussions.apple.com/thread/250790312">蘋果網站的討論串</a>有其他人碰到這個問題，解方則是：<em>（從網站複製過來的）</em></p>
+<ol>
+	<li>打開「終端機」（在應用程式 > 工具程式裡）</li>
+	<li>複製貼上：
+		<code class="block caption">
+			while true<br>
+			do<br>
+			clear<br>
+			ls -lhrt ~/Library/iTunes/<span class="text-darkred">iPhone</span>\ Software\ Updates<br>
+			sleep 20<br>
+			done<br>
+		</code>
+		<div class="emphasis">
+			<em>註一：如果你的裝置是iPad，請將<span class="text-darkred">紅色部分</span>改成iPad。</em><br>
+			<em>註二：想要刷新速度快一點，可以將「sleep」後面的數字改小。</em>
+		</div>
+	</li>
+	<li>按Enter。</li>
+</ol>
+<p>顯示畫面如下：</p>
+<img src="Resources/0509-Terminal示意圖.png" alt="另外一個示意圖">
+<p>　　自從MacOS更新上Catalina，iOS裝置改由Finder管理後，這個問題就存在了；到了現在的Big Sur，依然沒有改善。可憐哪Apple。</p>
+<hr>
+<div class="footer">
+<a href="0314-好讀，我.html">上一篇</a>
+<span class="time">05/09</span>
+<span>　　　</span>
+</div>
+</body>
+</html>
