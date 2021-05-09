@@ -106,6 +106,10 @@ a {
   border:0.5px solid #000;
 }
 
+div.footer > .time {
+  font-size: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -118,6 +122,11 @@ img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+hr {
+  border: 0.5px solid #000;
+  margin: 2rem 0 1rem 0;
 }
 
 hr.notes {
