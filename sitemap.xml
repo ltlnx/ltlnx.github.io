@@ -3,11 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
  <loc>https://ltlnx.github.io/map.html</loc>
- <lastmod>2021-04-11</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/I.MingCP-7.01.svg</loc>
- <lastmod>2020-12-27</lastmod>
+ <lastmod>2021-05-10</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/tools/sitemap_options</loc>
@@ -18,92 +14,48 @@
  <lastmod>2021-04-09</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/style copy.css</loc>
- <lastmod>2021-04-07</lastmod>
-</url>
-<url>
  <loc>https://ltlnx.github.io/index.html</loc>
- <lastmod>2021-04-28</lastmod>
+ <lastmod>2021-05-10</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/index.html</loc>
- <lastmod>2021-04-17</lastmod>
+ <lastmod>2021-05-09</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/speednotes.html</loc>
- <lastmod>2021-04-22</lastmod>
+ <lastmod>2021-04-28</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0314-好讀，我.html</loc>
- <lastmod>2021-04-11</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/posts/2021/0308.html</loc>
- <lastmod>2021-04-11</lastmod>
+ <lastmod>2021-05-09</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0130-從男女校的「空間」看權力與性別_評論.html</loc>
- <lastmod>2021-04-11</lastmod>
+ <lastmod>2021-04-29</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/posts/2021/vw與vh.html</loc>
- <lastmod>2021-04-11</lastmod>
+ <loc>https://ltlnx.github.io/posts/2021/Resources/0509-Terminal示意圖.png</loc>
+ <lastmod>2021-05-09</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/posts/2021/Resources/0509-Finder更新示意圖.png</loc>
+ <lastmod>2021-05-09</lastmod>
+</url>
+<url>
+ <loc>https://ltlnx.github.io/posts/2021/0509-用Mac下載iOS或iPadOS更新時，如何判斷下載進度.html</loc>
+ <lastmod>2021-05-10</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/posts/2021/0208-使用CSS將直書網頁編號轉正.html</loc>
- <lastmod>2021-04-11</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Light.ttf</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/.font-spider/Sarasa-UI-CL-Light.ttf</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/.font-spider/I.MingCP-7.01.ttf</loc>
- <lastmod>2020-12-27</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/.font-spider/Sarasa-UI-CL-Bold.ttf</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/I.MingCP-7.01.woff</loc>
- <lastmod>2020-12-27</lastmod>
+ <lastmod>2021-04-29</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/about.html</loc>
  <lastmod>2021-04-11</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Bold.svg</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/index.css</loc>
- <lastmod>2021-04-28</lastmod>
-</url>
-<url>
  <loc>https://ltlnx.github.io/README</loc>
  <lastmod>2021-04-09</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Light.svg</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Light.woff</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Bold.woff</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/I.MingCP-7.01.woff2</loc>
- <lastmod>2020-12-27</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/countdown.js</loc>
@@ -111,30 +63,14 @@
 </url>
 <url>
  <loc>https://ltlnx.github.io/links.html</loc>
- <lastmod>2021-04-24</lastmod>
+ <lastmod>2021-04-28</lastmod>
 </url>
 <url>
  <loc>https://ltlnx.github.io/style.css</loc>
- <lastmod>2021-04-23</lastmod>
+ <lastmod>2021-05-10</lastmod>
 </url>
 <url>
- <loc>https://ltlnx.github.io/I.MingCP-7.01.ttf</loc>
- <lastmod>2020-12-27</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Light.woff2</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Bold.woff2</loc>
- <lastmod>2021-04-12</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/index copy.html</loc>
- <lastmod>2021-04-24</lastmod>
-</url>
-<url>
- <loc>https://ltlnx.github.io/Sarasa-UI-CL-Bold.ttf</loc>
- <lastmod>2021-04-12</lastmod>
+ <loc>https://ltlnx.github.io/files/台中一中歷史複習講義（中國史含台灣史）.pdf</loc>
+ <lastmod>2021-04-28</lastmod>
 </url>
 </urlset>
