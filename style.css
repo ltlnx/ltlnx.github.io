@@ -61,6 +61,19 @@ h3.title {
   margin-top: 0;
   font-size:calc(10vw * 4 / 6.3);
 }
+
+@media screen and (max-width: 750px) {
+  h1.title {
+    font-size:20vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  h3.title {
+    margin-top: 0;
+    padding-top: 0;
+    font-size:calc(20vw * 4 / 6.3);
+  }
+}
 .title {
   text-align: center;
 }
