@@ -7,15 +7,14 @@
 	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
 </head>
 <body>
-	 <div class="nav">
-	<a href="../../index.html">回首頁</a>
-	<a href="../../map.html">網站地圖</a>
-	<a href="../../about.html">關於我</a>
-	<a href="../index.html">貼文</a>
-	<a href="../speednotes.html">速記</a>
-	<a href="../../links.html">連結</a>
+	<div class="nav">
+		<a href="../../index.html">回首頁</a>
+		<a href="../../map.html">網站地圖</a>
+		<a href="../../about.html">關於我</a>
+		<a href="../../index.html#posts">貼文</a>
+		<a href="../../index.html#notes">速記</a>
+		<a href="../../index.html#links">連結</a>
 	</div>
-
 
 <h1>用Mac下載iOS<br class="mobile-break">或iPadOS更新時，<br class="mobile-break">如何判斷下載進度</h1>
 <p>　　最近為了<a href="https://ios.gadgethacks.com/how-to/unjailbreak-your-iphone-restore-back-factory-settings-0155798/">解除iPadOS越獄</a>，我將iPad連上電腦，並準備下載更新。殊不知，因為線接觸不良，在下載更新時與iPad斷了連線。在連回電腦後，Mac上只有顯示「您的Mac正在下載iPad的軟體」，原本在下面的進度條卻不見了。</p>
@@ -29,12 +28,12 @@
 			while true<br>
 			do<br>
 			clear<br>
-			ls -lhrt ~/Library/iTunes/<span class="text-darkred">iPhone</span>\ Software\ Updates<br>
+			ls -lhrt ~/Library/iTunes/<span class="text-red">iPhone</span>\ Software\ Updates<br>
 			sleep 20<br>
 			done<br>
 		</code>
 		<div class="emphasis">
-			<em>註一：如果你的裝置是iPad，請將<span class="text-darkred">紅色部分</span>改成iPad。</em><br>
+			<em>註一：如果你的裝置是iPad，請將<span class="text-red">紅色部分</span>改成iPad。</em><br>
 			<em>註二：想要刷新速度快一點，可以將「sleep」後面的數字改小。</em>
 		</div>
 	</li>

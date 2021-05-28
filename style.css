@@ -28,6 +28,12 @@ html {
   max-width: 40rem;
   padding: 1rem;
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: rgb(33, 32, 32);
+    color:white;
+  }
+}
 
 /*以 .mobile_break 定義只在小螢幕上換行的地方（美觀）*/
 @media screen and (min-width: 500px) {
@@ -51,6 +57,7 @@ h3 {
   padding-top: 1rem;
 }
 
+/*網站入口的大標題*/
 h1.title {
   font-weight:bold;
   font-size:10vw;
@@ -63,25 +70,38 @@ h3.title {
   padding-top: 0;
   font-size:calc(10vw * 4 / 6.3);
 }
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   h1.title {
-    font-size:20vw;
+    font-size:18vw;
   }
   h3.title {
-    font-size:calc(20vw * 4 / 6.3);
+    font-size:calc(18vw * 4 / 6.3);
+  }
+}
+@media screen and (max-width: 300px) {
+  h1.title {
+    font-size:15vw;
+  }
+  h3.title {
+    font-size:calc(15vw * 4 / 6.3);
   }
 }
 .title {
   text-align: center;
 }
 
+/*貼文列表樣式*/
+.posts {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*內文Typography*/
 p,ol,ul,blockquote,div.nav {
   font-family: "Apple LiSung Light", "Noto Serif TC", "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho", "HGS明朝E", "MS Mincho", "PMingLiU", serif;
   line-height: 1.75;
   text-align: left;
 }
-
 a {
   text-decoration: none;
   padding-bottom: 0.15rem;
@@ -89,9 +109,33 @@ a {
   border-bottom-width: 1px;
 }
 
-.posts {
-  list-style-type: none;
-  padding-left: 0;
+.emphasis {
+  background-color: lightgoldenrodyellow;
+  padding:0.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  .emphasis {
+    background-color: rgb(59, 59, 42);
+    padding:0.5rem;
+  }
+}
+
+.caption {
+  background-color: gainsboro;
+  padding: 0.5rem;;
+}
+@media (prefers-color-scheme: dark) {
+  .caption {
+    background-color: rgb(54, 54, 54);
+    padding: 0.5rem;;
+  }
+}
+
+.time {
+  font-size: 10px;
+  padding: 3px;
+  border-radius: 5px;
+  border:0.5px solid;
 }
 
 .footer {
@@ -99,42 +143,17 @@ a {
   justify-content: space-between;
 }
 
-.emphasis {
-  background-color: lightgoldenrodyellow;
-  padding:0.5rem;
-}
-
-.caption {
-  background-color: gainsboro;
-  padding: 0.5rem;;
-}
-
-.time {
-  color: #000;
-  font-size: 10px;
-  padding: 3px;
-  border-radius: 5px;
-  border:0.5px solid #000;
-}
-
 div.footer > .time {
   font-size: 1rem;
 }
-
-.block {
-  display: block;
-}
-
-.text-darkred {
-  color: darkred;
-}
-
+/*圖像大小設定*/
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
+/*分隔線*/
 hr {
   border: 0.5px solid #000;
   margin: 2rem 0 1rem 0;
@@ -152,4 +171,18 @@ hr.notes:after {
     position: relative;
     font-size: 1em;
     padding: 0 0.25em;
+}
+
+/*美觀工具類*/
+.block {
+  display: block;
+}
+
+.text-red {
+  color: darkred;
+}
+@media (prefers-color-scheme: dark) {
+  .text-red {
+    color: rgb(255, 77, 77);
+  }
 }
