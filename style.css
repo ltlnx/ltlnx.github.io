@@ -60,15 +60,31 @@ h3 {
 /*網站入口的大標題*/
 h1.title {
   font-weight:bold;
-  font-size:10vw;
+  font-size:5vw;
   line-height:1em;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 h3.title {
-  margin-top: 0;
+  margin: 0;
   padding-top: 0;
-  font-size:calc(10vw * 4 / 6.3);
+  font-size:calc(5vw * 4 / 6.3);
+}
+p.nav {
+  margin: 0;
+  text-align: center;
+  font-size:calc(5vw * 4 / 13.6);
+}
+@media screen and (max-width: 1100px) {
+  h1.title {
+    font-size:8vw;
+  }
+  h3.title {
+    font-size:calc(8vw * 4 / 6.3);
+  }
+  p.nav {
+    font-size:calc(8vw * 4 / 13.6);
+  }
 }
 @media screen and (max-width: 600px) {
   h1.title {
@@ -77,6 +93,12 @@ h3.title {
   h3.title {
     font-size:calc(18vw * 4 / 6.3);
   }
+  p.nav {
+    font-size:calc(18vw * 4 / 13.6);
+  }
+  ul,ol {
+    padding-left: 20px;
+  }
 }
 @media screen and (max-width: 300px) {
   h1.title {
@@ -84,6 +106,9 @@ h3.title {
   }
   h3.title {
     font-size:calc(15vw * 4 / 6.3);
+  }
+  p.nav {
+    font-size:calc(15vw * 4 / 13.6);
   }
 }
 .title {
@@ -159,6 +184,13 @@ img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+/*iFrame（顯示速記用）*/
+iframe {
+  border:1px solid;
+  height: 400px;
+  width:100%;
 }
 
 /*分隔線*/
