@@ -75,9 +75,9 @@ h3.title {
 }
 div.title {
   margin: 0;
-  padding-top: 0.2rem;
+  padding-top: 1rem;
   text-align: center;
-  font-size:calc(5vw * 4 / 9.7);
+  font-size:calc(5vw * 4 / 13.8);
 }
 div.title a {
   padding-bottom: 0;
@@ -106,7 +106,7 @@ div.title a.current-page {
     font-size:calc(8vw * 4 / 6.3);
   }
   div.title {
-    font-size:calc(8vw * 4 / 9.9);
+    font-size:calc(8vw * 4 / 13.8);
   }
 }
 @media screen and (max-width: 600px) {
@@ -117,7 +117,7 @@ div.title a.current-page {
     font-size:calc(18vw * 4 / 6.3);
   }
   div.title {
-    font-size:calc(18vw * 4 / 9.9);
+    font-size:calc(18vw * 4 / 13.8);
   }
   ul,ol {
     padding-left: 20px;
@@ -131,7 +131,7 @@ div.title a.current-page {
     font-size:calc(15vw * 4 / 6.3);
   }
   div.title {
-    font-size:calc(15vw * 4 / 9.9);
+    font-size:calc(15vw * 4 / 13.8);
   }
 }
 
