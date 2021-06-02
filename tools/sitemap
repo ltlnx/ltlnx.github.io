@@ -1,7 +1,9 @@
 #!/bin/bash
-cd /Users/litelinux/Documents/GitHub/ltlnx.github.io
+cd ~/ltlnx.github.io/ltlnx.github.io
 # url configuration
 URL="https://ltlnx.github.io/"
+
+rm -rf sitemap.xml
 
 # values: always hourly daily weekly monthly yearly never
 # FREQ="weekly" removed for it is unused
