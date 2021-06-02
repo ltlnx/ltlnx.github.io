@@ -47,10 +47,10 @@ html {
 }
 
 /*標題*/
-h1,h2,h3,h4,h5,h6,strong,.time {
+h1,h2,h3,h4,h5,h6,.time,div.title {
   font-family: "更紗黑體 CL", sans-serif;
 }
-h3,h4,h5,h6,strong,.time {
+h3,h4,h5,h6,.time,div.title {
   font-weight:lighter;
 }
 h3 {
@@ -58,22 +58,45 @@ h3 {
 }
 
 /*網站入口的大標題*/
+.title {
+  text-align: center;
+}
 h1.title {
   font-weight:bold;
   font-size:5vw;
   line-height:1em;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin: 2rem 0 0;
+  padding: 0;
 }
 h3.title {
   margin: 0;
   padding-top: 0;
-  font-size:calc(5vw * 4 / 6.3);
+  font-size:calc(5vw * 4 / 6.2);
 }
-p.nav {
+div.title {
   margin: 0;
+  padding-top: 0.2rem;
   text-align: center;
-  font-size:calc(5vw * 4 / 13.6);
+  font-size:calc(5vw * 4 / 9.7);
+}
+div.title a {
+  padding-bottom: 0;
+}
+div.title a:visited,div.nav a:visited {
+  color:blue;
+}
+div.title a.current-page {
+  color:black;
+  font-weight: bold;
+  border:none;
+}
+@media (prefers-color-scheme: dark) {
+  div.title a:visited,div.nav a:visited {
+    color:rgb(35, 200, 255);
+  }
+  div.title a.current-page {
+    color:white;
+  }
 }
 @media screen and (max-width: 1100px) {
   h1.title {
@@ -82,8 +105,8 @@ p.nav {
   h3.title {
     font-size:calc(8vw * 4 / 6.3);
   }
-  p.nav {
-    font-size:calc(8vw * 4 / 13.6);
+  div.title {
+    font-size:calc(8vw * 4 / 9.9);
   }
 }
 @media screen and (max-width: 600px) {
@@ -93,8 +116,8 @@ p.nav {
   h3.title {
     font-size:calc(18vw * 4 / 6.3);
   }
-  p.nav {
-    font-size:calc(18vw * 4 / 13.6);
+  div.title {
+    font-size:calc(18vw * 4 / 9.9);
   }
   ul,ol {
     padding-left: 20px;
@@ -107,12 +130,9 @@ p.nav {
   h3.title {
     font-size:calc(15vw * 4 / 6.3);
   }
-  p.nav {
-    font-size:calc(15vw * 4 / 13.6);
+  div.title {
+    font-size:calc(15vw * 4 / 9.9);
   }
-}
-.title {
-  text-align: center;
 }
 
 /*貼文列表樣式*/
@@ -122,8 +142,10 @@ p.nav {
 }
 
 /*內文Typography*/
-p,ol,ul,blockquote,div,strong,em {
+p,ol,ul,blockquote,strong,em {
   font-family: "Apple LiSung Light", "Noto Serif TC", "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho", "HGS明朝E", "MS Mincho", "PMingLiU", serif;
+}
+p,ol,ul,blockquote {
   line-height: 1.75;
   text-align: left;
 }
@@ -133,8 +155,13 @@ a {
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
-strong {
-  font-weight:bold;
+a.external::after {
+  display:inline-block;
+  content: "";
+  width:0.7em;
+  height:0.7em;
+  background-image: url(external-link.svg);
+  margin:0 0 0 0.2em;
 }
 @media (prefers-color-scheme: dark) {
   a {
@@ -142,6 +169,9 @@ strong {
   }
   a:visited {
     color:rgb(186, 130, 238)
+  }
+  a.external::after {
+    background-image: url(external-link-dark.svg);
   }
 }
 
