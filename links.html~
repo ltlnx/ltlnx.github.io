@@ -51,7 +51,6 @@ content="臺灣的部落格中不常看到Blogroll（各個部落格的連結）
 					<li><a href="https://dorawei.xyz/">Dorawei</a>（中文Web Font、平面設計、ACG）</li>
 					<li><a href="https://max-everyday.com/">Max的每一天</a>（字體製作、LINE貼圖，做了一大堆開源字型，超強）</li>
 					<li><a href="https://jfsblog.com/">撰風旅食</a>（生活、旅行、科技、閱讀）</li>
-					<li><a href="https://ghostsinthelab.org/">Ghosts in the lab</a>（科技、Linux）</li>
 				</ul>
 			<h5>新聞網站</h5>
 				<ul>
@@ -63,6 +62,6 @@ content="臺灣的部落格中不常看到Blogroll（各個部落格的連結）
 				<li><a href="https://androidfilehost.com/?a=show&w=files&flid=296942">Instagram無廣告版</a></li>
 			</ul>
 	<p class="emphasis">名單持續增加中，若您發現不錯的部落格或網站，想增加的，請<a href="mailto:litelinux.org@gmail.com">聯絡我</a>。</p>
-</div>lab
+</div>
 <script src="countdown.js"></script>
 </body></html>

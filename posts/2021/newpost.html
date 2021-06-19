@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><title>編譯 Libchewing and Fcitx-chewing &mdash; Blog of Litelinux</title>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+</head>
+<body>
+	<div class="nav">
+		<a href="../../index.html">回貼文</a>
+		<a href="../../links.html">連結</a>
+		<a href="../../about.html">關於</a>
+		<a href="https://listed.to/p/UiSzX2uEDm" class="external">速記</a>
+	</div>
+
+<h1>如何編譯 Libchewing <br class="mobile-break">與 Fcitx-chewing</h1>
+<p>從Fcitx的Google Groups，<a href="https://groups.google.com/g/fcitx/c/ggYKSb-xFeA">「彭聖嚴」的留言</a>複製過來的，以便往後查閱。</p>
+<p>---以下為原留言</p>
+<p>系統: 全新灌在 VMware Workstation 12 player 的 lubuntu-14.04.4-desktop-amd64</p>
+<br>
+<ul>
+<li>安裝完＆軟體自動更新<br class="mobile-break"><code>sudo apt-get install fcitx fcitx-libs-dev</code></li>
+<li>切換鍵盤輸入法系統 從 ibus => fcitx  ( 右上角齒輪 > 系統設定值 > 語言支援 ）</li>
+<li>登入再登出</li>
+<li><code>sudo apt-get purge ibus-chewing</code></li>
+<li><code>sudo apt-get autoremove // 移除 libchewing3</code></li>
+<li><code>sudo apt-get install autoconf automake libtool cmake libclang-dev </code></li>
+<li><code>sudo apt-get install  build-essential libsqlite3-dev cmake git  pkg-config</code></li>
+<li><code>sudo apt-get install texinfo</code></li>
+</ul>
+<p>libchewing installation <strong>（不要用cmake! )</strong>
+<ul>
+<li><code>git clone https://github.com/chewing/libchewing.git</code></li>
+<li><code>cd libchewing</code></li>
+<li><code>./autogen.sh</code></li>
+<li><code>./configure --prefix=/usr</code></li>
+<li><code>make</code></li>
+<li><code>sudo make install</code></li>
+</ul>
+<p>fcitx-chewing installation</p>
+<ul>
+<li><code>git clone https://github.com/fcitx/fcitx-chewing.git</code></li>
+<li><code>cd fcitx-chewing</code></li>
+<li><code>mkdir build; cd build</code></li>
+<li><code>cmake .. </code></li>
+<li><code>make</code></li>
+<li><code>sudo make install</code></li>
+</ul>
+<p>
+點擊右上角小鍵盤 > 重新啟動
+應該就可以在右上角小鍵盤 > 輸入法 看到新酷音了（灑花）
+</p>
+<hr>
+<div class="footer">
+<a href="0314-好讀，我.html">上一篇</a>
+<span class="time">05/09</span>
+<span>　　　</span>
+</div>
+</body>
+</html>
