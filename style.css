@@ -1,27 +1,5 @@
 /* 基本字體設定，Inter */
-
-@font-face {
-  font-family: '更紗黑體 CL';
-  src: url('fonts/Sarasa-UI-CL-Light.eot');
-  src:
-    url('fonts/Sarasa-UI-CL-Light.woff2') format('woff2'),
-    url('fonts/Sarasa-UI-CL-Light.woff') format('woff'),
-    url('fonts/Sarasa-UI-CL-Light.ttf') format('truetype'),
-    url('fonts/Sarasa-UI-CL-Light.svg') format('svg');
-    font-weight: lighter;
-}
-
-@font-face {
-  font-family: '更紗黑體 CL';
-  src: url('fonts/Sarasa-UI-CL-Bold.eot');
-  src:
-    url('fonts/Sarasa-UI-CL-Bold.woff2') format('woff2'),
-    url('fonts/Sarasa-UI-CL-Bold.woff') format('woff'),
-    url('fonts/Sarasa-UI-CL-Bold.ttf') format('truetype'),
-    url('fonts/Sarasa-UI-CL-Bold.svg') format('svg');
-    font-weight: bold;
-}
-
+@import url(https://cdn.jsdelivr.net/gh/chiron-fonts/chiron-sans-hk@2.041/build/webfont/css/vf.css"/)
 /*全域*/
 html {
   margin: auto;
@@ -48,10 +26,12 @@ html {
 
 /*標題*/
 h1,h2,h3,h4,h5,h6,.time,div.title {
-  font-family: "更紗黑體 CL", sans-serif;
+  font-family: "Chiron Sans HK WS", sans-serif;
+  font-style: normal;
+  font-weight: 800;
 }
 h3,h4,h5,h6,.time,div.title {
-  font-weight:lighter;
+  font-weight:250;
 }
 h3 {
   padding-top: 1rem;
