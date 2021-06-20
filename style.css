@@ -2,7 +2,7 @@
 /*全域*/
 html {
   margin: auto;
-  max-width: 40rem;
+  max-width: 50rem;
   padding: 1rem;
 }
 @media (prefers-color-scheme: dark) {
