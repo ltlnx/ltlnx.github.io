@@ -1,9 +1,26 @@
-/* 基本字體設定，Inter */
 /*全域*/
 html {
   margin: auto;
-  max-width: 50rem;
   padding: 1rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  body {
+    display: block;
+    max-width:40rem;
+    margin:auto;
+  }
+  .title {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 750px) {
+  html {
+    max-width: 30rem;
+  }
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -11,16 +28,13 @@ html {
     color:white;
   }
 }
-
+/*網頁內容寬度*/
+.content {
+    width:50vw;
+}
 /*以 .mobile_break 定義只在小螢幕上換行的地方（美觀）*/
 @media screen and (min-width: 500px) {
   .mobile-break { display: none; }
-}
-
-@media screen and (max-width: 750px) {
-  html {
-    max-width: 30rem;
-  }
 }
 
 /*標題*/
@@ -29,88 +43,118 @@ h1,h2,h3,h4,h5,h6,.time,div.title {
   font-style: normal;
   font-weight: 800;
 }
-h3,h4,h5,h6,.time,div.title {
-  font-weight:250;
+    h3,h4,h5,h6,.time,div.title {
+    font-weight:300;
+    }
+        h3 {
+        padding-top: 1rem;
+        }
+
+/*首頁的瀏覽列*/
+div.homepage-nav {
+  margin: 0;
+  padding-top: 0.4rem;
+  font-size:24px;
 }
-h3 {
-  padding-top: 1rem;
+    div.homepage-nav a {
+    padding-bottom: 0;
+    }
+        div.homepage-nav a:visited,div.nav a:visited {
+        color:blue;
+        }
+        div.homepage-nav a.current-page {
+        color:black;
+        font-weight: bold;
+        border:none;
+        }
+
+@media (prefers-color-scheme: dark) {
+  div.homepage-nav a:visited,div.nav a:visited {
+    color:rgb(35, 200, 255);
+  }
+  div.homepage-nav a.current-page {
+    color:white;
+  }
 }
 
+div.homepage-text,span.time {
+  font-size: 16px;
+}
 /*網站入口的大標題*/
 .title {
-  text-align: center;
+  text-align: right;
+  padding-right:2rem;
 }
 h1.title {
   font-weight:bold;
   font-size:5vw;
   line-height:1em;
-  margin: 2rem 0 0;
-  padding: 0;
+  margin: 0;
 }
 h3.title {
-  margin: 0;
+  margin-top:0;
+  margin-bottom: auto;
   padding-top: 0;
-  font-size:calc(5vw * 4 / 6.2);
+  font-size:calc(5vw * 8/12.3);
 }
-div.title {
-  margin: 0;
-  padding-top: 1rem;
-  text-align: center;
-  font-size:calc(5vw * 4 / 13.8);
-}
-div.title a {
-  padding-bottom: 0;
-}
-div.title a:visited,div.nav a:visited {
-  color:blue;
-}
-div.title a.current-page {
-  color:black;
-  font-weight: bold;
-  border:none;
-}
-@media (prefers-color-scheme: dark) {
-  div.title a:visited,div.nav a:visited {
-    color:rgb(35, 200, 255);
-  }
-  div.title a.current-page {
-    color:white;
-  }
+h1.title,.content {
+  margin-top: 30vh;
 }
 @media screen and (max-width: 1100px) {
   h1.title {
     font-size:8vw;
   }
   h3.title {
-    font-size:calc(8vw * 4 / 6.3);
-  }
-  div.title {
-    font-size:calc(8vw * 4 / 13.8);
+    font-size:calc(8vw * 8/12.3);
   }
 }
-@media screen and (max-width: 600px) {
-  h1.title {
-    font-size:18vw;
-  }
-  h3.title {
-    font-size:calc(18vw * 4 / 6.3);
-  }
-  div.title {
-    font-size:calc(18vw * 4 / 13.8);
-  }
-  ul,ol {
-    padding-left: 20px;
-  }
+@media screen and (max-width: 900px) {
+    .title {
+        text-align:left;
+    }
+    h1.title {
+        margin-top: 10vw;
+    }
+    div.homepage-nav {
+    font-size:calc(8vw * 8 / 19.3);
+    }
+    .content {
+        margin:0;
+        width:initial;
+    }
+}
+@media screen and (max-width: 590px) {
+    .title,div.homepage-nav {
+        text-align:center;
+        padding:0;
+    }
+    h1.title {
+    font-size:15vw;
+    }
+    h3.title {
+    font-size:calc(15vw * 8/12.3);
+    }
+    div.homepage-nav {
+    font-size:calc(15vw * 8 / 19.3);
+    }
 }
 @media screen and (max-width: 300px) {
   h1.title {
     font-size:15vw;
   }
   h3.title {
-    font-size:calc(15vw * 4 / 6.3);
+    font-size:calc(15vw * 2 / 3.1);
   }
-  div.title {
+  div.homepage-nav {
     font-size:calc(15vw * 4 / 13.8);
+  }n
+}
+@media screen and (min-width: 2500px) {
+  h1.title {
+      font-size:64px;
+  }
+  h3.title {
+      font-size:calc(64px*4/3.1);
   }
 }
 
@@ -177,15 +221,17 @@ a.external::after {
 }
 
 .time {
-  font-size: 10px;
   padding: 3px;
   border-radius: 5px;
-  border:0.5px solid;
+  border:none;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 8px 10px 10px;
 }
 
 div.footer > .time {
