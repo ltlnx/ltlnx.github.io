@@ -1,0 +1,14 @@
+/*分隔線*/
+hr.notes {
+    overflow: visible; /* For IE */
+    text-align: center;
+    border: none;
+}
+
+hr.notes:after {
+    content: " ∗ ∗ ∗ ";
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    padding: 0 0.25em;
+}
