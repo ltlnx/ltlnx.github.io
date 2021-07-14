@@ -4,9 +4,6 @@ html {
   max-width:42rem;
   margin:auto;
 }
-body {
-
-}
 @media (prefers-color-scheme: dark) {
   html {
     background-color: rgb(33, 32, 32);
@@ -17,6 +14,11 @@ body {
 @media screen and (min-width: 600px) {
   .mobile-break { display: none; }
 }
+/*移掉小螢幕上的padding*/
+@media screen and (max-width: 600px) {
+  ol,ul {padding-left:18px;}
+}
+
 
 /*標題*/
 h1,h2,h3,h4,h5,h6,.time,div.title {
