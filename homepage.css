@@ -1,13 +1,13 @@
+html {
+  max-width:100%;
+}
 body {
   display: flex;
-  max-width:100%;
   justify-content: center;
 }
 @media screen and (max-width: 900px) {
   body {
     display: block;
-    max-width:40rem;
-    margin:auto;
   }
   .title {
     text-align: left;
@@ -50,11 +50,10 @@ div.homepage-text,span.time {
 /*網站入口的大標題*/
 .title {
   text-align: right;
-  padding-right:2rem;
 }
 h1.title {
   font-weight:bold;
-  font-size:5vw;
+  font-size:4.7vw;
   line-height:1em;
   margin: 0;
 }
@@ -62,34 +61,39 @@ h3.title {
   margin-top:0;
   margin-bottom: auto;
   padding-top: 0;
-  font-size:calc(5vw * 8/12.3);
+  font-size:calc(4.7vw * 8/12.3);
 }
 h1.title,.content {
   margin-top: 30vh;
 }
-@media screen and (max-width: 1100px) {
-  h1.title {
-    font-size:8vw;
-  }
-  h3.title {
-    font-size:calc(8vw * 8/12.3);
-  }
+.content {
+  margin-left:2rem;
 }
 @media screen and (max-width: 900px) {
-    .title {
-        text-align:left;
-    }
-    h1.title {
-        margin-top: 10vw;
-    }
-    div.homepage-nav {
-        font-size:calc(8vw * 8 / 19.3);
-        margin-top:
-    }
-    .content {
-        margin:0;
-        width:initial;
-    }
+  html {
+  max-width: 35rem;
+  }
+  div.header {
+    width:initial;
+  }
+  .title {
+    text-align:left;
+  }
+  h1.title {
+    margin-top: 10vw;
+    font-size:6.6vw;
+  }
+  h3.title {
+    font-size:calc(6.6vw * 8/12.3);
+  }
+  div.homepage-nav {
+    font-size:calc(8vw * 8 / 19.3);
+    margin-top:
+  }
+  .content {
+    margin:0;
+    width:initial;
+  }
 }
 @media screen and (max-width: 590px) {
     .title,div.homepage-nav {

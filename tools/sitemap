@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/ltlnx.github.io/ltlnx.github.io
+cd ~/ltlnx.github.io
 # url configuration
 URL="https://ltlnx.github.io/"
 
@@ -18,7 +18,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 
 # print urls
 IFS=$'\r\n' GLOBIGNORE='*' command eval "OPTIONS=($(cat $0_options))"
-gfind . -type f "${OPTIONS[@]}" -printf "%TY-%Tm-%Td%p\n" | \
+find . -type f "${OPTIONS[@]}" -printf "%TY-%Tm-%Td%p\n" | \
 while read -r line; do
   DATE=${line:0:10}
   FILE=${line:12}
