@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6,.time,div.title {
 
 /*內文Typography*/
 p,ol,ul,blockquote,strong,em {
-  font-family: "UD黎明體 R", "UD Reimin Regular", "Apple LiSung Light", "Noto Serif TC", "PMingLiU", serif;
+  font-family:  "森澤 UD 黎明體 R", "UD Reimin TC R", "Apple LiSung Light", "Noto Serif TC", "PMingLiU", serif;
 }
 p,ol,ul,blockquote {
   line-height: 1.75;
