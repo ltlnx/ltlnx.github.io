@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6,.time,div.title {
 
 /*內文Typography*/
 p,ol,ul,blockquote,strong,em {
-  font-family: "Apple LiSung Light", "Noto Serif TC", "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho ProN", "MS P明朝", "MS PMincho", "HGS明朝E", "MS Mincho", "PMingLiU", serif;
+  font-family: "UD黎明體 R", "UD Reimin Regular", "Apple LiSung Light", "Noto Serif TC", "PMingLiU", serif;
 }
 p,ol,ul,blockquote {
   line-height: 1.75;
