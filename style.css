@@ -17,6 +17,7 @@ html {
 /*移掉小螢幕上的padding*/
 @media screen and (max-width: 600px) {
   ol,ul {padding-left:18px;}
+  .reverse-mobile-break { display:none };
 }
 
 
