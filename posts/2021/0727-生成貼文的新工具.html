@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><title>生成貼文的新工具 &mdash; Blog of Litelinux</title>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chiron-fonts/chiron-sans-hk@2.041/build/webfont/css/vf.css">
+</head>
+<body>
+	<div class="nav">
+		<a href="../../index.html">回貼文</a>
+		<a href="../../links.html">連結</a>
+		<a href="../../about.html">關於</a>
+		<a href="https://listed.to/p/UiSzX2uEDm" class="external">速記</a>
+	</div>
+<h1>生成貼文的新工具</h1>
+<p>用bash寫的，很基本：</p>
+<pre><code class="block">#!/bin/bash
+# Short desc.: Add a new post to the blog.
+# Usage: newpost [title of post]
+basedir="$HOME/ltlnx.github.io"
+currentpost="$(date +%m%d)-$1.html"
+time="$(date +%m/%d)"
+lastpost="$(ls $basedir/posts/$(date +%Y) | grep [0-9] | tail -1)"
+cp "$basedir/posts/template.html" "$basedir/posts/$(date +%Y)/$currentpost"
+sed -i -e "s/TITLE/$1/" -e "s/LASTPOST/$lastpost/" -e "s|TIME|$time|" $currentpost
+sed -i "s|&lt;span&gt;　　　&lt;/span&gt;|&lt;a href=\"$currentpost\"&gt;下一篇&lt;/a&gt;|" $lastpost
+</code></pre>
+<p>
+還無法自動產生首頁貼文連結，之後再加。記錄一下。</p>
+
+<div class="footer">
+<a href="0714-i3wm中，在不同工作區中用同一個快速鍵開啟不同程式.html">上一篇</a>
+<span class="time">07/27</span>
+<span>　　　</span>
+</div>
+</body>
+</html>

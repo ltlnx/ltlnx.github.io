@@ -57,12 +57,6 @@ h1.title {
   line-height:1em;
   margin: 0;
 }
-h3.title {
-  margin-top:0;
-  margin-bottom: auto;
-  padding-top: 0;
-  font-size:calc(4.7vw * 8/12.3);
-}
 h1.title,.content {
   margin-top: 30vh;
 }
@@ -83,9 +77,6 @@ h1.title,.content {
     margin-top: 10vw;
     font-size:6.6vw;
   }
-  h3.title {
-    font-size:calc(6.6vw * 8/12.3);
-  }
   div.homepage-nav {
     font-size:calc(8vw * 8 / 19.3);
     margin-top:
@@ -103,9 +94,6 @@ h1.title,.content {
     h1.title {
     font-size:15vw;
     }
-    h3.title {
-    font-size:calc(15vw * 8/12.3);
-    }
     div.homepage-nav {
     font-size:calc(15vw * 8 / 19.3);
     }
@@ -114,9 +102,6 @@ h1.title,.content {
   h1.title {
     font-size:15vw;
   }
-  h3.title {
-    font-size:calc(15vw * 2 / 3.1);
-  }
   div.homepage-nav {
     font-size:calc(15vw * 4 / 13.8);
   }n
@@ -124,9 +109,6 @@ h1.title,.content {
 @media screen and (min-width: 2500px) {
   h1.title {
       font-size:64px;
-  }
-  h3.title {
-      font-size:calc(64px*4/3.1);
   }
 }
 
