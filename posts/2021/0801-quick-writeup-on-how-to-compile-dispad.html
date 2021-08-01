@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><title>Quick write-up on how to compile dispad &mdash; Blog of Litelinux</title>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chiron-fonts/chiron-sans-hk@2.041/build/webfont/css/vf.css">
+</head>
+<body>
+	<div class="nav">
+		<a href="../../index.html">回貼文</a>
+		<a href="../../links.html">連結</a>
+		<a href="../../about.html">關於</a>
+		<a href="https://listed.to/p/UiSzX2uEDm" class="external">速記</a>
+	</div>
+<h1>Quick write-up on how to compile dispad</h1>
+<p>From <a href="https://int3ractive.com/blog/2018/make-the-best-of-macbook-touchpad-on-ubuntu/#heading-disable-touchpad-while-typing-with-dispad">"Make the best out of Macbook touchpad on Ubuntu"</a>(int3ractive.com/blog)</p>
+    <code class="block">
+# install addition dev dependencies for dispad <br>
+sudo apt install libconfuse-dev libxi-dev <br>
+# get code <br>
+cd /tmp <br>
+git clone https://github.com/BlueDragonX/dispad.git <br>
+cd dispad <br>
+# compile the daemon <br>
+./configure <br>
+make <br>
+sudo make install
+    </code>
+</p>
+<p>
+The problem is, directly <code>make</code>ing would result in the following error:
+</p>
+<pre><code class="block">/usr/bin/ld: dispad.o: in function `cleanup':
+/home/ltlnx/dispad/src/dispad.c:53: undefined reference to `XCloseDisplay'
+/usr/bin/ld: dispad.o: in function `xlib_error_handler':
+/home/ltlnx/dispad/src/dispad.c:69: undefined reference to `XQueryExtension'
+/usr/bin/ld: /home/ltlnx/dispad/src/dispad.c:75: undefined reference to `XGetErrorText'
+/usr/bin/ld: dispad.o: in function `main':
+/home/ltlnx/dispad/src/dispad.c:158: undefined reference to `XOpenDisplay'
+/usr/bin/ld: /home/ltlnx/dispad/src/dispad.c:183: undefined reference to `XSetErrorHandler'
+/usr/bin/ld: conf.o: in function `config_file_parse':
+/home/ltlnx/dispad/src/conf.c:116: undefined reference to `cfg_init'
+/usr/bin/ld: /home/ltlnx/dispad/src/conf.c:117: undefined reference to `cfg_parse'
+/usr/bin/ld: /home/ltlnx/dispad/src/conf.c:118: undefined reference to `cfg_free'
+/usr/bin/ld: control.o: in function `control_get_value':
+/home/ltlnx/dispad/src/control.c:36: undefined reference to `XGetDeviceProperty'
+/usr/bin/ld: control.o: in function `control_init':
+/home/ltlnx/dispad/src/control.c:126: undefined reference to `XInternAtom'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:130: undefined reference to `XCloseDisplay'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:130: undefined reference to `XCloseDisplay'
+/usr/bin/ld: control.o: in function `control_set_value':
+/home/ltlnx/dispad/src/control.c:47: undefined reference to `XChangeDeviceProperty'
+/usr/bin/ld: control.o: in function `control_free':
+/home/ltlnx/dispad/src/control.c:141: undefined reference to `XCloseDevice'
+/usr/bin/ld: control.o: in function `control_set_value':
+/home/ltlnx/dispad/src/control.c:47: undefined reference to `XChangeDeviceProperty'
+/usr/bin/ld: control.o: in function `control_load_devices':
+/home/ltlnx/dispad/src/control.c:56: undefined reference to `XInternAtom'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:59: undefined reference to `XListInputDevices'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:67: undefined reference to `XOpenDevice'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:73: undefined reference to `XListDeviceProperties'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:86: undefined reference to `XFree'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:89: undefined reference to `XCloseDevice'
+/usr/bin/ld: /home/ltlnx/dispad/src/control.c:104: undefined reference to `XFreeDeviceList'
+/usr/bin/ld: listen.o: in function `listen_init':
+/home/ltlnx/dispad/src/listen.c:72: undefined reference to `XGetModifierMapping'
+/usr/bin/ld: /home/ltlnx/dispad/src/listen.c:80: undefined reference to `XFreeModifiermap'
+/usr/bin/ld: /home/ltlnx/dispad/src/listen.c:82: undefined reference to `XQueryKeymap'
+/usr/bin/ld: listen.o: in function `listen_activity':
+/home/ltlnx/dispad/src/listen.c:43: undefined reference to `XQueryKeymap'
+collect2: 錯誤：ld 回傳 1
+make[1]: *** [Makefile:327：dispad] 錯誤 1
+make[1]: 離開目錄「/home/ltlnx/dispad/src」
+make: *** [Makefile:331：all-recursive] 錯誤 1
+</code></pre>
+<p>It seems like the linker has some problems finding the libraries. The solution is to call the libraries manually:</p>
+<ol> (assuming we're in the dispad directory) 
+    <li><code>cd src</code></li>
+    <li>Open <code>Makefile</code> with your editor</li>
+    <li>Find <code>CFLAGS= -g -O2</code></li>
+    <li>Append <code>-L/usr/X11R6/lib -lm -lpthread -lX11 -L/usr/lib -lGL -lGLU -lXi -lXmu -lconfuse</code></li>
+    <li>Save, return to parent directory</li>
+    <li><code>make</code></li>
+</ol>
+<p>Should succeed, then proceed to <code>make install</code>. <code>dispad</code> should be working now.</p>
+<p>links:<ul>
+<li><a>https://stackoverflow.com/questions/37545135/add-libconfuse-to-eclipse-ccross-compilation</a></li>
+<li><a>https://stackoverflow.com/questions/33327727/cimg-library-linking-error</a></li>
+<li><a>https://community.khronos.org/t/linking-problem/47052/4</a></li>
+</ul></p>
+<div class="footer">
+<a href="0714-i3wm中，在不同工作區中用同一個快速鍵開啟不同程式.html">上一篇</a>
+<span class="time">08/01</span>
+<span>　　　</span>
+</div>
+</body>
+</html>

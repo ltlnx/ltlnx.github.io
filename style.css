@@ -83,7 +83,7 @@ a.external::after {
   }
 }
 pre {
-    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: pre-wrap;
 }
 code {
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace;
