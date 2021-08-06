@@ -4,7 +4,7 @@ html {
 }
 /*網頁內容寬度*/
 body {
-    width:50vw;
+    max-width:50vw;
     margin:auto;
 }
 /*網站入口的大標題*/
@@ -88,6 +88,9 @@ div.homepage-text,span.time {
   div.header {
     width:initial;
   }
+  .title {
+    font-size:18vw;
+  }
   div.homepage-nav {
     font-size:calc(8vw * 8 / 19.3);
   }
@@ -96,10 +99,17 @@ div.homepage-text,span.time {
     width:initial;
   }
 }
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 600px) {
+  body{
+    max-width:100%;
+    width:100%;
+  }
     .title,div.homepage-nav {
         text-align:center;
         padding:0;
+    }
+    .title {
+      font-size:30vw;
     }
     div.homepage-nav {
     font-size:calc(15vw * 8 / 19.3);
