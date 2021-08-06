@@ -37,10 +37,10 @@ div.homepage-nav {
         }
 /*首頁主要連結*/
 a.link {
-  color: initial;
+  color: inherit;
 }
 div.link {
-  border: 1px solid black;
+  border: 1px solid;
   padding: 3rem;
   margin: 0.3rem;
 }
