@@ -3,6 +3,7 @@ html {
   padding: 1rem;
   max-width:42rem;
   margin:auto;
+  font-size:15px;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -22,16 +23,17 @@ html {
 
 
 /*標題*/
-h1,h2,h3,h4,h5,h6,.time,div.title {
+h1,h2,h3,h4,h5,h6,.time,div.nav {
   font-family: "Chiron Sans HK WS", sans-serif;
   font-style: normal;
   font-weight: 800;
 }
-    h3,h4,h5,h6,.time,div.title {
+    h3,h4,h5,h6,.time,div.nav {
     font-weight:300;
     }
         h3 {
-        padding-top: 1rem;
+          margin: 0.5em 0 0;
+          padding: 0;
         }
 
 /*內文Typography*/
@@ -84,6 +86,7 @@ a.external::after {
 }
 pre {
     white-space: pre-wrap;
+    word-break: break-all;
 }
 code {
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace;

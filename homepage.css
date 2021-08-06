@@ -1,21 +1,22 @@
+@import url('https://rsms.me/inter/inter.css');
 html {
   max-width:100%;
 }
-body {
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width: 900px) {
-  body {
-    display: block;
-  }
-  .title {
-    text-align: left;
-  }
-}
 /*網頁內容寬度*/
-.content {
+body {
     width:50vw;
+    margin:auto;
+}
+/*網站入口的大標題*/
+.title {
+  font: 900 10vw/1 'Inter',sans-serif;
+  letter-spacing: -0.06em;
+  margin: 0;
+}
+@supports (font-variation-settings: normal) {
+  .title { 
+    font-family: 'Inter var', sans-serif; 
+  }
 }
 /*首頁的瀏覽列*/
 div.homepage-nav {
@@ -34,7 +35,40 @@ div.homepage-nav {
         font-weight: bold;
         border:none;
         }
-
+/*首頁主要連結*/
+a.link {
+  color: initial;
+}
+div.link {
+  border: 1px solid black;
+  padding: 3rem;
+  margin: 0.3rem;
+}
+div.link p {
+  margin:0;
+}
+.link-title {
+  font-family: "Chiron Sans HK WS", sans-serif;
+  font-size: 3rem;
+  letter-spacing: -0.045em;
+  font-weight: 900;
+}
+.link-subtitle {
+  font-family: Inter,sans-serif;
+  font-size:2.7rem;
+  letter-spacing: -0.05em;
+  font-weight:800;
+}
+.transform-90deg {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+.noheight {
+  line-height: 1;
+}
+.flex {
+  display: flex;
+}
 @media (prefers-color-scheme: dark) {
   div.homepage-nav a:visited,div.nav a:visited {
     color:rgb(35, 200, 255);
@@ -47,39 +81,15 @@ div.homepage-nav {
 div.homepage-text,span.time {
   font-size: 16px;
 }
-/*網站入口的大標題*/
-.title {
-  text-align: right;
-}
-h1.title {
-  font-weight:bold;
-  font-size:4.7vw;
-  line-height:1em;
-  margin: 0;
-}
-h1.title,.content {
-  margin-top: 30vh;
-}
-.content {
-  margin-left:2rem;
-}
 @media screen and (max-width: 900px) {
-  html {
+  body {
   max-width: 35rem;
   }
   div.header {
     width:initial;
   }
-  .title {
-    text-align:left;
-  }
-  h1.title {
-    margin-top: 10vw;
-    font-size:6.6vw;
-  }
   div.homepage-nav {
     font-size:calc(8vw * 8 / 19.3);
-    margin-top:
   }
   .content {
     margin:0;
@@ -91,23 +101,17 @@ h1.title,.content {
         text-align:center;
         padding:0;
     }
-    h1.title {
-    font-size:15vw;
-    }
     div.homepage-nav {
     font-size:calc(15vw * 8 / 19.3);
     }
 }
 @media screen and (max-width: 300px) {
-  h1.title {
-    font-size:15vw;
-  }
   div.homepage-nav {
     font-size:calc(15vw * 4 / 13.8);
-  }n
+  }
 }
 @media screen and (min-width: 2500px) {
-  h1.title {
+  .title {
       font-size:64px;
   }
 }
@@ -117,3 +121,4 @@ h1.title,.content {
   list-style-type: none;
   padding-left: 0;
 }
+
