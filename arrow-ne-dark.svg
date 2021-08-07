@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 659 659"
+   id="svg2"
+   version="1.1"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="arrow-ne-dark.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs550" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="716"
+     inkscape:window-height="859"
+     id="namedview548"
+     showgrid="false"
+     inkscape:zoom="0.72776573"
+     inkscape:cx="296.79881"
+     inkscape:cy="344.20417"
+     inkscape:window-x="720"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:pagecheckerboard="0" />
+  <metadata
+     id="metadata546">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:#000000;stroke-width:3.32618"
+     d="m 660.18308,329.29191 c 1.7e-4,-181.11055 0.40284,-254.713119 0.89481,-163.56126 0.49198,91.15186 0.49184,239.33323 -3e-4,329.29192 -0.49215,89.95869 -0.89468,15.37989 -0.89451,-165.73066 z"
+     id="path123" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Layer 1"
+     style="display:inline">
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.56115px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 648.70135,1.4638726 165.84005,8.4838093 2.6279598,188.39298 332.30364,188.93435 4.4826385,522.7696 147.29322,657.24715 475.57206,324.68779 481.1361,644.52631 657.33094,464.61715 Z"
+       id="path1367" />
+    <path
+       style="fill:#ffffff;stroke-width:1.37407"
+       d="M 75.57377,590.79465 C 36.653279,554.14926 4.8092399,523.55726 4.8092399,522.81243 c 0,-0.74484 72.9630401,-75.64508 162.1400901,-166.44502 89.17705,-90.79992 162.34536,-165.61526 162.59625,-166.2563 0.25089,-0.64105 -73.39777,-1.32262 -163.6637,-1.51462 L 1.762018,188.24739 83.388077,98.245901 C 156.65951,17.456288 165.46477,8.2124505 169.41691,7.9321493 171.83843,7.7604051 241.21773,6.6678329 323.59314,5.5042111 405.96855,4.3405891 512.86575,2.7581885 561.14247,1.9877652 609.4192,1.2173419 649.05395,0.76408695 649.21967,0.98053202 649.38541,1.1969771 651.16743,93.81453 653.17971,206.79732 c 2.01228,112.98278 4.04222,217.17391 4.51096,231.53582 l 0.85227,26.11257 -88.38239,90.3088 c -48.6103,49.66984 -88.6963,89.99488 -89.07998,89.6112 -0.71151,-0.71149 -5.41974,-247.84778 -5.57011,-292.37515 -0.0478,-14.17692 -0.61196,-24.31118 -1.33846,-24.0462 -0.69064,0.25191 -74.33291,74.50314 -163.64949,165.00273 -89.31659,90.49959 -162.79663,164.52916 -163.28899,164.51014 -0.49237,-0.019 -32.73926,-30.01719 -71.65975,-66.66258 z"
+       id="path90" />
+  </g>
+</svg>

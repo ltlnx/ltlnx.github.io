@@ -43,6 +43,8 @@ div.link {
   border: 1px solid;
   padding: 3rem;
   margin: 0.3rem;
+  display: flex;
+  justify-content: space-between;
 }
 div.link p {
   margin:0;

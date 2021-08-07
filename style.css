@@ -54,13 +54,17 @@ a {
 a:visited {
   color:#4B0082;
 }
-a.external::after {
+.arrow-ne {
+  position: relative;
+  top:0.45em;
+}
+.arrow-ne::after {
   display:inline-block;
   content: "";
-  width:0.7em;
-  height:0.7em;
-  background-image: url(external-link.svg);
-  margin:0 0 0 0.2em;
+  width:5.7rem;
+  height:5.7rem;
+  background-image: url(arrow-ne.svg);
+  margin:0;
 }
 @media (prefers-color-scheme: dark) {
   a {
@@ -69,8 +73,8 @@ a.external::after {
   a:visited {
     color:rgb(186, 130, 238)
   }
-  a.external::after {
-    background-image: url(external-link-dark.svg);
+  .arrow-ne::after {
+    background-image: url(arrow-ne-dark.svg);
   }
 }
 
