@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/ltlnx.github.io
+cd $HOME/ltlnx.github.io
 # url configuration
 URL="https://ltlnx.github.io/"
 
