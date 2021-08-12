@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6,.time,div.nav {
 
 /*內文Typography*/
 p,ol,ul,blockquote,strong,em {
-  font-family:  "森澤 UD 黎明體 R", "UD Reimin TC R", "Apple LiSung Light", "Noto Serif TC", "PMingLiU", serif;
+  font-family:  "Apple LiSung Light", "Noto Serif TC", "PMingLiU", serif;
 }
 p,ol,ul,blockquote {
   line-height: 1.75;
@@ -93,7 +93,7 @@ pre {
     word-break: break-all;
 }
 code {
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace;
+  font-family: "SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier",monospace;
   font-size: 0.8rem;
   color: #4070a0;
   position:relative;
