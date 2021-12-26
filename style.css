@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6,.time,div.nav {
 
 /*內文Typography*/
 p,ol,ul,blockquote,strong,em {
-  font-family:  "Apple LiSung Light", "Noto Serif TC", "PMingLiU", serif;
+  font-family: "Chiron Sans HK WS", sans-serif;
 }
 p,ol,ul,blockquote {
   line-height: 1.75;

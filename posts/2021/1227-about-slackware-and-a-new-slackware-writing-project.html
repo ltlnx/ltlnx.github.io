@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><title>1227-關於Slackware，與Slackware之路寫作計畫 &mdash; Blog of Litelinux</title>
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content=""/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:image" content=""/>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chiron-fonts/chiron-sans-hk@2.041/build/webfont/css/vf.css">
+</head>
+<body>
+	<div class="nav">
+		<a href="../../index.html">回首頁</a>
+		<a href="../../posts.html">回貼文</a>
+		<a href="../../links.html">連結</a>
+	</div>
+<h1>關於Slackware，與Slackware之路寫作計畫</h1>
+<p>2012～3年，我初次接觸Linux，當時先從Ubuntu用起，因為速度太慢再換到Xubuntu，後續又用了Lubuntu、Bodhi Linux、Slitaz、Puppy Linux等各種千奇百怪的發行版。Slackware則是因為看了維基百科的Linux歷史，「最老的活躍Linux發行版」；再看了Slackware的Distrowatch，看起來套件還算新，於是就下載來用了第一次。但當時不太喜歡KDE4的界面，加上Slackware對於新手不太友善，最後記得是因為筆電闔起來無法休眠，我也不知道怎麼修，就結束了我與Slackware共處的短短幾天。</p>
+<p>時過境遷，2020年尾我買了一台二手Macbook，用了MacOS一小陣子，覺得Big Sur實在用不順手，就把MacOS刷掉，裝了Fedora。但用了一兩個月後，在一次更新中，Wifi等等的功能一夕之間全部失效，我也懶得修，於是又想起了Slackware。這次裝的是-current，KDE更新到了Plasma 5，不論在實用性或美觀上面都比KDE4好很多，使用上跟同期GNOME比起來也比較順手。再加上Slackware預設裝了幾乎所有我會用到（和許多其實用不太到）的東西，因此裝完之後就可以馬上開始使用了。當然他還是有許多眉眉角角需要修改、注意，但此時的我對於Linux上的問題解決也比較熟悉，因此不是什麼大問題。以下介紹一些我這兩個月使用Slackware下來遇到的趣事與痛點。</p>
+<p>決定要用Slackware之後，我馬上遇到第一個問題：到底要去哪下載最新的Slackware安裝檔？顯然，最後更新時間是2016（！）的<a href="http://slackware.com/">官方網站</a>絕對不是答案。接著我上各種地方尋找答案，不知在哪發覺了：有個人綽號AlienBob，他的<a href="https://slackware.nl/">伺服器</a>上可以找到最新版的ISO，而且是每天更新。因為我的電腦是64位元的Mac，我便下載了64位元版的ISO。接下來插入USB、安裝的部份，它使用的是文字介面的安裝程式，因此可能長得不是那麼熟悉，但每一個步驟指示清楚，並不會讓人覺得困難。</p>
+<p>安裝完後開機，第一個迎面而來的是文字版的登入畫面。我心想：難道沒有圖形界面的登入畫面嗎？後來才知道不是，而是要事先修改某個檔案（<code>/etc/inittab</code>），才能在開機時就開進圖形登入畫面。但其實在文字界面登入後，輸入<code>startx</code>也會開啟圖形界面，不一定要在圖形界面登入。更何況，在文字界面登入後，會顯示一段有趣的文字，每次登入心情都可以變好一些。但是，畢竟文字界面是有諸多限制的，如不能顯示中文、不能輸入中文等等，因此開進圖形界面是必然的。</p>
+<p>執行<code>startx</code>、開進圖形界面後，迎來的是安裝時選擇的KDE Plasma桌面環境。KDE在各種魔改之前，就已經很像Windows，但比Windows好看、好用一些。剛從Fedora的GNOME環境轉過來，對我來說使用者界面是一大升級。裡頭有些程式好用、有些難用至極，或是好聽點來說，需要適應一下。最常用的程式非瀏覽器莫屬，而我最常用的瀏覽器——Firefox也已經包含在內，雖稱不上好用，但至少是堪用的。其他常用的還有Kate、KMail跟Konsole，倒是預裝的許多遊戲我一直沒去玩。</p>
+<p>而快轉四個月，到了現在，我可以說Slackware是我用過數一數二穩的Linux發行版。第一個，他不會因為一個Update就搞砸所有東西；二，他相當好理解，也就相當好控制，遇到問題也有固定的跡象可以尋線解決；三，他的環境很容易管理，用起來也蠻爽的。以上總結我目前用Slackware用下來的感覺。目前最大的問題是有時候從Suspend要打開螢幕恢復時，螢幕會維持暗的大概一分多鐘，然後才會亮起來。目前還沒找到能完全解決問題的方法。</p>
+<p>行文至此，我想宣佈一個重大消息：我的「Slackware之路」連載即將開始。在這之前，Slackware的繁體中文資源少之又少，而且大部分甚至是10幾年前成文的；在簡體中文的世界亦然，只是查資料的過程中找到了<a href="https://slackwarecn.github.io/About/">Slackware中文社區計畫</a>與<a href="https://slackwarecn.gitbook.io/slackbook_cn">Slackbook中文版</a>、<a href="https://www.onesl.com/web/ylsh.html">絲路網</a>的少許文章，與<a href="https://digwtx.com/slackware-14-basic.html">一些</a><a href="https://havee.me/linux/2013-11/try-slackware.html">零零星星的</a><a href="https://www.jianshu.com/p/e9bb05f8f357">Slackware文章</a>。但總體來說，一個不斷更新的Slackware文庫，是中文世界所缺乏的。因此這個連載計畫即是補足這個缺憾。隨著Slackware 15<a href="https://www.linuxquestions.org/questions/slackware-14/mr-volkerding-please-release-15-0-as-soon-as-possible-even-sooner-4175703386/page24.html#post6310775">發行在即</a>，我認為即時推行應該能幫助更多人跳上Slackware這條船。</p>
+<p>以上報告。</p>
+
+<div class="footer">
+<a href="0912-untitled.html">上一篇</a>
+<span class="time">12/27</span>
+<span>　　　</span>
+</div>
+</body>
+</html>
