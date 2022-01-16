@@ -8,12 +8,12 @@ year=$(date +%Y)
 basedir="$HOME/ltlnx.github.io"
 currentpost="$(date +%m%d)-$(echo "$*" | sed "s| |-|").html"
 echo $currentpost
-lastpost="$(ls $basedir/posts/$year | grep [0-9] | tail -1)"
+lastpost="$(ls $basedir/posts/2021 | grep [0-9] | tail -1)"
 
 # Copy template to new post
 cp "$basedir/posts/template.html" "$basedir/posts/$year/$currentpost"
 
 # Update footer
 sed -i -e "s|TITLE|$1|" -e "s|LASTPOST|$lastpost|" -e "s|TIME|$time|" "$basedir/posts/$year/$currentpost"
-sed -i "s|<span>　　　</span>|<a href=\"$currentpost\">下一篇</a>|" "$basedir/posts/$year/$lastpost"
+sed -i "s|<span>　　　</span>|<a href=\"$currentpost\">下一篇</a>|" "$basedir/posts/2021/$lastpost"
 

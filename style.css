@@ -1,7 +1,7 @@
 /*全域*/
 html {
   padding: 1rem;
-  max-width:760px;
+  max-width:900px;
   margin:auto;
   font-size:15px;
 }
@@ -130,6 +130,7 @@ code.block {
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
+  clear: both;
   padding: 8px 10px 10px;
   background-color: #eee;
 }
