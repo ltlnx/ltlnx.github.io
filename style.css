@@ -3,7 +3,7 @@ html {
   padding: 1rem;
   max-width:900px;
   margin:auto;
-  font-size:15px;
+  font-size:16px;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -37,12 +37,20 @@ h1,h2,h3,h4,h5,h6,.time,div.nav {
         }
 
 /*內文Typography*/
-p,ol,ul,blockquote,strong,em {
+p,ol,ul,blockquote,strong,em,figcaption {
   font-family: "Chiron Sans HK WS", sans-serif;
 }
 p,ol,ul,blockquote {
   line-height: 1.75;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+    h1,h2,h3,h4,h5,h6,p,ol,ul,blockquote {
+        clear: both;
+    }
+    figure {
+        float: none;
+    }
 }
 a {
   text-decoration: none;
@@ -81,6 +89,9 @@ a:visited {
 .emphasis {
   background-color: lightgoldenrodyellow;
   padding:0.5rem;
+}
+.emphasis, .block {
+    clear: both;
 }
 @media (prefers-color-scheme: dark) {
   .emphasis {
@@ -151,6 +162,10 @@ img {
   max-height: 100%;
   object-fit: contain;
 }
+figcaption {
+  text-align: center;
+  margin-top: 0.8rem;
+}
 
 /*美觀工具類*/
 .block {
@@ -164,4 +179,16 @@ img {
   .text-red {
     color: rgb(255, 77, 77);
   }
+}
+.float-right {
+    float: right;
+}
+.float-left {
+    float: left;
+}
+
+@media screen and (max-width: 600px) {
+    .float-right, .float-left {
+        float: none;
+    }
 }
