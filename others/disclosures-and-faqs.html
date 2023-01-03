@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Disclosures and FAQ</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://blog2.ltlnx.tw/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://blog2.ltlnx.tw/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://blog2.ltlnx.tw/index.html'>Home</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/links.html'>Links</a></li>
+                <li><a href='https://blog2.ltlnx.tw/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/about.html'>About</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a href="index.html">Others
+其他</a> &gt;</p>
+</div>
+<main>
+<h1 id="disclosures-and-faq">Disclosures and FAQ</h1>
+<p>This page is created due to a desperate need to document some stuff I
+implemented on the site. At first I crammed them in the <a
+href="about.html">about</a> page, but found out that the details are
+getting too long and boring, that it deserves a separate page. So here
+they are.</p>
+<hr />
+<h3 id="website-technology">Website Technology</h3>
+<p><strong>The Blogging System</strong><br />
+Blogging is part of the fun, and creating and modifying a reading
+experience is another. I’ve tried out <a
+href="https://gohugo.io/">Hugo</a> and <a
+href="https://hexo.io/">Hexo</a>, and they are honestly pretty great and
+flexible. But since I simply had to have more control over the styling,
+I eventually retracted to writing my own pages in HTML. The current goal
+is to write some shell scripts to prevent myself from writing raw HTML
+again. (If you haven’t written pure HTML with CSS, do give it a try.
+It’s fun and horrible at the same time.)</p>
+<p>Currently my update script (or a horrible code noodle, depending on
+your viewpoint) does the following:</p>
+<ul>
+<li>Update the content with <a href="https://pandoc.org">Pandoc</a></li>
+<li>Add outer HTML (headers and footers)</li>
+<li>Create meta (as in “post list”) pages like the <a
+href="../blerbs/index.html">Blerbs</a> page</li>
+<li>Create the homepage</li>
+</ul>
+<p>As an addition, I utilize other bash scripts to create an RSS feed
+and the sitemap. They are all modified scripts from others but I
+retained the copyright notice in the scripts. They can be viewed in the
+<a href="https://codeberg.org/ltlnx/pages-src">pages-src</a>
+repository.</p>
+<p><strong>Why Codeberg?</strong><br />
+This one boils down to personal preference. I had put my pages on <a
+href="https://github.com">Github</a>, but did not feel comfortable with
+it anymore (megacorp stuff). In reality anywhere outside of megacorps
+would be fine, but I chose Codeberg because of its similarities to the
+Github Pages workflow. In a parallel world I’d probably choose <a
+href="https://srht.site/">Sourcehut Pages</a>.</p>
+<p><strong>Typography and Fonts</strong><br />
+The <a href="https://web.mit.edu/jmorzins/www/fonts.html">web-safe
+font</a> chosen is DejaVu Sans and Verdana for headlines, and Noto Sans,
+Segoe UI and Lucida Grande for text. Serif and monospaced fonts are set
+to <code>serif</code> and <code>monospace</code>, which in turn are set
+as your browser’s defaults.</p>
+<p>To set up default <code>sans-serif</code>, <code>serif</code> and
+<code>monospace</code> fonts:</p>
+<ul>
+<li>Here is the Chrome settings link: <a
+href="chrome://settings/fonts">chrome://settings/fonts</a>.</li>
+<li>For Firefox, go to <a
+href="about:preferences#general">about:preferences#general</a> ￫ “Fonts”
+￫ “Advanced” to set up fonts for different languages.</li>
+<li>For other browsers, please refer to your browser’s
+documentation.</li>
+</ul>
+<p>As for the typography… I’ve tried to implement a grid system by using
+<code>--var</code> variables, but the result is not satisfactory. The
+<code>--var</code>s are substituted with exact values, and I think I’d
+redo the grid once I learn more about it. Currently it will stay
+as-is.</p>
+<p><strong>Comments — Why no comments section?</strong><br />
+I haven’t found a satisfactory way to implement comments without adding
+hundreds of kilobytes to the load. Currently an average page
+<em>plus</em> CSS weighs about 4–5 kilobytes, and I’m not ready to let
+the extra bytes seep in, so currently there’s no comment section.
+However, I’m looking toward adding it to every post as a separate page,
+or maybe implement a guestbook page. So it’s still possible that there
+will be one in the future.</p>
+<h3 id="disclosures">Disclosures</h3>
+<p>These are the things that has possibility of shaping my opinions.</p>
+<p><strong>Taiwan</strong><br />
+I grew up in <strong>Taiwan</strong>, and my world view and common sense
+are heavily influenced by this island.</p>
+<p><strong>Views on Software</strong><br />
+I root for <strong>FOSS software</strong>, even if they are slightly
+inferior to their proprietary counterparts; I use the GIMP and Inkscape
+for creating graphics, LibreOffice and Pandoc for document preparation,
+hardened Firefox as the browser, and Kdenlive for video editing. (The
+hardest part is video editing software, as most FOSS solutions of this
+regard are either too unstable or too simple. One of the most featureful
+FOSS editors, Kdenlive, renders <em>very</em> slow and crashes often for
+example.)</p>
+<p><strong>Affiliates &amp; Advertising</strong><br />
+Currently there is no affiliates and advertising whatsoever. If I did
+accept some kind of affiliation I’ll update it here.</p>
+<p>(<em>That’s it for now. I’d update the list if necessary</em>)</p>
+<p><em>Last updated: 2022-06-30</em></p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://blog2.ltlnx.tw/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>

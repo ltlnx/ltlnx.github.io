@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Substitution Only in Capture Groups in Perl</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://blog2.ltlnx.tw/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://blog2.ltlnx.tw/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://blog2.ltlnx.tw/index.html'>Home</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/links.html'>Links</a></li>
+                <li><a href='https://blog2.ltlnx.tw/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/about.html'>About</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a href="index.html">Blerbs
+胡言亂語</a> &gt;</p>
+</div>
+<main>
+<h1 id="substitution-only-in-capture-groups-in-perl">Substitution Only
+in <br class="wb">Capture Groups in Perl</h1>
+<p>The title may not explain it well, so here’s an example. A regular
+perl substitution probably looks like this:</p>
+<pre><code>$ echo &quot;hello world&quot; | perl -pe &quot;s/h/b/g&quot;
+bello world</code></pre>
+<p>The <code>h</code> part is the target we want to substitute, and
+<code>b</code> is the substitution. If we add stuff to the original
+string, and run the same substitution:</p>
+<pre><code>$ echo &#39;hello `hello world` world&#39; | perl -pe &quot;s/h/b/g&quot;
+bello `bello world` world</code></pre>
+<p>The <code>hello</code> outside and inside the backticks are all
+affected. If I only want to run the substitution inside the
+backtick:</p>
+<pre><code>$ echo &#39;hello `hello world` world&#39; | perl -pe &#39;s{(`.*?`)}{$1 =~ s/h/b/gr}ge&#39;
+hello `bello world` world</code></pre>
+<p>Let’s break down what we did here. First of all, we changed the
+convention of separating targets and subtitutions from
+<code>s/a/b/g</code> to <code>s{a}{b}g</code>. These two are just
+different ways to express the same command. Also, we changed from
+double-quotes (<code>""</code>) to single-quotes (<code>''</code>) to
+avoid our shell evaluating <code>$1</code>, etc., and leave them to
+perl.</p>
+<p>On the target side, we targeted all text inside backticks
+(<code>{(`.*?`)}</code>) and put them inside a capture group. On the
+substitution side, we did a trick — write the substitution as code. The
+<code>{$1 =~ s/h/b/gr}</code> grabs the first capture group (all text
+inside backticks in our case), substituted <code>h</code> with
+<code>b</code>, and set the global flag (<code>g</code>) and the non
+destructive substitution flag (<code>r</code>). What the <code>r</code>
+flag does is it specifies the result only be shown in the output, but
+not written back to the variable (<code>$1</code> in our case).</p>
+<p>The last part, <code>ge</code>, specifies that the substitution is
+global (<code>g</code>), and should be evaluated before output
+(<code>e</code>).</p>
+<p>To make the substitution work multiline, add <code>0</code> to the
+argument list, and add <code>s</code> to the substitution flags:</p>
+<pre><code>$ printf &#39;hello `hello\nworld` world\n&#39; | perl -0pe &#39;s{(`.*?`)}{$1 =~ s/h/b/gr}ges&#39;
+hello `bello
+world` world</code></pre>
+<p><em>Last updated: 2022-10-06</em></p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://blog2.ltlnx.tw/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>

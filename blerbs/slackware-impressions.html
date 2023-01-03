@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Slackware Impressions</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://blog2.ltlnx.tw/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://blog2.ltlnx.tw/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://blog2.ltlnx.tw/index.html'>Home</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/links.html'>Links</a></li>
+                <li><a href='https://blog2.ltlnx.tw/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/about.html'>About</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a href="index.html">Blerbs
+胡言亂語</a> &gt;</p>
+</div>
+<main>
+<h1 id="slackware-impressions">Slackware Impressions</h1>
+<h3 id="where-it-all-started">Where it all started</h3>
+<p>My journey with Slackware dates back to around 2018 and 2019. At the
+time I was still fresh to Linux and wasn’t so comfortable with tweaking
+things on the command-line, so I hoped to find a distribution, or
+<em>distro</em>, that suits me best out-of-the-box.</p>
+<p>Slackware popped into my radar after randomly roaming the website <a
+href="https://distrowatch.com">Distrowatch</a>. The latest stable
+release was version 14.2, released in 2016, showing its age with the old
+versions of included software. There was (and still is) no apparent way
+to download the latest development (<code>-current</code>) snapshots
+form the main site, so I went with the stable one.</p>
+<p>The out-of-the-box experience, if I recall it correctly, was
+<em>horrendous</em>. My laptop was running hot after idling for a short
+period of time, Wi-Fi wasn’t working, and KDE 4, with all of its
+animations and fluff, felt a bit clunky to use. To make things worse, I
+found out that it wouldn’t suspend correctly when closing the lid. I
+ditched it fairly quick.</p>
+<p>The next encounter went a lot better. It was late 2020, I’ve got
+myself a 2014 used Macbook Pro (still an upgrade from my previous 2013
+model), and wiped MacOS after struggling with Big Sur’s new design
+paradigm. I was then past my distro-hopping days, and hoped to settle on
+a stable environment in order to build my personal desktop experience.
+First I tried Fedora. The installation was smooth, and everything works
+as expected.</p>
+<p>Nevertheless, after some months of usage, I noticed the rolling
+updates. First of all, it needs a couple hundred megs of bandwidth every
+week or so. Moreover, those updates sometimes break stuff — such as my
+Wi-Fi connection, which is completely gone after an update (though in
+retrospective, the reason may be that there was a kernel update and the
+Wi-Fi module wasn’t rebuilt.) One day after another update, I rebooted
+and it stuck at the Fedora logo and the spinning wheel. I thought, maybe
+it’s time to leave.</p>
+<p>(<em>By the way I haven’t tried Fedora since version 33, maybe I
+should give it another shot…</em>)</p>
+<h3 id="rediscover-and-installation">Rediscover and installation</h3>
+<p>It was by happenstance I rediscovered Slackware, and found ISOs for
+<a href="https://slackware.uk/people/alien-current-iso/">snapshots of
+the <code>-current</code> development branch</a>, maintained by
+Slackware contributor <a
+href="https://alien.slackbook.org/blog/">Alienbob</a>. He also builds <a
+href="https://download.liveslak.org/">“liveslak”</a> or Slackware Live
+Edition builds that come in various flavors. I picked the install-only
+version (for no real reason, both are great).</p>
+<p>The version I downloaded is probably a snapshot from around the first
+half of 2021. The KDE version was 5.18 (5.20?), and the default look and
+feel gives off a clean, neutral feeling. There are a whole lot of
+included apps, including the whole set of KDE applications, such as the
+Calligra Office suite, Kdenlive, Digikam, Krita, Falkon, etc., and even
+lesser-known apps like Kile (TeX editor) and Kamoso (Camera viewer).</p>
+<p>Other apps include two browsers, Firefox and Seamonkey; Qt5 Designer
+and GTK app designer Glade; a number of GUI and command-line audio/video
+players, a screen recorder, an assortment of X apps such as xsnow, xfig,
+and xpdf; and a bunch of other stuff, including terminal programs such
+as <code>mc</code> (Midnight Commander). The full install also comes
+with numerous compilers, language interpreters and libraries.</p>
+<p>Overall while the full install assures that every dependency is met,
+there are a lot of cases where multiple programs do the same job, or are
+simply unneeded. (Seriously who needs the scientific period table as a
+standalone program?)</p>
+<p>As an independent Linux distro with no upstream (its origin SLS died
+before Ubuntu was even released), Slackware has its own set of jargon
+and quirks. The default installation boots to the command-line TTY
+interface, and requires changing a config file to boot to a GUI login
+manager.</p>
+<p>To install software outside the default selection, we either install
+<code>slackpkg+</code> and enable 3rd-party repos, or compile source
+code to packages with the help of “SlackBuilds”, which are bash scripts
+that automates package building, then install those packages. We also
+decide our own method of dependency resolution; either we track our own
+dependencies, rely on <code>sbopkg</code> queues, or use SlackBuild
+managers that comes with dependency resolution enabled by default, such
+as <code>sbotools</code> or <code>sboui</code>.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Configuration wasn’t a breeze, but was surely predictable. There are
+several places in the default install that needed tweaking to fit my
+needs:</p>
+<ul>
+<li>Being a Mandarin user, the first thing I have to set up is the input
+method. Slackware 15.0 ships with the Fcitx 4 input framework, natively
+supporting numerous Chinese input methods. However there is an improved
+version of Fcitx, <a
+href="https://fcitx-im.org/wiki/Special:MyLanguage/Fcitx_5">Fcitx 5</a>,
+which hadn’t become a part of Slackware (it was added in October 2022).
+It doesn’t even have SlackBuilds available on <a
+href="https://slackbuilds.org">slackbuilds.org</a>! So I had to
+hand-roll my own Slackbuilds, build packages from them, and install them
+with the internal <code>installpkg</code> command. There is also
+environment variables to specify to make Fcitx work — since all users on
+the computer (only me) speak Chinese, I added them to
+<code>/etc/environment</code>.</li>
+</ul>
+<blockquote>
+<p>Update 2022-12-27: I uploaded my SlackBuilds onto SBo, and <a
+href="https://slackbuilds.org/result/?search=fcitx&amp;sv=15.0">they
+were accepted</a>. So as of now they are on slackbuilds.org, and only
+several commands away from installation.</p>
+</blockquote>
+<ul>
+<li>KDE now has pretty decent Wayland support, however Qt apps need an
+environment variable, <code>QT_QPA_PLATFORM=wayland</code>, to turn
+Wayland support on by default. Another addition to
+<code>/etc/environment</code>.</li>
+<li>For more optimal battery life, I installed the power management tool
+TLP. The SlackBuild installs a service in <code>/etc/rc.d</code>, which
+requires a hook in <code>rc.local</code> to autostart. I added it to
+<code>rc.local</code>.</li>
+</ul>
+<p>The list goes on. There are also bash configs, vim configs, etc.,
+which most people customize regardless of Linux distros. The only
+compromise I have to make is to replace suspend with hibernate across
+the KDE power settings, since suspend doesn’t work properly with the
+default kernel on my machine.</p>
+<h3 id="general-usage">General Usage</h3>
+<p>According to <code>tune2fs -l /dev/sda3</code> (the command failed on
+sda1 and sda2, but all the filesystems were created on the same day), my
+current Slackware installation dates back to:</p>
+<pre><code>Filesystem created:       Wed Jan 19 18:48:14 2022</code></pre>
+<p>That means at the time of writing, I’ve used my current Slackware
+installation for over 6 months.</p>
+<p>These 6 months sees some of my most hectic weeks in university. That
+includes 3 design projects for different associations, one of which I
+designed over 30 pieces of artwork for social media posts. I’ve done
+them in GIMP 2.10 and 2.99.10. It’s not a good experience, but most of
+the blame falls on the fundamental concepts of GIMP. I’ve also done
+several final exam projects and presentations, which I made with a
+combination of Vim + Pandoc, LibreOffice and Microsoft Office in a
+virtual machine.</p>
+<p>After doing all these work on Slackware, I must say the experience is
+rock-solid. With the exception of GIMP 2.99, which was an alpha release
+anyways, Slackware has never crashed or lost any files. What should work
+works: software I depend on the most, such as Firefox, KMail, Konsole,
+Dolphin, among other stuff, has always worked expectedly. Plasma Shell
+sometimes crashes or fails to perform actions on certain keyboard
+shortcuts, but recent updates made it better and better; I believe
+Plasma 5.26 would be the turning point where I actually start
+<em>recommending</em> KDE. It surely matured a lot during the past
+year.</p>
+<p>In addition, Slackware does development work fairly good. After
+setting up quick-run Python 3 keybindings in Vim, I’ve finished 2
+medium-sized final-semester projects with Python on this install. I’ve
+also installed Cargo and the Rust compiler in order to get a taste of
+Rust development. Recently I also delved into C/C++, which Slackware
+(and Linux in general) are made for, so writing and compiling them is a
+breeze.</p>
+<h3 id="drawbacks">Drawbacks</h3>
+<p>Slackware does have some major drawbacks. Notable drawbacks
+include:</p>
+<ul>
+<li><p>You have to manually update the <code>elilo</code> config if you
+want to keep your boot parameters. Those who don’t pass kernel
+parameters can run <code>geninitrd</code> (generates the initrd) ￫
+<code>eliloconfig</code> (rewrites the config), but
+<code>eliloconfig</code> doesn’t support keeping kernel parameters
+(yet).</p></li>
+<li><p>The inability to suspend at least on my Mac. Other major distros
+(Linux Mint, Fedora) don’t have this issue, but something in the
+Slackware kernel wasn’t configured to make sleep working on my
+machine.</p></li>
+<li><p>Having to compile almost everything not in the official package
+selection (with the exception of repos that work with slackpkg+). Doing
+this does bring benefits like having all libraries linked correctly, but
+is an absolute hassle, especially for dependency-heavy applications such
+as OBS, the open broadcaster software.</p></li>
+</ul>
+<h3 id="benefits">Benefits</h3>
+<p>Nonetheless, these are what makes me keep using Slackware:</p>
+<ul>
+<li><p>The small but vibrant community. There is an <a
+href="https://www.linuxquestions.org/questions/slackware-14/">official
+online forum</a> on <a
+href="https://www.linuxquestions.org/">LinuxQuestions</a>, where people
+help out each other with computer issues, compile failures, and all
+kinds of questions. People also share patches, tips and stories, and the
+atmosphere is both geeky and cozy. It was like attending a local users
+group meetup.</p></li>
+<li><p>Stableness. Even on the -current development branch, which is
+kind of a rolling release, packages are compiled and tested against new
+libraries before going downstream (as seen on the <a
+href="https://mirrors.slackware.com/slackware/slackware64-current/ChangeLog.txt">ChangeLog</a>),
+so programs rarely break. Therefore the experience is a lot better than
+other rolling distros like Arch or Fedora Rawhide, where (in my
+experience) things break a lot more often.</p></li>
+<li><p>Familiarity. The config files rarely change place, and internal
+commands (<code>slackpkg</code>, <code>pkgtool</code>, etc.) stay the
+same over years, so muscle memory have a good chance of working after
+returning to Slackware. It’s like a good living place: the furniture is
+sensible and durable, so there’s no reason to move them around or change
+them constantly. Even if there are minor defects here and there, as time
+goes on we used to them and know how to work around and fix them to our
+liking.</p></li>
+</ul>
+<p>Overall, in the fast-paced technology world where web apps change
+layouts multipe times over months, Slackware feels like home. It’s not
+the tech but the <em>feeling</em> of coziness that makes me stay on
+Slackware.</p>
+<p><em>Created: 2022-11-15</em><br />
+<em>Last updated: 2022-12-27</em></p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://blog2.ltlnx.tw/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>

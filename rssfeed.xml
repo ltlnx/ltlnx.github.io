@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+    <rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+    <!-- Made using own generator based on rss-roller https://github.com/maxhebditch/rss-roller -->
+    
+
+    <channel>
+    <title>Website of ltlnx</title>
+    <link>https://blog2.ltlnx.tw</link>
+    <description>Personal website of ltlnx, contains thoughts and stuff.</description>
+    <atom:link href='https://blog2.ltlnx.tw/rssfeed.xml' rel='self' type='application/rss+xml' />
+    
+<item>
+    <title>New Blog Architecture, a Roadmap</title>
+    <link>https://blog2.ltlnx.tw/blerbs/new-blog-architecture.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/new-blog-architecture.html</guid>
+    <description>Edit 2022-05-13: In the end I changed back to a simple list layout, for the sake of simplicity and mobile compability. In the future I may investigate in tables again and make better use of @media queries and css display options.  I have been writing blogs on Github Pages (now Codeberg Pages) since 2019, and I had always needed to add the sources and links myself, sometimes even hand-craft the HTML. For the new blog, I wish to blog completely in Markdown, and have an easy structure for conversion and the ability to automatically create the “Posts” page. Given the hirearchy:</description>
+    </item>
+    
+<item>
+    <title>小麥注音</title>
+    <link>https://blog2.ltlnx.tw/blerbs/mcbopomofo.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/mcbopomofo.html</guid>
+    <description>最近在Mastodon上，qbane發了把小麥注音移植到ibus上的進度（HackMD筆記連結），才發現原來小麥注音早在幾年前就有fcitx版，因此我趕緊寫了個SlackBuild裝來試用。用一用發現，小麥注音的選字比新酷音直覺好多，在打長文的時候幾乎不用選字；打標點符號的規則也跟新注音/酷音相差不遠，很快就用上手了。</description>
+    </item>
+    
+<item>
+    <title>Slackware Impressions</title>
+    <link>https://blog2.ltlnx.tw/blerbs/slackware-impressions.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/slackware-impressions.html</guid>
+    <description>My journey with Slackware dates back to around 2018 and 2019. At the time I was still fresh to Linux and wasn’t so comfortable with tweaking things on the command-line, so I hoped to find a distribution, or distro, that suits me best out-of-the-box. Slackware popped into my radar after randomly roaming the website Distrowatch. The latest stable release was version 14.2, released in 2016, showing its age with the old versions of included software. There was (and still is) no apparent way to download the latest development (-current) snapshots form the main site, so I went with the stable one.</description>
+    </item>
+    
+<item>
+    <title>Substitution Only in Capture Groups in Perl</title>
+    <link>https://blog2.ltlnx.tw/blerbs/run-subs-inside-subs-in-perl.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/run-subs-inside-subs-in-perl.html</guid>
+    <description>The title may not explain it well, so here’s an example. A regular perl substitution probably looks like this: $ echo &quot;hello world&quot; | perl -pe &quot;s/h/b/g&quot; bello world The h part is the target we want to substitute, and b is the substitution. If we add stuff to the original string, and run the same substitution:</description>
+    </item>
+    
+<item>
+    <title>GDSC Select-Course System Usability Exploration</title>
+    <link>https://blog2.ltlnx.tw/blerbs/gdsc-selectcourse-comments.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/gdsc-selectcourse-comments.html</guid>
+    <description>This small article is written after a bit of poking around a supposed replacement for the Course Selection System of NCCU, the current university I’m in. The old system is a mixed bag of old IIS/ASP with a separate(!) course exploration system based on Javascript. Moreover, they have two completely different UIs and conventions, and needless to say, the whole experience is pretty confusing for freshmen like me last year.</description>
+    </item>
+    
+<item>
+    <title>Disclosure on the Influence of Opinions</title>
+    <link>https://blog2.ltlnx.tw/blerbs/on-disclosure.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/on-disclosure.html</guid>
+    <description>Recently I came across Damien’s Blog because of a font he created — Envy Code R. The font itself is a good mixture of old and new, with Terminus-style boldfaces (which I like a lot and feel like too little monospaced fonts does this), and a generally pretty clean appearance. Sadly the font was still in beta, and has not seen progress since 2008. As the comments on the page stated, it would be appreciated if new versions can better distinguish between similar characters (0/O, I/l/1/|). But I digress.</description>
+    </item>
+    
+<item>
+    <title>Make Slackbuilds Work Well with Github</title>
+    <link>https://blog2.ltlnx.tw/blerbs/slackbuild-github-urls.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/slackbuild-github-urls.html</guid>
+    <description>While writing a Slackbuild, I encountered a problem where I’m not sure how to work with Github Release tags. The problem goes as follows:  Hello, I’ve encountered a problem when writing SlackBuilds for fcitx5 – the Github releases only has tags, not tarballs. However, tags downloaded from Github don’t have the package name in the filename. For example, if I want to download version 5.0.18 from their “Releases” page by clicking on “tar.gz” on the tag, the downloaded file would have the filename “5.0.18.tar.gz”, as opposed to “fcitx5-5.0.18.tar.gz”.</description>
+    </item>
+    
+<item>
+    <title>Mobile App Suggestions</title>
+    <link>https://blog2.ltlnx.tw/blerbs/mobile-app-suggestions.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/mobile-app-suggestions.html</guid>
+    <description>Occasionally (usually?) I encounter pain points in life, where I hope there’s a mobile app that could help ease. They are documented here.  “Remind Me” Inspired by the Reddit function “!remindme” that reminds users to check back on the thread. It would be lovely if there is an app that takes anything from the “Share” dialog, especially text items, and then pop up a dialog to select an interval or fixed time to remind. Then the app adds a calendar item, and sets reminders based on the query. That way, users can be reminded through the official calendar API, which handles the push notifications.</description>
+    </item>
+    
+<item>
+    <title>使用CSS與一點魔法，在HTML中英文交界加入空格</title>
+    <link>https://blog2.ltlnx.tw/blerbs/spacing-between-zh-and-en.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/spacing-between-zh-and-en.html</guid>
+    <description>最近開始寫中文的Public Logs，寫一寫總會去預覽一下排起來的樣子。但寫最近一篇Week 39的時候，卻越看越不對勁：為什麼中文字跟英文字之間，一點空格都沒有？身為對字體排版還算有點要求的人，這種狀況實在是令人不爽。因此我開始尋找將中英稍微隔開來的方法。</description>
+    </item>
+    
+<item>
+    <title>KDE Plasma Applet: Text Viewer Widget</title>
+    <link>https://blog2.ltlnx.tw/software/text-viewer-widget.html</link>
+    <guid>https://blog2.ltlnx.tw/software/text-viewer-widget.html</guid>
+    <description>One day I was thinking, “How great would it be if I could show a status-like banner in the panel!” The closest thing I could find, Rich Text Viewer, didn’t quite cut the chase as its font size and applet size are largely fixed and doesn’t change based on its content. So I took the opportunity to learn a bit of QML and write my own widget. This widget shows text from any online/offline source, and refreshes when clicked. It supports plain and Markdown text, and can switch between displaying normally (as a widget) and as one line (as a panel item).</description>
+    </item>
+    
+<item>
+    <title>ltlnx’s Blog Generator</title>
+    <link>https://blog2.ltlnx.tw/software/blog-generator.html</link>
+    <guid>https://blog2.ltlnx.tw/software/blog-generator.html</guid>
+    <description>I started blogging one day around 2018 on Blogger. At the time I already started writing about random computer stuff, such as Linux distros (GeeXboX) and old Windows (NT 3.51, 2000). Some time later, I read about Github Pages, moved there, and generated a blog site with Hexo. However I wanted more freedom with my pages, and eventually retracted to writing HTML, which slowed down the blogging process by a lot (aside from laziness). Here’s where this blog generator came into play. The goal is to have enough freedom but also a degree of automation.</description>
+    </item>
+    
+<item>
+    <title>Videos Where I Play Drums</title>
+    <link>https://blog2.ltlnx.tw/music/my-drum-videos.html</link>
+    <guid>https://blog2.ltlnx.tw/music/my-drum-videos.html</guid>
+    <description>I mainly play the drums. These are links to videos where I play drums. Last updated: 2022-12-14  NCCU Comp Sci Night, April 2022 伍佰 &amp; China Blue - 被動</description>
+    </item>
+    
+<item>
+    <title>Basic Chinese Character Sets</title>
+    <link>https://blog2.ltlnx.tw/typography/chinese-charsets.html</link>
+    <guid>https://blog2.ltlnx.tw/typography/chinese-charsets.html</guid>
+    <description>(Note: This page contains Traditional Chinese translations of English text.) As Chinese speakers and learners know, Chinese has a humongous number of characters, but only a subset of them are used frequently. Therefore various organizations or font foundries try to define a plane of characters fonts should choose to support depending on the use-case. The following list shows some of these planes, and other ones I collected from sources.</description>
+    </item>
+    
+<item>
+    <title>常用Vim快捷鍵與指令</title>
+    <link>https://blog2.ltlnx.tw/vim/common-vim-commands.html</link>
+    <guid>https://blog2.ltlnx.tw/vim/common-vim-commands.html</guid>
+    <description>Vim是一個在Linux系統上常看到，在終端機上使用的文字編輯器。它最為人稱道的是：</description>
+    </item>
+    
+<item>
+    <title>Install and Boot the Linux Mint Kernel on Slackware</title>
+    <link>https://blog2.ltlnx.tw/tutorials/kernel-swap.html</link>
+    <guid>https://blog2.ltlnx.tw/tutorials/kernel-swap.html</guid>
+    <description>Do note that this procedure is HIGHLY discouraged. While booted into Slackware with the Linux Mint kernel, I face some issues such as  Spotty trackpad and drawing tablet support. When the drawing tablet is plugged in, the trackpad starts to misbehave or not work at all.  Other problems that I can’t recall at the time of writing also exists. Expect buggy performance, and please do not do this on production devices.</description>
+    </item>
+    
+<item>
+    <title>Week 39 (2022-09-25 – 2022-10-01)</title>
+    <link>https://blog2.ltlnx.tw/public-logs/week39.html</link>
+    <guid>https://blog2.ltlnx.tw/public-logs/week39.html</guid>
+    <description>(English readers: most parts of my public log will be in Chinese. Sorry about that.) 2022-09-25 最近把一些東西重新裝回去了，例如新酷音。在Slackware將fcitx正式升級成fcitx5之後，原本想說試試看先不裝新酷音，適應看看原生的行列；經過一個禮拜之後，深刻感受到這樣是行不通的。接著又試著裝了gcin，卻發現在Wayland上跑會造成ㄧ大堆東西segfault。但詞音打起來真的好舒服，比新酷音舒服太多了。真的好可惜。</description>
+    </item>
+    
+<item>
+    <title>Week 36 (2022-09-04 – 2022-09-10)</title>
+    <link>https://blog2.ltlnx.tw/public-logs/week36.html</link>
+    <guid>https://blog2.ltlnx.tw/public-logs/week36.html</guid>
+    <description>(English readers: most parts of my public log will be in Chinese. Sorry about that.) 2022/09/04 跟黃c、林b跟他女友吳m去吃小尚品。小尚品的肉吃起來粉粉硬硬的，往玻璃門外一看產地，果然是進口肉（沒記錯的話是丹麥）。不曉得是不是因為台灣豬比較貴。 本來下午要去藝文中心收器材，但沒意料到藝文中心沒開，只好各自打道回府。 晚上去吃滷味遇到黎j，結果是他邀了葉h跟超來聊天。印象最深刻的是超講的一句：「我覺得我蠻喜歡現在的自己。」 還有「你現在的行為模式跟你的爸媽有很大的關係，你唯有在接受這件事之後，你才能跟他們開始變得不一樣。」</description>
+    </item>
+    
+<item>
+    <title>Week 35 (2022-08-28 – 2022-09-03)</title>
+    <link>https://blog2.ltlnx.tw/public-logs/week35.html</link>
+    <guid>https://blog2.ltlnx.tw/public-logs/week35.html</guid>
+    <description>(English readers: most parts of my public log will be in Chinese. Sorry about that.)  2022-09-03 晚上去黃c宿舍打牌，認識了一些應數系的朋友，不過不知道之後在路上認不認得。  2022-09-02 啥都沒做。</description>
+    </item>
+    
+
+    </channel>
+
+    </rss>
+    

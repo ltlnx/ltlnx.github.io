@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>KDE Plasma Applet: Text Viewer Widget</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://blog2.ltlnx.tw/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://blog2.ltlnx.tw/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://blog2.ltlnx.tw/index.html'>Home</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/links.html'>Links</a></li>
+                <li><a href='https://blog2.ltlnx.tw/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/about.html'>About</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a href="index.html">Software
+軟體</a> &gt;</p>
+</div>
+<main>
+<h1 id="kde-plasma-applet-text-viewer-widget">KDE Plasma Applet: Text
+Viewer Widget</h1>
+<style> 
+table, td, tr {border: none}
+@media(max-width: 600px) {
+  td {display: block}
+}
+</style>
+<p>One day I was thinking, “How great would it be if I could show a
+status-like banner in the panel!” The closest thing I could find, <a
+href="https://www.pling.com/p/1207198">Rich Text Viewer</a>, didn’t
+quite cut the chase as its font size and applet size are largely fixed
+and doesn’t change based on its content. So I took the opportunity to
+learn a bit of QML and write my own widget.</p>
+<p>This widget shows text from any online/offline source, and refreshes
+when clicked. It supports plain and Markdown text, and can switch
+between displaying normally (as a widget) and as one line (as a panel
+item).</p>
+<table>
+<tr>
+<td>
+<img src="res/tv1-ed.png">
+</td>
+<td>
+<img src="res/tv2-ed.png">
+</td>
+</tr>
+<tr>
+<td>
+<img src="res/tv3-ed.png">
+</td>
+<td>
+<img src="res/tv4-ed.png">
+</td>
+</tr>
+</table>
+<p>Settings:</p>
+<ul>
+<li>Whether to use a local file as the source: when checked, a “Choose”
+button would allow you to choose local files.</li>
+<li>Text type: choose between plain and Markdown text.</li>
+<li>Font size</li>
+<li>Show text as one line: if checked, the loaded text would ignore
+newlines and render everything as one line.</li>
+</ul>
+<p><strong>Download:</strong> <a
+href="https://www.pling.com/p/1961015/">Item link on pling</a></p>
+<p><em>Last updated: 2023-01-02</em></p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://blog2.ltlnx.tw/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>

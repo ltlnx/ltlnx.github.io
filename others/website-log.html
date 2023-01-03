@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Website Update Log</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://blog2.ltlnx.tw/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://blog2.ltlnx.tw/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://blog2.ltlnx.tw/index.html'>Home</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/links.html'>Links</a></li>
+                <li><a href='https://blog2.ltlnx.tw/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/about.html'>About</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a href="index.html">Others
+其他</a> &gt;</p>
+</div>
+<main>
+<h1 id="website-update-log">Website Update Log</h1>
+<p>Here lies the update announcements, notes and occasional rants about
+random things — mostly behind-the-scenes stuff. They largely correlate
+to my <a
+href="https://codeberg.org/ltlnx/pages/commits/branch/main">commit
+messages</a>.</p>
+<p><em>Last updated: 2022-12-14</em></p>
+<hr />
+<p><em>2022-12-14</em></p>
+<blockquote>
+<h3 id="tldr">TL;DR</h3>
+<ul>
+<li>Added Chinese translations of category names</li>
+</ul>
+</blockquote>
+<p>After this update, the Chinese translations of the categories will
+show up beside their English counterparts. I am still thinking how to
+make Chinese and English coexist peacefully on the site (as I write in
+both), and hopefully this is a first step to a bi-lingual website.</p>
+<p>In the future I may add ways to show translations of the same
+article, or even separate the site into a Chinese version and English
+version. Hard to say what would happen exactly.</p>
+<hr />
+<p><em>2022-12-08</em></p>
+<blockquote>
+<h3 id="tldr-1">TL;DR</h3>
+<ul>
+<li>Added date to all article listings</li>
+</ul>
+</blockquote>
+<p>I’ve finally added some lines to my update script to grab the last
+edited (updated) date and show them beside the article link. Also, the
+articles are now sorted based on it, instead of the last modified time
+as defined by the computer. Enjoy!</p>
+<hr />
+<p><em>2022-10-18</em></p>
+<blockquote>
+<h3 id="tldr-2">TL;DR</h3>
+<ul>
+<li>The website now has a TLD at <a href="https://ltlnx.tw"
+class="uri">https://ltlnx.tw</a></li>
+<li>Officially removed favicons</li>
+</ul>
+</blockquote>
+<p>I finally bought the TLD <a href="https://ltlnx.tw">ltlnx.tw</a>! Now
+all content is served over this URL.</p>
+<p>Favicons are officially removed. Before this, browsers make favicon
+requests to my server, which I don’t have, and complains with error code
+404. Courtesy to <a
+href="https://stackoverflow.com/questions/1321878/how-to-prevent-favicon-ico-requests">this
+thread on StackOverflow</a>, I added a line to every HTML file to work
+around this:</p>
+<pre><code>&lt;link rel=&quot;icon&quot; href=&quot;data:,&quot;&gt;</code></pre>
+<p>This should prevent 404’s from happening.</p>
+<hr />
+<p><em>2022-10-12</em></p>
+<blockquote>
+<h3 id="tldr-3">TL;DR</h3>
+<ul>
+<li>Style overhaul</li>
+</ul>
+</blockquote>
+<p>Another long-awaited style overhaul. I increased the main font size
+and line height on the desktop, and added styles for headings.</p>
+<hr />
+<p><em>2022-09-25</em></p>
+<blockquote>
+<h3 id="tldr-4">TL;DR</h3>
+<ul>
+<li>Added trivial styles for warnings</li>
+</ul>
+</blockquote>
+<div class="warning">
+<p>This is the new warning style that will show on paragraphs marked
+with the class <code>warning</code>.</p>
+</div>
+<p><em>2022-08-04</em></p>
+<blockquote>
+<h3 id="tldr-5">TL;DR</h3>
+<ul>
+<li>Fix page title generation</li>
+<li>Changed sidebar layout on the desktop</li>
+</ul>
+</blockquote>
+<p>A previous bug in the update code makes every page lack &lt;title&gt;
+tags. (No wonder only one page was indexed by Google, and caches are not
+refreshed by DuckDuckGo!) This is now fixed, and every page has
+titles.</p>
+<p>The desktop sidebar has always been an annoyance to me, as it shifts
+the content to the right with no benefit in looks or navigation. Now the
+sidebar on the desktop is moved up to the top right; I’m still not very
+satisfied by the result, but IMO it is a small improvement from the
+previous layout. What do you think? Please mail your opinions to the
+mailbox in my <a href="about.html#contact-info">Contact info</a>. All
+opinions appreciated :)</p>
+<hr />
+<p><em>2022-07-22</em></p>
+<blockquote>
+<h3 id="tldr-6">TL;DR</h3>
+<ul>
+<li>Every directory has a page</li>
+<li>Better subfolder index handling</li>
+</ul>
+</blockquote>
+<p>I refactored the website update code, so that index page generation
+is in a loop: for every folder, generate a page index. Making this part
+of the code modular has a side benefit: I don’t need separate code to
+generate the homepage anymore.</p>
+<p>Another part of code updated is, every index page now shows the first
+10 entries in every subfolder, and has a “More” or “Dedicated Page” link
+directing to the subfolder index.</p>
+<hr />
+<p><em>2022-06-28</em></p>
+<blockquote>
+<h3 id="tldr-7">TL;DR</h3>
+<ul>
+<li>The posts now are sorted in chronological order</li>
+</ul>
+</blockquote>
+<p>I didn’t specify the order posts appear on the homepage, so they are
+sorted by whatever default <code>find</code> outputs its results. For
+some reason I decided to address this issue today, so I searched and
+found <a href="https://superuser.com/a/1413494">this answer</a>. I
+modified it to output one result per line, so the final code is the
+following:</p>
+<pre><code>find . -type f &lt;other arguments here&gt; -exec ls -t1 {} +</code></pre>
+<p>Currently there’s no dates beside the post list however; I may
+address it some day…</p>
+<hr />
+<p><em>2022-06-20</em></p>
+<blockquote>
+<h3 id="tldr-8">TL;DR</h3>
+<ul>
+<li>The update script is updated to use functions more</li>
+<li>New footer</li>
+<li>The <a href="../blerbs/index.html">blerbs</a> page now has an
+<code>index.html</code> for cleaner navigation</li>
+</ul>
+</blockquote>
+<p>The updater script sees an overhaul that makes part of the code more
+modular. For example, the “simple subpage layout” generation code is now
+a function, so that we can generate multiple subpages with the same
+code. This future-proofs possible updates to move tutorials,
+documentation, etc. into subfolders.</p>
+<p>There’s a new footer to state copyright: Everyone are welcome to copy
+stuff from my site or archive them as a whole, but they should release
+the content in compliance of the <a
+href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+BY-SA 4.0</a> license. Other terms of copying are on the <a
+href="about.html">About</a> page.</p>
+<p>Another thing to cover is that subfolder pages now have their own
+<code>index.html</code> page, instead of the
+<code>all-&lt;subfolder name&gt;.html</code> format. This makes
+navigation cleaner, as we only need to key in <a
+href="https://ltlnx.codeberg.page/blerbs/"
+class="uri">https://ltlnx.codeberg.page/blerbs/</a> instead of <a
+href="https://ltlnx.codeberg.page/blerbs/all-blerbs.html"
+class="uri">https://ltlnx.codeberg.page/blerbs/all-blerbs.html</a>.</p>
+<hr />
+<p><em>2022-05-29</em></p>
+<blockquote>
+<h3 id="tldr-9">TL;DR</h3>
+<ul>
+<li>The dark theme is now proudly powered by the <a
+href="https://www.nordtheme.com/docs/colors-and-palettes">Nord color
+palette</a>! Shout out to the great guys at Nord.</li>
+</ul>
+</blockquote>
+<p>The dark theme is now powered by the all-hailed <a
+href="https://www.nordtheme.com/">Nord colorscheme</a>! Since the more I
+look at the original dark palette, the more it looks like it’s drowned
+in molasses (or whisky if you’re in the mood), I went in search for a
+cleaner palette. After trying some other color palettes, I found Nord,
+highly praised by critics as a serene dark theme with suitable contrast.
+I tried it on Vim for a week and loved it, so I thought it’s time to
+apply it on the website.</p>
+<p>However, I also chose some undocumented colors that Nord uses on
+their website, including:</p>
+<ul>
+<li><span style="color:#242933;letter-spacing:-0.1em">██</span>
+<code>#242933</code>, a shade darker than the <span
+style="color:#2e3440;letter-spacing:-0.1em">██</span> “nord0” color, for
+the background;</li>
+<li><span style="color:#abb9cf;letter-spacing:-0.1em">██</span>
+<code>#ABB9CF</code>, two shades lighter (I reckon) than the <span
+style="color:#4c566a;letter-spacing:-0.1em">██</span> “nord3” color, for
+quote text;</li>
+<li><span style="color:#638897;letter-spacing:-0.1em">██</span>
+<code>#638897</code>, one shade darker than the <span
+style="color:#88c0d0;letter-spacing:-0.1em">██</span> “nord8” color, for
+quote left borders.</li>
+</ul>
+<p>Overall, this change gives us a cleaner dark theme experience. The <a
+href="about.html">about</a> page is updated as well to reflect the
+change.</p>
+<hr />
+<p><em>2022-05-26</em></p>
+<blockquote>
+<h3 id="tldr-10">TL;DR</h3>
+<ul>
+<li>Reverted font choice for Android devices back to Roboto to address
+legibility issues</li>
+<li>Added a dedicated RSS page</li>
+<li>Modified the title-grabbing technique in my update script; it now
+grabs the <code>&lt;h1&gt;</code> title instead of parsing the
+filename</li>
+</ul>
+</blockquote>
+<p>This time there is no detailed explanation, as life keeps getting in
+the way these days.</p>
+<hr />
+<p><em>2022-05-23</em></p>
+<blockquote>
+<h3 id="tldr-11">TL;DR</h3>
+<ul>
+<li>New “source-sans-pro” style rule targetting Android</li>
+<li>Subscribe to RSS from the URL bar in supported browsers</li>
+</ul>
+</blockquote>
+<p>I finally found a way to target Android fonts without it defaulting
+to Roboto. Turns out we shouldn’t target the font name like in other
+OSes, instead target the generic name defined by
+<code>/etc/fonts.xml</code> on Android. Fortunately, there’s a copy of
+<code>fonts.xml</code> <a
+href="https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-cts-11.0_r8/data/fonts/fonts.xml">available
+online</a>, so we can use it as a reference. In the end, I chose
+“source-sans-pro” (which is identical to Noto Sans) as the default
+display and text font on Android.</p>
+<p>Android font support, at this point, still leaves a lot to be
+desired. In the “embedded device” mindset of early Android, storage is
+scarce and left for other applications, therefore most fonts are only
+aliases in a “font definition” file, and there are only a handful of
+fonts available on the device.</p>
+<p>However currently, where mobile storage easily surpasses desktop
+ones, Google (or the Open Handset Alliance, whatever) still didn’t put
+better fonts on Android devices, and only added Noto fonts for language
+support. Come on, it’s 2022! Why cripple a key point in good UI for
+reasons that isn’t a concern anymore?</p>
+<p>Another change is the ability to subscribe to the site by simply
+clicking the RSS button in the URL bar. It once was a Firefox feature,
+but Firefox <a
+href="https://support.mozilla.org/en-US/kb/feed-reader-replacements-firefox">phased
+it out</a> in favor of their “Pocket” service. What a shame! Luckily,
+the feature lives on in some Firefox derivatives like Pale Moon.</p>
+<p>IE also supported RSS subscriptions, but sadly the browser’s obsolete
+at this point. Chrome didn’t support such stuff from the beginning, but
+the functionality can be added with an <a
+href="https://chrome.google.com/webstore/detail/rss-subscription-extensio/nlbjncdgjeocebhnmkbbbdekmmmcbfjd">official
+Google extension</a>.</p>
+<p>To make the RSS icon show, I added an RSS feed link to every
+<code>&lt;head&gt;</code>:</p>
+<pre><code>&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;All Pages on the Website&quot; href=&quot;https://ltlnx.codeberg.page/rssfeed.xml&quot;&gt;</code></pre>
+<p>Then, <em>ta-da</em>! The rss icon shows in the address bar:</p>
+<figure>
+<img src="res/rss-feed-icon-palemoon.png"
+alt="RSS icon in the address bar" />
+<figcaption aria-hidden="true">RSS icon in the address bar</figcaption>
+</figure>
+<hr />
+<p><em>2022-05-19</em></p>
+<blockquote>
+<h3 id="tldr-12">TL;DR</h3>
+<ul>
+<li>New sitemap</li>
+<li>New RSS feed</li>
+<li>All webpages now have <code>&lt;title&gt;</code>s</li>
+</ul>
+</blockquote>
+<p>There’s a new <a
+href="https://ltlnx.codeberg.page/sitemap.xml">sitemap</a> for the
+website! Generated by a <a
+href="https://codeberg.org/ltlnx/pages-src/src/branch/main/sitemap">bash
+script</a> based on <a
+href="https://github.com/mcmilk/sitemap-generator">mcmilk’s script</a>,
+hopefully it would bring a bit of SEO benefit to this blog. Also, I
+implemented a RSS feed, generated by a <a
+href="https://codeberg.org/ltlnx/pages-src/src/branch/main/rss-roller">heavily
+modified version</a> of maxhebditch’s <a
+href="https://codeberg.org/ltlnx/pages/commits/branch/main">rss-roller</a>
+. Both are bash scripts, which is easier for me to modify and
+maintain.</p>
+<p>Originally there are no <code>&lt;title&gt;</code> attributes in all
+my webpages, since I used a shared header template to generate them.
+Today I added some <code>sed</code> trickery to extract titles from
+original markdown files, and add them as <code>&lt;title&gt;</code>
+elements. This should also have a positive effect in SEO.</p>
+<hr />
+<p><em>2022-05-18</em></p>
+<blockquote>
+<h3 id="tldr-13">TL;DR</h3>
+<ul>
+<li>New dark theme for <code>@media(prefers-color-scheme: dark)</code>
+guys
+<ul>
+<li>Inspired by the vim colorscheme “Slate”</li>
+<li>But with less colors</li>
+</ul></li>
+<li><code>sed</code> expression to convert arrows to better-looking
+arrows</li>
+<li>Added hover highlights</li>
+</ul>
+</blockquote>
+<p>So I eventually put out a dark theme, and minified the css a bit. Not
+in the sense of emitting all newlines, as I absolutely <em>despise</em>
+that; more like sharing some style blocks and removing newlines for
+elements with only one style.</p>
+<p>The dark theme is inspired by vim’s “Slate” theme, which is the only
+theme in vim with a softer color palette; others are razor-sharp and
+often an eyesore. However, the colorscheme features a lot of colors, and
+when I tried them on different elements, I found out that I can’t
+harmonize them perfectly. So I retreated to one main color, and other
+auxillary colors referring to it.</p>
+<p>Currently, the text color of the dark theme is kind of a washed-out
+orange, malt-like color. I’m thinking whether to make it plain white —
+just like how the original Slate theme treats text. I think I’m going to
+keep it until people complain.</p>
+<p>The website generation script also had a small change: due to my
+abuse of code-style arrows (-&gt;), I infused a sed expression to
+convert it to an arrow (￫). However, currently it converts code
+representations to arrows too, but I haven’t found an easy fix to
+it.</p>
+<p>I might as well type a proper arrow with the help of the
+<em>compose</em> key (which is as easy as
+<code>Compose + hyphen + greater-than</code>), but in Noto Sans, the
+default arrow looks like this:</p>
+<p>←↑↓→</p>
+<p>Which, for some reason, looks bad in desktop Firefox. So I decided to
+use Unicode codepoints FFE9 to FFEC (￩￪￬￫), which has a more consistent
+look across devices.</p>
+<p>Another change is that links now have non-intrustive hover
+highlights, which used some CSS trickery to make the highlighted link
+stay in place. The technique is copied from <a
+href="https://css-tricks.com/forums/topic/fixed-width-highlight-on-hover/">a
+reply on CSS Tricks website</a>. The answer was missing a
+<code>margin-right</code> but that’s an easy fix.</p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://blog2.ltlnx.tw/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>

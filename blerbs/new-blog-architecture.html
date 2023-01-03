@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>New Blog Architecture, a Roadmap</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://blog2.ltlnx.tw/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://blog2.ltlnx.tw/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://blog2.ltlnx.tw/index.html'>Home</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/links.html'>Links</a></li>
+                <li><a href='https://blog2.ltlnx.tw/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/about.html'>About</a></li>
+                <li><a href='https://blog2.ltlnx.tw/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a href="index.html">Blerbs
+胡言亂語</a> &gt;</p>
+</div>
+<main>
+<h1 id="new-blog-architecture-a-roadmap">New Blog Architecture,
+<br class="wb">a Roadmap</h1>
+<blockquote>
+<p>Edit 2022-05-13: In the end I changed back to a simple list layout,
+for the sake of simplicity and mobile compability. In the future I may
+investigate in tables again and make better use of <code>@media</code>
+queries and css <code>display</code> options.</p>
+</blockquote>
+<p>I have been writing blogs on Github Pages (now Codeberg Pages) since
+2019, and I had always needed to add the sources and links myself,
+sometimes even hand-craft the HTML. For the new blog, I wish to blog
+completely in Markdown, and have an easy structure for conversion and
+the ability to automatically create the “Posts” page.</p>
+<p>Given the hirearchy:</p>
+<pre><code>    Posts/
+        無病呻吟/
+            0309-test1.md
+            0310-test2.md
+        科技相關/
+            0311-hello.md
+            0312-world.md</code></pre>
+<p>The conversion program should be able to create a table containing
+links to all of the posts, in markdown format:</p>
+<pre><code>  ------------------------------------------------------------------------
+               無病呻吟&lt;span lang=&quot;en&quot;&gt;                             &lt;/span&gt;科技相關
+  ----------------------------------- ------------------------------------
+   [test1](無病呻吟/0309-test1.html)   [hello](科技相關/0311-hello.html)
+
+   [test2](無病呻吟/0310-test2.html)   [world](科技相關/0312-world.html)
+  ------------------------------------------------------------------------</code></pre>
+<p>On top of that, I may declare different headings, and introduction
+text on the posts page. I may also make new table rows or columns for
+clarity. In that case, I wish to have a editable template file, which
+has a hook in it to insert converted content; and when doing the
+conversion the program will insert the new table hirearchy into the
+template, thus creating the new posts page.</p>
+<p>All of these should be done in one script that I could run after
+finishing a piece of writing. Ideally it would also have a “Beta” hook
+which if I include in my source file, it wouldn’t parse the file. All
+resources should also be detected and put in their respective folders,
+relative to the post. Each post should be portable; that is, each post
+is a folder and contains the resources it needs, only referring to the
+stylesheet.</p>
+<p><em>Last updated: 2022-05-27</em></p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://blog2.ltlnx.tw/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>
