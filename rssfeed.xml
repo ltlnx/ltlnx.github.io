@@ -10,6 +10,20 @@
     <atom:link href='https://blog2.ltlnx.tw/rssfeed.xml' rel='self' type='application/rss+xml' />
     
 <item>
+    <title>Solve Suspend Issues in Certain Macbooks</title>
+    <link>https://blog2.ltlnx.tw/slackware/macbook-suspend.html</link>
+    <guid>https://blog2.ltlnx.tw/slackware/macbook-suspend.html</guid>
+    <description>This was posted by me on the Slackware forum on January 2023. After some extensive troubleshooting I finally solved my long-standing suspend problem, so I’m keeping this here for reference (and for people who are in the same situation). The problem goes as follows: starting from kernel version 5.15, my Macbook Pro (model A1398) wouldn’t wake up from suspend. Running tools like Intel’s pm-graph didn’t yield anything interesting. So I switched the lid close action to hibernate and ignored the problem.</description>
+    </item>
+    
+<item>
+    <title>Make Slackbuilds Work Well With Github</title>
+    <link>https://blog2.ltlnx.tw/slackware/slackbuild-github-urls.html</link>
+    <guid>https://blog2.ltlnx.tw/slackware/slackbuild-github-urls.html</guid>
+    <description>While writing a Slackbuild, I encountered a problem where I’m not sure how to work with Github Release tags. The problem goes as follows:  Hello, I’ve encountered a problem when writing SlackBuilds for fcitx5 – the Github releases only has tags, not tarballs. However, tags downloaded from Github don’t have the package name in the filename. For example, if I want to download version 5.0.18 from their “Releases” page by clicking on “tar.gz” on the tag, the downloaded file would have the filename “5.0.18.tar.gz”, as opposed to “fcitx5-5.0.18.tar.gz”.</description>
+    </item>
+    
+<item>
     <title>New Blog Architecture, a Roadmap</title>
     <link>https://blog2.ltlnx.tw/blerbs/new-blog-architecture.html</link>
     <guid>https://blog2.ltlnx.tw/blerbs/new-blog-architecture.html</guid>

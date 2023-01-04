@@ -2,6 +2,18 @@
 <!-- generator="Milkys Sitemap Generator, https://github.com/mcmilk/sitemap-generator" -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+ <loc>https://blog2.ltlnx.tw/slackware/macbook-suspend.html</loc>
+ <lastmod>2023-01-04</lastmod>
+</url>
+<url>
+ <loc>https://blog2.ltlnx.tw/slackware/slackbuild-github-urls.html</loc>
+ <lastmod>2023-01-04</lastmod>
+</url>
+<url>
+ <loc>https://blog2.ltlnx.tw/slackware/index.html</loc>
+ <lastmod>2023-01-04</lastmod>
+</url>
+<url>
  <loc>https://blog2.ltlnx.tw/blerbs/new-blog-architecture.html</loc>
  <lastmod>2023-01-04</lastmod>
 </url>
@@ -191,6 +203,10 @@
 </url>
 <url>
  <loc>https://blog2.ltlnx.tw/public-logs/index.html</loc>
+ <lastmod>2023-01-04</lastmod>
+</url>
+<url>
+ <loc>https://blog2.ltlnx.tw/style.css</loc>
  <lastmod>2023-01-04</lastmod>
 </url>
 <url>
