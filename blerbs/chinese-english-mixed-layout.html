@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>中英混排空格配置</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://ltlnx.github.io/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://ltlnx.github.io/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://ltlnx.github.io/index.html'>Home</a></li>
+                <li><a href='https://ltlnx.github.io/others/links.html'>Links</a></li>
+                <li><a href='https://ltlnx.github.io/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://ltlnx.github.io/others/about.html'>About</a></li>
+                <li><a href='https://ltlnx.github.io/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a href="index.html">Blerbs
+胡言亂語</a> &gt;</p>
+</div>
+<main>
+<h1 id="中英混排空格配置">中英混排空格配置</h1>
+<p>文字敘述待補。這篇主要是想比較三種中英混排方式的差異：</p>
+<ol type="1">
+<li>在英文左右兩側加空格（截至<span
+lang="en">2022</span>-01-05，目前作法）</li>
+<li>標點符號旁不加空格（密排？）</li>
+<li>將標點符號旁的空格分散到標點符號兩側（也就是標點符號在旁邊有英文的狀況下，左右兩側會各有一半大小的空格）</li>
+</ol>
+<h3 id="原始空格">原始空格</h3>
+<style>
+span[lang="en"]:before, span[lang="en"]:after {content: " "; font-size: calc((1em * -0.5) + 1.5rem)}
+</style>
+<p>
+最近在<span lang="en">Mastodon</span>上，<span
+lang="en">qbane</span>發了把小麥注音移植到<span
+lang="en">ibus</span>上的進度（<a href="https://hackmd.io/@q/ibus-mcbopomofo-dev"><span
+lang="en">HackMD</span>筆記連結</a>），才發現原來小麥注音早在幾年前就有<a href="https://github.com/openvanilla/fcitx5-mcbopomofo"><span
+lang="en">fcitx</span>版</a>，因此我趕緊寫了個<span
+lang="en">SlackBuild</span>裝來試用。用一用發現，小麥注音的選字比新酷音直覺好多，在打長文的時候幾乎不用選字；打標點符號的規則也跟新注音/酷音相差不遠，很快就用上手了。
+</p>
+<blockquote>
+<p>
+題外話：現在我的小麥注音<span lang="en">SlackBuild</span>已經上傳到<span
+lang="en">slackbuilds.org</span>，各位可以點<a href="https://slackbuilds.org/repository/15.0/misc/fcitx5-mcbopomofo/">這個連結</a>下載
+</p>
+</blockquote>
+<p>
+但這麼好用的輸入法不禁讓我思考：同樣是注音自動選字輸入法，為什麼有的用起來比較順，有的用起來會卡卡的？仔細一看<a href="https://mcbopomofo.openvanilla.org/">小麥注音的網站</a>，下面有個<span
+lang="en">FAQ</span>，其中一項正是：「選字的原理是什麼？」可惜<span
+lang="en">n</span>-<span
+lang="en">gram</span>什麼的我實在看不懂，只能很膚淺地說它真的很好用¯\_(ツ)_/¯
+看得懂的朋友們可以去他們的網站連結看看細節。
+</p>
+<p>
+下面還有另一個有趣的細節，就是「詞條資料來源」。他們在<a href="https://mcbopomofo.openvanilla.org/textpool.html">另一個頁面</a>詳述資料來源：有新聞稿、近代古典文學、各類公開出版品，與主要開發者們的部落格文字。
+</p>
+<p>
+仔細查了一下，發現小麥注音的開發者似乎都很大咖；<a href="https://arxiv.org/pdf/0704.3665.pdf">相關期刊文章</a>甚至可以看到許聞廉先生（自然輸入法開發者）當共同作者。但新酷音陣營似乎也不遑多讓，由<span
+lang="en">jserv</span>（黃敬群老師）打頭陣；但相關學術文章就沒找到了（不代表是什麼壞事）。但<span
+lang="en">jserv</span>的<a href="https://web.archive.org/web/20110209144124/http://blog.linux.org.tw/~jserv/archives/2010/04/_ximiiimf_hidek.html">部落格文章</a>中，也提到許多查資料時常遇到的人名，如<span
+lang="en">kanru</span>、<span lang="en">kcwu</span>、<span
+lang="en">gugod</span>、<span lang="en">zonble</span>、<span
+lang="en">pcman</span>等，大家好像跟各路輸入法框架（<span
+lang="en">gcin</span>、<span
+lang="en">fcitx</span>）也有些關係。這個區塊的世界似乎滿小的（笑）
+</p>
+<p>
+2023 高文偉<span lang="en"> </span>@ 政大總圖
+</p>
+<hr>
+<style>
+span.n {padding: 0}
+</style>
+<h3 id="標點符號旁不排空格">標點符號旁不排空格</h3>
+<p>最近在<span class="f"></span>Mastodon<span class="f"></span>上<span
+class="n"></span>，<span class="n"></span>qbane<span
+class="f"></span>發了把小麥注音移植到<span class="f"></span>ibus<span
+class="f"></span>上的進度（<span class="n"></span><a
+href="https://hackmd.io/@q/ibus-mcbopomofo-dev">HackMD 筆記連結</a><span
+class="n"></span>），才發現原來小麥注音早在幾年前就有<span
+class="f"></span><a
+href="https://github.com/openvanilla/fcitx5-mcbopomofo">fcitx
+版</a>，因此我趕緊寫了個<span class="f"></span>SlackBuild<span
+class="f"></span>裝來試用。用一用發現，小麥注音的選字比新酷音直覺好多，在打長文的時候幾乎不用選字；打標點符號的規則也跟新注音<span
+class="f"></span>/<span
+class="f"></span>酷音相差不遠，很快就用上手了。</p>
+<blockquote>
+<p>題外話：現在我的小麥注音<span class="f"></span>SlackBuild<span
+class="f"></span>已經上傳到<span class="f"></span>slackbuilds.org<span
+class="n"></span>，<span class="n"></span>各位可以點<a
+href="https://slackbuilds.org/repository/15.0/misc/fcitx5-mcbopomofo/">這個連結</a>下載</p>
+</blockquote>
+<p>但這麼好用的輸入法不禁讓我思考：同樣是注音自動選字輸入法，為什麼有的用起來比較順，有的用起來會卡卡的？仔細一看<a
+href="https://mcbopomofo.openvanilla.org/">小麥注音的網站</a>，下面有個<span
+class="f"></span>FAQ<span class="n"></span>，<span
+class="n"></span>其中一項正是：「選字的原理是什麼？」可惜<span
+class="f"></span>n-gram<span
+class="f"></span>什麼的我實在看不懂，只能很膚淺地說它真的很好用¯\_(ツ)_/¯
+看得懂的朋友們可以去他們的網站連結看看細節。</p>
+<p>下面還有另一個有趣的細節，就是「詞條資料來源」。他們在<a
+href="https://mcbopomofo.openvanilla.org/textpool.html">另一個頁面</a>詳述資料來源：有新聞稿、近代古典文學、各類公開出版品，與主要開發者們的部落格文字。</p>
+<p>仔細查了一下，發現小麥注音的開發者似乎都很大咖；<a
+href="https://arxiv.org/pdf/0704.3665.pdf">相關期刊文章</a>甚至可以看到許聞廉先生（自然輸入法開發者）當共同作者。但新酷音陣營似乎也不遑多讓，由<span
+class="f"></span>jserv（黃敬群老師）打頭陣；但相關學術文章就沒找到了（不代表是什麼壞事）。但<span
+class="f"></span>jserv<span class="f"></span>的<a
+href="https://web.archive.org/web/20110209144124/http://blog.linux.org.tw/~jserv/archives/2010/04/_ximiiimf_hidek.html">部落格文章</a>中，也提到許多查資料時常遇到的人名，如<span
+class="f"></span>kanru<span class="n"></span>、<span
+class="n"></span>kcwu<span class="n"></span>、<span
+class="n"></span>gugod<span class="n"></span>、<span
+class="n"></span>zonble<span class="n"></span>、<span
+class="n"></span>pcman<span
+class="f"></span>等，大家好像跟各路輸入法框架（gcin<span
+class="n"></span>、<span
+class="n"></span>fcitx）也有些關係。這個區塊的世界似乎滿小的（笑）</p>
+<p>2023 高文偉<span lang="en"> </span>@ 政大總圖</p>
+<hr>
+<style>
+span.f {padding-left: 0.24rem}
+span.h {padding-left: 0.12rem}
+</style>
+<h3 id="標點符號特殊空格處理">標點符號特殊空格處理</h3>
+<p>最近在<span class="f"></span>Mastodon<span class="f"></span>上<span
+class="h"></span>，<span class="h"></span>qbane<span
+class="f"></span>發了把小麥注音移植到<span class="f"></span>ibus<span
+class="f"></span>上的進度（<a
+href="https://hackmd.io/@q/ibus-mcbopomofo-dev">HackMD
+筆記連結</a>），才發現原來小麥注音早在幾年前就有<span
+class="f"></span><a
+href="https://github.com/openvanilla/fcitx5-mcbopomofo">fcitx
+版</a>，因此我趕緊寫了個<span class="f"></span>SlackBuild<span
+class="f"></span>裝來試用。用一用發現，小麥注音的選字比新酷音直覺好多，在打長文的時候幾乎不用選字；打標點符號的規則也跟新注音<span
+class="f"></span>/<span
+class="f"></span>酷音相差不遠，很快就用上手了。</p>
+<blockquote>
+<p>題外話：現在我的小麥注音<span class="f"></span>SlackBuild<span
+class="f"></span>已經上傳到<span class="f"></span>slackbuilds.org<span
+class="h"></span>，<span class="h"></span>各位可以點<a
+href="https://slackbuilds.org/repository/15.0/misc/fcitx5-mcbopomofo/">這個連結</a>下載</p>
+</blockquote>
+<p>但這麼好用的輸入法不禁讓我思考：同樣是注音自動選字輸入法，為什麼有的用起來比較順，有的用起來會卡卡的？仔細一看<a
+href="https://mcbopomofo.openvanilla.org/">小麥注音的網站</a>，下面有個<span
+class="f"></span>FAQ<span class="h"></span>，<span
+class="h"></span>其中一項正是：「選字的原理是什麼？」可惜<span
+class="f"></span>n-gram<span
+class="f"></span>什麼的我實在看不懂，只能很膚淺地說它真的很好用¯\_(ツ)_/¯
+看得懂的朋友們可以去他們的網站連結看看細節。</p>
+<p>下面還有另一個有趣的細節，就是「詞條資料來源」。他們在<a
+href="https://mcbopomofo.openvanilla.org/textpool.html">另一個頁面</a>詳述資料來源：有新聞稿、近代古典文學、各類公開出版品，與主要開發者們的部落格文字。</p>
+<p>仔細查了一下，發現小麥注音的開發者似乎都很大咖；<a
+href="https://arxiv.org/pdf/0704.3665.pdf">相關期刊文章</a>甚至可以看到許聞廉先生（自然輸入法開發者）當共同作者。但新酷音陣營似乎也不遑多讓，由<span
+class="f"></span>jserv（黃敬群老師）打頭陣；但相關學術文章就沒找到了（不代表是什麼壞事）。但<span
+class="f"></span>jserv<span class="f"></span>的<a
+href="https://web.archive.org/web/20110209144124/http://blog.linux.org.tw/~jserv/archives/2010/04/_ximiiimf_hidek.html">部落格文章</a>中，也提到許多查資料時常遇到的人名，如<span
+class="f"></span>kanru<span class="h"></span>、<span
+class="h"></span>kcwu<span class="h"></span>、<span
+class="h"></span>gugod<span class="h"></span>、<span
+class="h"></span>zonble<span class="h"></span>、<span
+class="h"></span>pcman<span
+class="f"></span>等，大家好像跟各路輸入法框架（gcin<span
+class="h"></span>、<span
+class="h"></span>fcitx）也有些關係。這個區塊的世界似乎滿小的（笑）</p>
+<p>2023 高文偉<span lang="en"> </span>@ 政大總圖</p>
+<p>Last updated: 2023-01-05</p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://ltlnx.github.io/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>

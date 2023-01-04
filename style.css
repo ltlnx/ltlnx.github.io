@@ -29,9 +29,9 @@ pre {overflow-x: scroll}
 main, table, blockquote {line-height: 1.75em}
 .wb {display: none}
 p > code, li > code {font-size: 1rem; padding: 0 0.25rem}
-span[lang="en"]:before, span[lang="en"]:after {content: " "; font-size: calc((1em * -0.5) + 1.5rem)}
+span[lang="en"]:before, span[lang="en"]:after {content: " "; font-size: calc((1em * -0.5) + 1.5rem)}
 a:hover {color: red}
-a, summary {color: blue}
+a, summary {color: blue; margin: 0 0.05rem}
 table, th, td {border: 1px solid black; border-collapse: collapse; padding: 0.5rem}
 th {border-bottom: 2px solid black}
 ul, ol {padding-inline-start: 15px}
