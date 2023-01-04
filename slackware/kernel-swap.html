@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Install and Boot the Linux Mint Kernel on Slackware</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://ltlnx.github.io/style.css">
+        <link rel="icon" href="data:,">
+        <link rel="alternate" type="application/rss+xml" title="All Pages on the Website" href="https://ltlnx.github.io/rssfeed.xml">
+    </head>
+    <body>
+        <div id='sbl'>
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href='https://ltlnx.github.io/index.html'>Home</a></li>
+                <li><a href='https://ltlnx.github.io/others/links.html'>Links</a></li>
+                <li><a href='https://ltlnx.github.io/blerbs/index.html'>Blerbs</a></li>
+                <li><a href='https://ltlnx.github.io/others/about.html'>About</a></li>
+                <li><a href='https://ltlnx.github.io/others/rss.html'>RSS</a></li>
+                <li><a href='https://g0v.social/@ltlnx'>Mastodon</a></li>
+            </ul>
+        </div>
+<div class="nav">
+<p><a href="../index.html">ltlnx</a> &gt; <a
+href="index.html">Slackware</a> &gt;</p>
+</div>
+<main>
+<h1 id="install-and-boot-the-linux-mint-kernel-on-slackware">Install and
+Boot <br class="wb">the Linux Mint Kernel <br class="wb">on
+Slackware</h1>
+<blockquote>
+<h3 id="warning">Warning</h3>
+<p>Do note that this procedure is HIGHLY discouraged. While booted into
+Slackware with the Linux Mint kernel, I face some issues such as</p>
+<ul>
+<li>Spotty trackpad and drawing tablet support. When the drawing tablet
+is plugged in, the trackpad starts to misbehave or not work at all.</li>
+</ul>
+<p>Other problems that I can’t recall at the time of writing also
+exists. Expect buggy performance, and please do not do this on
+production devices.</p>
+</blockquote>
+<h3 id="preface">Preface</h3>
+<p>Since I upgraded my laptop from kernel version 5.14.1 to 5.15.12,
+sleep (suspend) stopped working. I switched all the power actions in KDE
+from “Sleep” to “Hibernate” as a workaround. However recently I tested
+Linux Mint on this laptop, and sleep worked as expected, so I wonder if
+this has something to do with the kernel or kernel modules.</p>
+<p>To test if this is the case, I swapped the Linux Mint kernel and
+modules onto Slackware and booted it. Magically, sleep started working.
+This is a guide on how I made it work.</p>
+<h3 id="specs">Specs</h3>
+<ul>
+<li>Laptop: MacBook Pro Late 2013 (MacBookPro11,2)</li>
+<li>CPU: Intel Core i7-4770HQ</li>
+<li>RAM: 16 GB</li>
+<li>Network card: Broadcom BCM4360</li>
+<li>Slackware version: -current w/ kernel 5.19.6</li>
+<li>Linux Mint version: 21.1 “Vanessa” w/ kernel 5.15.0-47</li>
+<li>Bootloader: ELILO</li>
+</ul>
+<h3 id="procedure">Procedure</h3>
+<p><strong>In Slackware</strong></p>
+<ul>
+<li>Partition your Slackware box and create (or make sure there is) a
+partition larger than 20GB.</li>
+<li>Download the <a href="https://linuxmint.com">Linux Mint
+ISO</a>.</li>
+<li>Install Linux Mint on the partition you created. Linux Mint would
+also install a working version of GRUB.</li>
+<li>Reboot.</li>
+</ul>
+<p><strong>In Linux Mint</strong></p>
+<ul>
+<li>Select Linux Mint from the GRUB boot menu.</li>
+<li>Install all updates with <code>apt update</code> and
+<code>apt upgrade</code>.</li>
+<li>Make sure every piece of hardware works under Linux Mint. For me I
+had to install the Broadcom Wi-Fi driver
+(<code>broadcom-sta-dkms</code>) to make Wi-Fi work.</li>
+</ul>
+<p>After making sure everything works and suspend is working correctly,
+reboot.</p>
+<p><strong>In Slackware</strong></p>
+<blockquote>
+<p><strong>[Note]</strong> This part assumes you use ELILO, the
+bootloader shipped with Slackware as the current default. If you use
+GRUB or other bootloaders, procedures may differ.</p>
+</blockquote>
+<ul>
+<li><p>Mount the Linux Mint drive, graphically or by executing as root
+<code>mount &lt;device-partition-name&gt; &lt;folder&gt;</code>
+(e.g. <code>mount /dev/sda5 /mnt/mint</code>).</p>
+<p>(<em>From here on I’ll assume the Mint drive is mounted on
+<code>/mnt/mint</code>.</em>)</p></li>
+<li><p>Switch user to root and change directory to
+<code>/mnt/mint</code>.</p>
+<pre><code>$ sudo su
+# cd /mnt/mint</code></pre></li>
+<li><p>Copy the initrd and vmlinuz into the appropriate EFI folder. If
+you’ve upgraded Linux Mint previously, there may be more than one kernel
+and initrd; copy the newest version. For me they’re with the suffix
+<code>5.15.0-47-generic</code>.</p>
+<pre><code># cp boot/initrd.img-5.15.0-47-generic boot/vmlinuz-5.15.0-47-generic /boot/efi/EFI/Slackware</code></pre></li>
+<li><p>Copy the kernel modules to Slackware.</p>
+<pre><code># cp -r lib/modules/5.15.0-47-generic /lib/modules</code></pre></li>
+<li><p>Change directory to your EFI folder. For me it’s
+<code>/boot/efi/EFI/Slackware</code>.</p>
+<pre><code># cd /boot/efi/EFI/Slackware</code></pre></li>
+<li><p><strong>[Optional]</strong> Rename the Mint initrd and
+vmlinuz.</p>
+<pre><code># mv initrd.img-5.15.0-47-generic initrd-mint.img
+# mv vmlinuz-5.15.0-47-generic vmlinuz-mint</code></pre></li>
+<li><p>Add ELILO entries. Edit <code>elilo.conf</code> with your
+favorite editor (mine is <code>vim</code>).</p>
+<pre><code>vim elilo.conf</code></pre>
+<p>It should look something like this:</p>
+<pre><code>chooser=simple
+delay=1
+timeout=1
+#
+image=vmlinuz-generic-5.19.6
+        label=current
+        initrd=initrd.gz
+        read-only
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal ro&quot;</code></pre></li>
+<li><p>Append an entry for the Mint kernel and initrd at the bottom of
+the file.</p>
+<pre><code>image=vmlinuz-mint
+        label=mint
+        initrd=initrd-mint.img
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal&quot; </code></pre>
+<p>The appended file looks like this:</p>
+<pre><code>chooser=simple
+delay=1
+timeout=1
+#
+image=vmlinuz-generic-5.19.6
+        label=current
+        initrd=initrd.gz
+        read-only
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal ro&quot;
+
+image=vmlinuz-mint
+        label=mint
+        initrd=initrd-mint.img
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal&quot;</code></pre></li>
+<li><p>Save the file and exit.</p></li>
+</ul>
+<p>After installing Linux Mint, GRUB automatically takes precedence over
+other bootloaders. We need to fix that with <code>efibootmgr</code>.</p>
+<ul>
+<li><p>Run <code>efibootmgr</code> for a list of bootloaders.</p>
+<pre><code># efibootmgr </code></pre>
+<p>Output:</p>
+<pre><code>BootCurrent: 0000
+Timeout: 5 seconds
+BootOrder: 0000,0001,0080
+Boot0000* slackware-15.0+       HD(1,GPT,651aedc3-99fa-6447-b0bf-537afd5c66e6,0x800,0x64000)/File(\EFI\slackware-15.0+\grubx64.efi)
+Boot0001* Slackware     HD(1,GPT,651aedc3-99fa-6447-b0bf-537afd5c66e6,0x800,0x64000)/File(\EFI\Slackware\elilo.efi)
+Boot0080*       PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)/Sata(0,0,0)/HD(2,GPT,60b362a4-e270-4224-bad3-d5b1345c85db,0x64028,0xe991198)/VenMedia(be74fcf7-0b7c-49f3-9147-01f4042e6842,17a3baf0909199449864a58758401b69)/File(\F3A00EC0-6D2B-4ACB-A25D-3C0BF980C36B\System\Library\CoreServices\boot.efi)
+BootFFFF*       PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)/Sata(0,0,0)/HD(2,GPT,60b362a4-e270-4224-bad3-d5b1345c85db,0x64028,0xe991198)/VenMedia(be74fcf7-0b7c-49f3-9147-01f4042e6842,17a3baf0909199449864a58758401b69)/File(\F3A00EC0-6D2B-4ACB-A25D-3C0BF980C36B\System\Library\CoreServices\boot.efi)</code></pre>
+<p>Here we can see the ELILO entry at <code>Boot0001</code>. Other
+entries include a GRUB install at <code>Boot0000</code>, and Mac
+fallbacks at <code>Boot0080</code> and <code>BootFFFF</code>.</p>
+<p>Take note of the <code>BootOrder</code> (<code>0000,0001,0080</code>
+in mine), as it would be used later.</p></li>
+<li><p>Make the ELILO entry take precedence. Edit the boot order
+with:</p>
+<pre><code># efibootmgr -o 0001,0000,0080</code></pre>
+<p>Here I swapped <code>0001</code> and <code>0000</code> in the
+previous <code>BootOrder</code> value. This varies with every
+computer.</p>
+<p>For example, if your ELILO entry is at <code>0004</code>, and your
+<code>BootOrder</code> is
+<code>0000,0005,0006,0001,0002,0004,0080</code>, than you should
+run:</p>
+<pre><code># efibootmgr -o 0004,0000,0005,0006,0001,0002,0080</code></pre></li>
+<li><p>Run <code>efibootmgr</code> again to make sure everything is
+right.</p></li>
+<li><p>Reboot.</p></li>
+</ul>
+<h3 id="booting-the-new-kernel">Booting the new kernel</h3>
+<ul>
+<li><p>After pressing the power button, spam any letter key
+(<code>j</code> would be sufficient) until the ELILO boot prompt
+appears.</p>
+<p>The boot prompt looks like this:</p>
+<pre><code>ELILO boot:</code></pre></li>
+<li><p>Enter <code>mint</code> on the boot prompt and press
+Enter.</p></li>
+</ul>
+<p>At this point, your system should be booted with the Mint kernel.
+Test if sleep works; if it does, congratulations!</p>
+<h3
+id="bonus-making-the-system-boot-the-linux-mint-kernel-by-default">Bonus:
+Making the system boot the Linux Mint kernel by default</h3>
+<ul>
+<li><p>Do this as root.</p>
+<pre><code>$ sudo su</code></pre></li>
+<li><p>Edit <code>elilo.conf</code> with your favorite editor.</p>
+<pre><code># vim /boot/efi/EFI/Slackware/elilo.conf</code></pre></li>
+<li><p>Move the Linux Mint entry to the top, right below the ELILO
+settings. For me, before editing it looks like:</p>
+<pre><code>chooser=simple
+delay=1
+timeout=1
+#
+image=vmlinuz-generic-5.19.6
+        label=current
+        initrd=initrd.gz
+        read-only
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal ro&quot;
+
+image=vmlinuz-mint
+        label=mint
+        initrd=initrd-mint.img
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal&quot;</code></pre>
+<p>After editing it looks like:</p>
+<pre><code>chooser=simple
+delay=1
+timeout=1
+#
+image=vmlinuz-mint
+        label=mint
+        initrd=initrd-mint.img
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal&quot;
+
+image=vmlinuz-generic-5.19.6
+        label=current
+        initrd=initrd.gz
+        read-only
+        append=&quot;root=/dev/sda2 resume=/dev/sda4 vga=normal ro&quot;</code></pre></li>
+<li><p>Reboot and test if the Mint kernel automatically boots.</p></li>
+</ul>
+<p>Last updated: 2022-11-28</p>
+</article>
+<div id="footer">
+    <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://ltlnx.github.io/others/about.html#copyright">About</a> page.</span>
+</div>
+</body>
+</html>

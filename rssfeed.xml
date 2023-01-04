@@ -24,6 +24,13 @@
     </item>
     
 <item>
+    <title>Install and Boot the Linux Mint Kernel on Slackware</title>
+    <link>https://blog2.ltlnx.tw/slackware/kernel-swap.html</link>
+    <guid>https://blog2.ltlnx.tw/slackware/kernel-swap.html</guid>
+    <description>Do note that this procedure is HIGHLY discouraged. While booted into Slackware with the Linux Mint kernel, I face some issues such as  Spotty trackpad and drawing tablet support. When the drawing tablet is plugged in, the trackpad starts to misbehave or not work at all.  Other problems that I can’t recall at the time of writing also exists. Expect buggy performance, and please do not do this on production devices.</description>
+    </item>
+    
+<item>
     <title>New Blog Architecture, a Roadmap</title>
     <link>https://blog2.ltlnx.tw/blerbs/new-blog-architecture.html</link>
     <guid>https://blog2.ltlnx.tw/blerbs/new-blog-architecture.html</guid>
