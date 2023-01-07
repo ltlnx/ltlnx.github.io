@@ -26,6 +26,8 @@ pre {overflow-x: scroll}
 #sbl ul, #sbl ol {padding-inline-start: 20px}
 #sbl h3{margin: 0 0 0.5rem 0}
 /* Main content */
+span.fsp{padding-left: 0.2rem}
+span.hsp{padding-left: 0.1rem}
 main, table, blockquote {line-height: 1.75em}
 .wb {display: none}
 p > code, li > code {font-size: 1rem; padding: 0 0.25rem}
