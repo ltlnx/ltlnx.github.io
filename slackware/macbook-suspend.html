@@ -74,34 +74,38 @@ Jan  4 05:05:06 dankstar kernel: ahci 0000:04:00.0: VPD access failed.  This is 
 I guessed that it was a thunderbolt problem. While searching for more
 info I found this blog entry, where someone in the comments say that the
 thunderbolt module needs to be disabled before suspend, and reactivated
-after resume.</p>
+after resume. (<strong>UPDATE</strong> Bluetooth seemed to cause issues
+too, so I added it to the script)</p>
 <p>Therefore the solution is to:</p>
 <ul>
-<li>Add to /lib/elogind/system-sleep (or /lib64/elogind/system-sleep
-depending on your architecture) a file named 50-thunderbolt-fix (could
-be any name):</li>
+<li>Add to <code>/lib/elogind/system-sleep</code> (or
+<code>/lib64/elogind/system-sleep</code> depending on your architecture)
+a file named <code>50-suspend-fix</code> (could be any name):</li>
 </ul>
-<pre><code>    #!/bin/sh
-    case &quot;${1-}&quot; in
-        &#39;pre&#39;)
-            exec modprobe -r thunderbolt
-            ;;
+<pre><code>#!/bin/sh
+case &quot;${1-}&quot; in
+    &#39;pre&#39;)
+        exec /etc/rc.d/rc.bluetooth stop
+        exec modprobe -r thunderbolt
+        ;;
 
-        &#39;post&#39;)
-            exec modprobe thunderbolt
-            ;;
+    &#39;post&#39;)
+        exec /etc/rc.d/rc.bluetooth start
+        exec modprobe thunderbolt
+        ;;
 
-        *)
-            exit 64
-            ;;
-    esac</code></pre>
+    *)
+        exit 64
+        ;;
+esac</code></pre>
 <ul>
-<li>Make sure the file is executable (chmod +x 50-thunderbolt-fix).</li>
+<li>Make sure the file is executable
+(<code>chmod +x 50-suspend-fix</code>).</li>
 </ul>
 <p>Then you can reboot (or not?) and test if it works. At least it
 worked for me :)</p>
 <p>ltlnx @ school main library</p>
-<p><em>Last updated: 2023-01-04</em></p>
+<p><em>Last updated: 2023-01-09</em></p>
 </article>
 <div id="footer">
     <p>© ltlnx under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Additional terms in the <a href="https://ltlnx.github.io/others/about.html#copyright">About</a> page.</span>
