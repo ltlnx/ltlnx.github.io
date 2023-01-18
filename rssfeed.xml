@@ -66,6 +66,13 @@
     </item>
     
 <item>
+    <title>如果我來做手機介面</title>
+    <link>https://blog2.ltlnx.tw/blerbs/android-app-musings.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/android-app-musings.html</guid>
+    <description>雖然我對手機應用程式開發不是很熟悉，但從使用者的角度，我會希望應用程式還是有一些基本的原則，例如：</description>
+    </item>
+    
+<item>
     <title>GDSC Select-Course System Usability Exploration</title>
     <link>https://blog2.ltlnx.tw/blerbs/gdsc-selectcourse-comments.html</link>
     <guid>https://blog2.ltlnx.tw/blerbs/gdsc-selectcourse-comments.html</guid>
@@ -84,6 +91,13 @@
     <link>https://blog2.ltlnx.tw/blerbs/slackbuild-github-urls.html</link>
     <guid>https://blog2.ltlnx.tw/blerbs/slackbuild-github-urls.html</guid>
     <description>While writing a Slackbuild, I encountered a problem where I’m not sure how to work with Github Release tags. The problem goes as follows:  Hello, I’ve encountered a problem when writing SlackBuilds for fcitx5 – the Github releases only has tags, not tarballs. However, tags downloaded from Github don’t have the package name in the filename. For example, if I want to download version 5.0.18 from their “Releases” page by clicking on “tar.gz” on the tag, the downloaded file would have the filename “5.0.18.tar.gz”, as opposed to “fcitx5-5.0.18.tar.gz”.</description>
+    </item>
+    
+<item>
+    <title></title>
+    <link>https://blog2.ltlnx.tw/blerbs/2023-plans.html</link>
+    <guid>https://blog2.ltlnx.tw/blerbs/2023-plans.html</guid>
+    <description># 2023個人計畫 通常我是很討厭作計畫的，因為很多計畫說出來之後，就不太會真的做出來。但為了精進自己的生活，我還是決定來列一下2023想做的事，以及想成為怎麼樣的人。 個人生活 如果要完成任何事情，個人生活絕對是不可避免的一部分。2023年我希望自己能：</description>
     </item>
     
 <item>
