@@ -1,96 +1,39 @@
-/* Basic theming */
-html {
-    max-width: 900px;
-    color: #242933;
-    margin: auto;
-    font-family: "Noto Sans", "Segoe UI", "Lucida Grande", sans-serif, "Noto Sans CJK TC", "Noto Sans TC";
-}
-html, table {font-size: 15px}
-body {margin: 1rem}
-h1, h2, h3 {display: inline-block; font-family: "DejaVu Sans", "Verdana", sans-serif, "Noto Sans CJK TC", "Noto Sans TC"}
-h1 {font-size: 24px; margin: 1rem 0 1.5rem}
-h3 {margin: 1rem 0 0.5rem}
-p > h3:first-of-type, blockquote > h3:first-of-type {margin-top: 0}
-/* Sidebar */
-#sbl {
-    width: 8rem;
-    z-index: 1;
-    margin: 0 1rem 1rem 0;
-    float: initial;
-    overflow-x: hidden;
-}
-#sbl, pre {padding: 1rem}
-pre, code, #sbl {background: #eceff4}
-pre {overflow-x: scroll}
-#sbl ul, #sbl ol, figure {margin: 0}
-#sbl ul, #sbl ol {padding-inline-start: 20px}
-#sbl h3{margin: 0 0 0.5rem 0}
-/* Main content */
-span.fsp{padding-left: 0.2rem}
-span.hsp{padding-left: 0.1rem}
-main, table, blockquote {line-height: 1.6em}
+*, #sbl *, h1, hr, #footer > p {margin: 0; padding: 0}
+html, h1, h2, h3, h4 {font-size: 16px}
+html {max-width: 790px; margin: auto; background: #eee; font-family: "Noto Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans CJK TC"}
+body {margin: 8px; line-height: 22.5px}
+h1, h2, h3, h4 {font-weight: bold; line-height: 1}
+h2, h3, h4, blockquote {padding: 16px 16px 0}
+#main {max-width: 648px; margin-left: 140px}
+#main > h2, #main > h3, #main > h4 {border-top: 2px solid #000}
+h1, #main h1 + h3, hr, #sbl > h3, #main > hr + * {border: 0}
+h1, hr {border-bottom: 2px solid #000}
+.nav, h1, details, pre, #sbl {padding: 8px}
+#main, .nav, #sbl, #footer, table, tr, td {background: #fff; border: 2px solid}
+li {margin: 0 0 4px 16px; padding-left: 2px}
+li:first-of-type {margin-top: 4px}
+#sbl li {margin-left: 16px}
+.nav {display: inline-block; margin: 0 0 8px}
+#sbl {position: absolute; width: 112px}
+#sbl > h3 {margin: 0 0 4px}
+.date {padding: 0 0.5rem 0 0; font-variant-numeric: tabular-nums;}
+#footer {display: inline-block; float: right; font-size: 12px; margin: 8px 0; padding: 4px}
+#footer > p {line-height: 1; margin: 4px}
 .wb {display: none}
-p > code, li > code {font-size: 1rem; padding: 0 0.25rem}
-span[lang="en"]:before, span[lang="en"]:after {content: " "; font-size: calc((1em * -0.5) + 1.5rem)}
-a:hover {color: red}
-a, summary {color: blue; margin: 0 0.05rem}
-table, th, td {border: 1px solid black; border-collapse: collapse; padding: 0.5rem}
-th {border-bottom: 2px solid black}
-ul, ol {padding-inline-start: 15px}
-li {margin: 0.25rem 0}
-blockquote {
-    border-left: 2px solid black;
-    margin-left: 0.5rem;
-    padding-left: 1rem;
-}
+p, blockquote + p, #main > ul, #main > ol, table {margin: 16px}
+#main li > p, li > p + pre {margin: 16px 0}
+blockquote {background: #fff9e9; border-left: 10px solid orange}
+blockquote > * {margin: 0; padding: 0 0 16px}
+pre, code, details, .gray {background: #f5f5f5}
+pre, code {font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace; line-height: 16px}
+pre, code, figcaption {font-size: 14px}
+code {display: inline-block; padding: 0 4px}
+pre {overflow-x: scroll}
 figure {max-width: 640px; margin: 2rem auto}
-figcaption {font-size: 14px; font-family: "Noto Serif CJK TC", "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif; text-align: center; margin: 0.25rem 0}
+figcaption {text-align: center; margin: 0.25rem 0}
 img, video {width: 100%; max-width: 640px}
+table {border-collapse: collapse}
+table pre {white-space: pre-wrap}
 video {display: block; margin: 1rem 0}
-hr {border: none; border-top: 1px solid black; margin: 2rem 0 1rem}
-.backtotop + hr {margin: 0.5rem 0 1rem}
-.backtotop, #footer {
-    font-size: 10.5px;
-    line-height: 1;
-    letter-spacing: 0.01rem;
-    text-align: right;
-}
-#footer {padding: 5rem 0 1rem 0}
-span.date {display: inline-block; width: 5.6em}
-/* Desktop-specific */
-@media(min-width: 375px){
-    h1 {display: block}
-    #sbl {float: right; margin: 0 0 1rem 1rem}
-}
-@media(min-width: 600px){
-    main, div, table, ul, ol, blockquote {font-size: 16px}
-    #sbl {background: initial; width: initial}
-    #sbl, #sbl ul, #sbl ul li {margin: 0; padding: 0}
-    #sbl h3 {display: none}
-    #sbl ul {list-style-type: none}
-    #sbl ul li {float: left; padding: 0 0.5rem}
-    ul, ol {padding-inline-start: 40px}
-    .wb {display: inline}
-    h1 {font-size: 2rem; line-height: 1.5em; margin: 2rem 1rem 2rem}
-    h3 {margin-top: 1.75rem}
-    h1:before, h1:after {content: "/"; display: inline-block; position: relative; left: -1.25rem; transform: scale(1.5); font-weight: 400}
-    h1:after {left: 1rem}
-    span.date {width: 5.7em}
-}
-/* For printing */
-@media print {
-    #sbl, .nav {display: none;}
-    #content {margin: 0;}
-}
-/* Dark theme with colors from Nord */
-@media(prefers-color-scheme: dark) {
-    html {background: #242933; color: #eceff4}
-    a, summary {text-decoration: none; font-weight: bold; color: #88c0d0}
-    pre, code, #sbl, a:hover {background: #2e3440}
-    a:hover {color: #eceff4}
-    span.date {color: #81a1c1}
-    pre, hr, table, th, td {border-color: #838995}
-    blockquote, #footer {border-color: #638897; color: #abb9cf}
-    h3 {border-bottom: 2px solid #5e81ac}
-    h1:before, h1:after {color: #81a1c1}
-}
+@media(max-width: 648px) {#sbl {display: none} #main {margin: 0} li {margin-bottom: 4px}}
+@media print {#sbl, .nav {display: none} #main {margin: 0; max-width: 100%}}
