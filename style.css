@@ -1,39 +1,65 @@
-*, #sbl *, h1, hr, #footer > p {margin: 0; padding: 0}
-html, h1, h2, h3, h4 {font-size: 16px}
-html {max-width: 790px; margin: auto; background: #eee; font-family: "Noto Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans CJK TC"}
-body {margin: 8px; line-height: 22.5px}
-h1, h2, h3, h4 {font-weight: bold; line-height: 1}
-h2, h3, h4, blockquote {padding: 16px 16px 0}
-#main {max-width: 648px; margin-left: 140px}
-#main > h2, #main > h3, #main > h4 {border-top: 2px solid #000}
-h1, #main h1 + h3, hr, #sbl > h3, #main > hr + * {border: 0}
-h1, hr {border-bottom: 2px solid #000}
-.nav, h1, details, pre, #sbl {padding: 8px}
-#main, .nav, #sbl, #footer, table, tr, td {background: #fff; border: 2px solid}
+*, #sbl *, #nav, hr, #footer > p, blockquote > :first-child {margin: 0; padding: 0}
+html {max-width: 750px; margin: auto; background: #eee; font-family: "Noto Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans CJK TC"}
+html, h2, h3, h4 {font-size: 16px}
+body {line-height: 1.5em; overflow-x: hidden}
+#footer {font-size: 12px; padding: 16px 0}
+pre, code, figcaption {font-size: 14px}
+pre, code {font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace}
+h1, h2, h3, h4, #footer, pre, code, figcaption {line-height: 1.2em}
+h2, h3, h4 {margin: 24px 0 0}
+details, pre {padding: 8px}
+blockquote {background: #fff9e9; border-left: 10px solid orange; padding: 16px}
+hr {text-align: center; margin: auto; border: 0}
+hr:before {display: block; text-align: center; content: "∗ ∗ ∗"}
+#topbar, #footer {margin: 16px}
+#nav, code {display: inline-block}
+#menu-container {float: right}
+#main {margin: 0 16px}
+#sbl > ul {list-style-type: none; display: flex}
+#sbl > h3, .menu {display: none}
+code, #sbl li {padding: 0 4px}
+#main > h1 {display: block; font-size: calc(1.5rem + 0.5vw)}
 li {margin: 0 0 4px 16px; padding-left: 2px}
 li:first-of-type {margin-top: 4px}
-#sbl li {margin-left: 16px}
-.nav {display: inline-block; margin: 0 0 8px}
-#sbl {position: absolute; width: 112px}
-#sbl > h3 {margin: 0 0 4px}
 .date {padding: 0 0.5rem 0 0; font-variant-numeric: tabular-nums;}
-#footer {display: inline-block; float: right; font-size: 12px; margin: 8px 0; padding: 4px}
-#footer > p {line-height: 1; margin: 4px}
 .wb {display: none}
-p, blockquote + p, #main > ul, #main > ol, table {margin: 16px}
-#main li > p, li > p + pre {margin: 16px 0}
-blockquote {background: #fff9e9; border-left: 10px solid orange}
-blockquote > * {margin: 0; padding: 0 0 16px}
+p, ul, ol, table, blockquote, h1, video {margin: 16px 0}
+li > ul {margin: 0}
 pre, code, details, .gray {background: #f5f5f5}
-pre, code {font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace; line-height: 16px}
-pre, code, figcaption {font-size: 14px}
-code {display: inline-block; padding: 0 4px}
 pre {overflow-x: scroll}
-figure {max-width: 640px; margin: 2rem auto}
-figcaption {text-align: center; margin: 0.25rem 0}
+figure {max-width: 640px; margin: 16px auto}
+figcaption {text-align: center; margin: 8px 0}
 img, video {width: 100%; max-width: 640px}
 table {border-collapse: collapse}
 table pre {white-space: pre-wrap}
-video {display: block; margin: 1rem 0}
-@media(max-width: 648px) {#sbl {display: none} #main {margin: 0} li {margin-bottom: 4px}}
-@media print {#sbl, .nav {display: none} #main {margin: 0; max-width: 100%}}
+video {display: block}
+@media(max-width: 648px) {
+  #topbar {margin: 0}
+  #footer {margin: 0 16px}
+  .menu {display: initial}
+  #nav {margin: 16px 16px 0}
+  #menu-container {margin: 0; float: right}
+  #menu-toggle {display: none}
+  span.menu {display: block; padding: 16px; width: 20px; text-align: center}
+  span.menu:before {content: "≡"}
+  #sbl {display: none; position: absolute; padding: 12px 16px 16px; background: #fff}
+  #sbl > h3 {display: initial; margin: 0 0 4px}
+  #sbl > ul {list-style-type: disc; display: block}
+  #sbl li {margin: 0 0 0 16px}
+  #menu-toggle:checked ~ span.menu {background: #fff}
+  #menu-toggle:checked ~ #sbl {display: block; right: 0; top: 54px}
+  #menu-toggle:checked ~ span.menu:before {content: "×"}
+  li {margin-bottom: 4px}}
+@media print {#sbl, #nav {display: none} #main {margin: 0; max-width: 100%}}
+@media(prefers-color-scheme: dark) {
+  html {background: #222; color: #eee}
+  a {color: #eb0; font-weight: 700; text-decoration: none}
+  a:hover {text-decoration: underline}
+  a:visited {color: #c72}
+  pre, code, details, .gray {background: #333}
+  blockquote {background: #431}
+  @media(max-width: 648px) {
+    #sbl {background: #333}
+    #menu-toggle:checked ~ span.menu {background: #333}
+  }
+}

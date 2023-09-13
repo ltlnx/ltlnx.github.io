@@ -1,0 +1,54 @@
+En esta revisión sobre la desinformación durante la crisis de la COVID-19 se
+hace un análisis teórico, conceptual y exploratorio de la infodemia y
+desinfodemia en tiempos de crisis de salud pública. En el artículo se intents
+precisar qué son la infodemia y desinfodemia, en el marco del
+bioinformacionalismo, se reflexiona si hemos llegado tarde para atajarla, se
+exponen los peligros para la salud pública, las democracias y la vedad(verdad)
+histórica por el auge de teóricas conspirativas virales, de noticias falsas y
+de campañas de desprestigio contra las autoridades científico-sanitarias y se
+analiza el papel comunicativo de científicos y periodistas en la resolución de
+esta crisis sanitaria.
+
+revisión (n): review
+se hace = provides
+teórico: theoretical
+exploratorio: exploratory
+infodemia: infodemic (excessive amount of information concerning a problem)
+desinfodemia: disinfodemic? (la palabra no está en Wiktionary)
+bioinformacionalismo: bioinformationalism
+se reflexiona: reflects on
+atajar: tackle
+exponer: expose
+el auge de: the rise of
+campaña de desprestigio: smear campaigns
+desprestigio: quitar el prestigio
+    prestigio: ascendiente, influencia, autoridad
+contra: against
+el papel comunicativo: communicative role
+    papel: cargo o función que alguen o algo desempeña en alguna situación o
+    en la vida.
+    desempeñar: ejercer las obligaciones inherentes a una profesión, cargo u
+    oficio.
+
+### Introducción
+
+Si la pandemia de COVID-19 causada por el coronavirus SARS-CoV-2 ha supuesto
+el mayor desafío para el bienestar de la humanidad, en todas sus dimensiones,
+desde la Segunda Guerra Mundial, los bulos, las mentiras y las teórias
+conspirativas que infectan Internet y que se propagan principalmente desde
+redes sociales -- pero también por medios de masas -- sobre este patógeno han
+potenciado las amenazas para las democracias, la seguridad y la salud de los
+ciudadanos.
+
+suponer: considerar como cierto o real algo a partir de los indicios que se
+tienen.
+    como: here means "as" (considerar como cierto: consider sth as true)
+    a partir de: based on
+    indicio: indication (fenómeno que permite conocer o inferir la existencia
+    de otro no percibido)
+Segunda Guerra Mundial: WW2
+bulo: hoax (noticia falsa propalada con algún fin)
+    propalar: divulgar algo oculto que generalmente se considera negativo
+    divulgar: publicar, extender, poner al alcance del público algo
+    alcance: range
+
