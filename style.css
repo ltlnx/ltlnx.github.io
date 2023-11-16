@@ -1,19 +1,65 @@
-html {
-    margin: auto;
-    max-width: 52rem;
-    background: #242423;
-    color: #f6eae4;
-    font-family: "Noto Sans", sans;
+*, #sbl *, #nav, hr, #footer > p, blockquote > :first-child {margin: 0; padding: 0}
+html {max-width: 750px; margin: auto; background: #eee; font-family: "Noto Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans CJK TC"}
+html, h2, h3, h4 {font-size: 16px}
+body {line-height: 1.5em; overflow-x: hidden}
+#footer {font-size: 12px; padding: 16px 0}
+pre, code, figcaption {font-size: 14px}
+pre, code {font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace}
+h1, h2, h3, h4, #footer, pre, code, figcaption {line-height: 1.2em}
+h2, h3, h4 {margin: 24px 0 0}
+details, pre {padding: 8px}
+blockquote {background: #fff9e9; border-left: 10px solid orange; padding: 16px}
+hr {text-align: center; margin: auto; border: 0}
+hr:before {display: block; text-align: center; content: "∗ ∗ ∗"}
+#topbar, #footer {margin: 16px}
+#nav, code {display: inline-block}
+#menu-container {float: right}
+#main {margin: 0 16px}
+#sbl > ul {list-style-type: none; display: flex}
+#sbl > h3, .menu {display: none}
+code, #sbl li {padding: 0 4px}
+#main > h1 {display: block; font-size: calc(1.5rem + 0.5vw)}
+li {margin: 0 0 4px 16px; padding-left: 2px}
+li:first-of-type {margin-top: 4px}
+.date {padding: 0 0.5rem 0 0; font-variant-numeric: tabular-nums;}
+.wb {display: none}
+p, ul, ol, table, blockquote, h1, video {margin: 16px 0}
+li > ul {margin: 0}
+pre, code, details, .gray {background: #f5f5f5}
+pre {overflow-x: scroll}
+figure {max-width: 640px; margin: 16px auto}
+figcaption {text-align: center; margin: 8px 0}
+img, video {width: 100%; max-width: 640px}
+table {border-collapse: collapse}
+table pre {white-space: pre-wrap}
+video {display: block}
+@media(max-width: 648px) {
+  #topbar {margin: 0}
+  #footer {margin: 0 16px}
+  .menu {display: initial}
+  #nav {margin: 16px 16px 0}
+  #menu-container {margin: 0; float: right}
+  #menu-toggle {display: none}
+  span.menu {display: block; padding: 16px; width: 20px; text-align: center}
+  span.menu:before {content: "≡"}
+  #sbl {display: none; position: absolute; padding: 12px 16px 16px; background: #fff}
+  #sbl > h3 {display: initial; margin: 0 0 4px}
+  #sbl > ul {list-style-type: disc; display: block}
+  #sbl li {margin: 0 0 0 16px}
+  #menu-toggle:checked ~ span.menu {background: #fff}
+  #menu-toggle:checked ~ #sbl {display: block; right: 0; top: 54px}
+  #menu-toggle:checked ~ span.menu:before {content: "×"}
+  li {margin-bottom: 4px}}
+@media print {#sbl, #nav {display: none} #main {margin: 0; max-width: 100%}}
+@media(prefers-color-scheme: dark) {
+  html {background: #222; color: #eee}
+  a {color: #eb0; font-weight: 700; text-decoration: none}
+  a:hover {text-decoration: underline}
+  a:visited {color: #c72}
+  pre, code, details, .gray {background: #333}
+  blockquote {background: #431}
+  @media(max-width: 648px) {
+    #sbl {background: #333}
+    #menu-toggle:checked ~ span.menu {background: #333}
+  }
 }
-body {overflow-x: hidden}
-pre, blockquote {overflow-x: auto; background: #343332; padding: 1em}
-blockquote {margin: 0; border-left: 0.75em solid}
-blockquote > * {margin: 0 0.25em 0.25em;}
-code {font-size: 1rem}
-pre code {font-size: 0.9rem}
-ul, ol {padding-left: 1em}
-a {color: #8fc1e2}
-#header a, .links a {text-decoration: none}
-#sitename, .links a:hover {color: #e1b79f}
-#header a, .links a, .tags a {padding: 0 0.1em 0 0}
-hr {border: 0.75px solid}
