@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW">
+  <title>ltlnx 的筆記倉庫</title>
+  <id>https://notes.ltlnx.tw/</id>
+  <updated>2023-11-16T22:53:31+08:00</updated>
+  <author>
+    <name>ltlnx</name>
+  </author>
+  <subtitle>ltlnx 的所有筆記</subtitle>
+  <rights>ⓒ ltlnx 2023. 除非另有說明，以 CC BY-NC-SA 4.0 釋出。</rights>
+  <link href="https://ltlnx.tw/atom.xml" rel="self"/>
+  <entry>
+    <title>關於</title>
+    <link rel="alternate" href="https://notes.ltlnx.tw/about.html"/>
+    <id>https://notes.ltlnx.tw/about.html/</id>
+    <author>
+      <name>ltlnx</name>
+    </author>
+    <updated>2023-11-16T00:00:00+08:00</updated>
+    <summary>還沒有東西。</summary>
+  </entry>
+  <entry>
+    <title>不屬於主要部落格的東西</title>
+    <link rel="alternate" href="https://notes.ltlnx.tw/index.html"/>
+    <id>https://notes.ltlnx.tw/index.html/</id>
+    <author>
+      <name>ltlnx</name>
+    </author>
+    <updated>2023-11-16T00:00:00+08:00</updated>
+    <summary>有的時候想寫一些比較長（或比較短）的廢文，但又覺得發在部落格那邊不太妥當，於是就有了這個地方放這些... 遺珠（？）而且這邊是全中文的，我在想主要部落格要不就改成全英文的呢。</summary>
+  </entry>
+  <entry>
+    <title>所以呢？</title>
+    <link rel="alternate" href="https://notes.ltlnx.tw/2023/20231117.html"/>
+    <id>https://notes.ltlnx.tw/2023/20231117.html/</id>
+    <author>
+      <name>ltlnx</name>
+    </author>
+    <updated>2023-11-17T00:00:00+08:00</updated>
+    <summary>所以我們要先來點介紹嗎？不然你也不知道我是誰。雖然知道我是誰對於閱讀網站文章不知道有沒有任何助益，但也許能給予大家一些背景資訊。</summary>
+  </entry>
+</feed>
