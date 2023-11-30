@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW">
   <title>ltlnx 的筆記倉庫</title>
   <id>https://notes.ltlnx.tw/</id>
-  <updated>2023-11-16T23:01:33+08:00</updated>
+  <updated>2023-12-01T04:59:36+08:00</updated>
   <author>
     <name>ltlnx</name>
   </author>
@@ -28,6 +28,16 @@
     </author>
     <updated>2023-11-16T00:00:00+08:00</updated>
     <summary>有的時候想寫一些比較長（或比較短）的廢文，但又覺得發在部落格那邊不太妥當，於是就有了這個地方放這些... 遺珠（？）而且這邊是全中文的，我在想主要部落格要不就改成全英文的呢。</summary>
+  </entry>
+  <entry>
+    <title>規劃</title>
+    <link rel="alternate" href="https://notes.ltlnx.tw/2023/20231201.html"/>
+    <id>https://notes.ltlnx.tw/2023/20231201.html/</id>
+    <author>
+      <name>ltlnx</name>
+    </author>
+    <updated>2023-12-01T00:00:00+08:00</updated>
+    <summary>如果要把自己從不怎麼樣的循環拉出來，可以拿來學習或是完成更多事情，勢必要像馬世芳的某集 podcast 裡面提到的一樣，要建立某種「紀律」才行。至於這個紀律長得如何？今天看了 Jamie Wong 的「[Tools for Sanity in Isolation](https://jamie-wong.com/post/tools-for-sanity/)」，有一段這樣說：</summary>
   </entry>
   <entry>
     <title>所以呢？</title>
