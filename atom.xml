@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW">
   <title>ltlnx 的筆記倉庫</title>
   <id>https://notes.ltlnx.tw/</id>
-  <updated>2023-12-01T04:59:36+08:00</updated>
+  <updated>2023-12-01T06:00:43+08:00</updated>
   <author>
     <name>ltlnx</name>
   </author>
@@ -31,8 +31,8 @@
   </entry>
   <entry>
     <title>規劃</title>
-    <link rel="alternate" href="https://notes.ltlnx.tw/2023/20231201.html"/>
-    <id>https://notes.ltlnx.tw/2023/20231201.html/</id>
+    <link rel="alternate" href="https://notes.ltlnx.tw/20231201.html"/>
+    <id>https://notes.ltlnx.tw/20231201.html/</id>
     <author>
       <name>ltlnx</name>
     </author>
@@ -41,8 +41,8 @@
   </entry>
   <entry>
     <title>所以呢？</title>
-    <link rel="alternate" href="https://notes.ltlnx.tw/2023/20231117.html"/>
-    <id>https://notes.ltlnx.tw/2023/20231117.html/</id>
+    <link rel="alternate" href="https://notes.ltlnx.tw/20231117.html"/>
+    <id>https://notes.ltlnx.tw/20231117.html/</id>
     <author>
       <name>ltlnx</name>
     </author>
