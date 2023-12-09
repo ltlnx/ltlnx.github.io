@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW">
   <title>ltlnx 的筆記倉庫</title>
   <id>https://notes.ltlnx.tw/</id>
-  <updated>2023-12-04T02:19:39+08:00</updated>
+  <updated>2023-12-09T23:51:20+08:00</updated>
   <author>
     <name>ltlnx</name>
   </author>
@@ -48,6 +48,16 @@
     </author>
     <updated>2023-12-01T00:00:00+08:00</updated>
     <summary>如果要把自己從不怎麼樣的循環拉出來，可以拿來學習或是完成更多事情，勢必要像馬世芳的某集 podcast 裡面提到的一樣，要建立某種「紀律」才行。至於這個紀律長得如何？今天看了 Jamie Wong 的「[Tools for Sanity in Isolation](https://jamie-wong.com/post/tools-for-sanity/)」，有一段這樣說：</summary>
+  </entry>
+  <entry>
+    <title>1000 palabras básicas en español</title>
+    <link rel="alternate" href="https://notes.ltlnx.tw/1000-palabras.html"/>
+    <id>https://notes.ltlnx.tw/1000-palabras.html/</id>
+    <author>
+      <name>ltlnx</name>
+    </author>
+    <updated>2020-01-01T00:00:00+08:00</updated>
+    <summary>Es la tercera año en la universidad aprendiendo español, pero cuando intento hablar de una cosa, a veces no encuentro nada palabra. Por eso quiero crecer mi cantidad de vocabulario, y [esta lista de 1000 palabras de Wiktionary](https://es.wiktionary.org/wiki/Apéndice:1000_palabras_básicas_en_español) parece un buen punto de partida. Cada día ampliaré 10 palabras, descubriendo sus significados, formas y cómo utilizarlas.</summary>
   </entry>
   <entry>
     <title>所以呢？</title>
