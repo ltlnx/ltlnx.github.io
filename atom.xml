@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW">
   <title>ltlnx 的筆記倉庫</title>
   <id>https://notes.ltlnx.tw/</id>
-  <updated>2023-12-20T18:25:12+08:00</updated>
+  <updated>2024-02-18T08:37:17+08:00</updated>
   <author>
     <name>ltlnx</name>
   </author>
@@ -58,6 +58,45 @@
     </author>
     <updated>2020-01-01T00:00:00+08:00</updated>
     <summary>Es la tercera año en la universidad aprendiendo español, pero cuando intento hablar de una cosa, a veces no encuentro nada palabra. Por eso quiero crecer mi cantidad de vocabulario, y [esta lista de 1000 palabras de Wiktionary](https://es.wiktionary.org/wiki/Apéndice:1000_palabras_básicas_en_español) parece un buen punto de partida. Cada día ampliaré 10 palabras, descubriendo sus significados, formas y cómo utilizarlas.</summary>
+  </entry>
+  <entry>
+    <title></title>
+    <link rel="alternate" href="https://notes.ltlnx.tw/20230219.html"/>
+    <id>https://notes.ltlnx.tw/20230219.html/</id>
+    <author>
+      <name>ltlnx</name>
+    </author>
+    <updated>2020-01-01T00:00:00+08:00</updated>
+    <summary>- 翁睿承
+- 呂玟逸
+- 賴誠彥
+- 陳以薰
+- 陳玟諭
+- 鄭頤
+- 廖護穎
+- 郭沛涵
+- 蘇天藍
+- 鄭茹心
+- 董鼎上
+- 鄧郁蒨
+- 陳姿云
+- 張怡璇
+- 林仁澤
+- 李岳瞬
+- 楊采禕
+- 郭謹萱
+- 陳子玲
+- 吳定蓁
+- 周鉦傑
+- 廖珮竹
+- 黃筱喬
+- 劉丹
+- 連育瑩
+- 吳靜恩
+- 鄧凱玲
+- 陳俞臻
+- 黃書咸
+- 郭貞妤</summary>
   </entry>
   <entry>
     <title>所以呢？</title>
