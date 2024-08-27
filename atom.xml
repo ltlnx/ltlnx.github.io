@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW">
   <title>ltlnx 的筆記倉庫</title>
   <id>https://notes.ltlnx.tw/</id>
-  <updated>2024-02-18T08:37:17+08:00</updated>
+  <updated>2024-08-27T21:23:52+08:00</updated>
   <author>
     <name>ltlnx</name>
   </author>
@@ -97,6 +97,16 @@
 - 陳俞臻
 - 黃書咸
 - 郭貞妤</summary>
+  </entry>
+  <entry>
+    <title>內部整修系列之 無助</title>
+    <link rel="alternate" href="https://notes.ltlnx.tw/internalfixing-1.html"/>
+    <id>https://notes.ltlnx.tw/internalfixing-1.html/</id>
+    <author>
+      <name>ltlnx</name>
+    </author>
+    <updated>2020-01-01T00:00:00+08:00</updated>
+    <summary>我可能需要寫一點東西來釐清我的現況，因此開始了這篇文章。我沒有要抱怨因為沒什麼好抱怨的，但希望能透過書寫的過程知道自己是哪裡出了問題，進而花時間跟心力去整修。</summary>
   </entry>
   <entry>
     <title>所以呢？</title>
