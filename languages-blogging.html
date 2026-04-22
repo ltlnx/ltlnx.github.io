@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Languages, Translation, and Blogging - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="languages-translation-and-blogging">Languages, Translation, and
+Blogging</h1>
+<p>First of all, I definitely should blog more, to push more thoughts
+into the wild and reiterate on what I’ve read or done. The problem is:
+which language should I do it in?</p>
+<p>You see, in general I like learning new languages and using them. My
+native language is Chinese (Taiwan), and I’ve used English since I was a
+child. In high school it was mandatory to choose another language to
+learn, so I learnt a little French. Now in university, I’m in a
+department mainly teaching European languages, and I’ve been learning
+Spanish for three years.</p>
+<p>However, the current way I implement index page creation does not
+allow the same article to exist in different languages. If I were to
+write an article in English and translate it into Chinese, they can only
+exist on different posts (or on the same post, but I doubt anyone wants
+that). That said, what if I implement a way to mark different languages
+and incorporate them into the index pages? A crude process would be:</p>
+<ul>
+<li>I create two files, <code>title.zh.html</code> and
+<code>title.en.html</code>, with translations of the same post.</li>
+<li>When converting they get different HTML language tags, and links to
+one another.</li>
+<li>The bash script interprets it and shows
+<code>Title ([中](title.zh.html)|[EN](title.en.html))</code> in index
+pages.</li>
+<li>The title text shown depends on the index page language. (So I have
+to implement it too, lovely)</li>
+</ul>
+<p>It looks pretty difficult to implement, but <em>if</em> I’ve done it,
+another problem emerges: Do people really read or like multilingual
+blogs? I mean, there must be a reason why there are so few blogs that
+are multilingual, right? Even some of my friends in Taiwan (Internet
+friends, admittedly) only choose one language between English and
+Chinese, and keep posts in other languages on other blogs or
+elsewhere.</p>
+<p>That’s my struggle. Sometimes I think in English (for tech stuff) and
+sometimes I think in other languages, therefore the language of my first
+draft usually depends on which mode I’m in. After that, I have to choose
+between translating the draft into another language or just keep it, and
+judging from the things I post, you can see that I chose the latter. The
+problem is, I’ve always wanted to write mainly for Chinese readers, and
+keep their English variants as a side reference. (That is, if I have
+readers at all, since I have zero analytics honestly I don’t know.)</p>
+<p>To conclude this, I may add proper multilingual support if I have
+time, but in the meantime it will stay as-is.</p>
+<p><em>Last updated: 2023-10-02</em></p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/languages-blogging.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

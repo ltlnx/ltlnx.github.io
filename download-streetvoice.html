@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>下載 StreetVoice 上的音樂 - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="下載-streetvoice-上的音樂">下載 StreetVoice 上的音樂</h1>
+<p>嗯，這不是釣魚標題，你真的可以下載 StreetVoice 上的音樂。</p>
+<p>首先，先確定你的電腦上安裝了 <code>youtube-dl</code> 跟
+<code>ffmpeg</code>：</p>
+<pre><code>$ youtube-dl --version
+2021.12.17
+$ ffmpeg -version
+ffmpeg version 5.1.2 Copyright (c) 2000-2022 the FFmpeg developers
+built with gcc 12.2.0 (GCC)
+configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --docdir=/usr/doc/ffmpeg-5.1.2/html --mandir=/usr/man --disable-debug --enable-shared --disable-static --enable-gpl --enable-version3 --arch=x86_64 --disable-encoder=aac --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-libbluray --enable-libcaca --enable-libcdio --enable-frei0r --enable-openal --enable-libopus --enable-libspeex --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libmp3lame --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libpulse --enable-libsmbclient --enable-libxml2 --enable-librsvg --enable-vulkan --enable-libglslang --enable-libdrm
+libavutil      57. 28.100 / 57. 28.100
+libavcodec     59. 37.100 / 59. 37.100
+libavformat    59. 27.100 / 59. 27.100
+libavdevice    59.  7.100 / 59.  7.100
+libavfilter     8. 44.100 /  8. 44.100
+libswscale      6.  7.100 /  6.  7.100
+libswresample   4.  7.100 /  4.  7.100
+libpostproc    56.  6.100 / 56.  6.100</code></pre>
+<p>接下來，我們需要複製 StreetVoice
+上歌曲的網址，並貼進終端機模擬程式裡。以 StreetVoice 4/19
+的每日推薦歌曲——<a
+href="https://streetvoice.com/ControlT/songs/726409/">真空狀態</a>為例：</p>
+<pre><code>$ youtube-dl https://streetvoice.com/ControlT/songs/726409/</code></pre>
+<p>按下 Enter 後，歌曲就會開始下載，輸出如下：</p>
+<pre><code>[StreetVoice] 726409: Downloading JSON metadata
+[StreetVoice] 726409: Downloading hls format URL
+[StreetVoice] 726409: Downloading http format URL
+WARNING: Unable to download JSON metadata: HTTP Error 403: Forbidden
+[StreetVoice] 726409: Downloading original format URL
+WARNING: Unable to download JSON metadata: HTTP Error 403: Forbidden
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 22
+[download] Destination: 真空狀態Hollow (Demo)-726409.mp3
+[download] 100% of 3.74MiB in 00:08</code></pre>
+<p>下載完之後，我們還需要用 <code>ffmpeg</code> 進行轉檔，因為
+StreetVoice
+使用的格式比較像直播格式，如果直接開啟，音樂播放器會沒辦法讀到正確的歌曲長度：</p>
+<pre><code>$ ffmpeg -i 真空狀態Hollow\ \(Demo\)-726409.mp3 -vn -c:a copy 真空狀態Hollow\ \(Demo\).mp3</code></pre>
+<p>記得，最後面的檔案名稱要跟原本的不同；像我會選擇刪掉後面的數字。轉換完之後，基本上就下載完成了！</p>
+<p><em>Last updated: 2023-04-19</em></p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/download-streetvoice.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

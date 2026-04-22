@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>寫給中文使用者的 Slackware 安裝指南 - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="寫給中文使用者的-slackware-安裝指南">寫給中文使用者的 Slackware
+安裝指南</h1>
+<blockquote>
+<p><strong>注意</strong> 這篇文章還不完整，還缺了：</p>
+<ul>
+<li>如何更新系統</li>
+<li>如何使用<code>sboui</code></li>
+<li>輸入法設定</li>
+</ul>
+<p>但最近有點多雜事，如果有時間更新再補上。</p>
+</blockquote>
+<p>Slackware
+是持續更新的發行版中，最早出現的發行版，以穩定、保守、「最接近
+UNIX」聞名。適合使用 Slackware 的有下列這幾種人：</p>
+<ul>
+<li><p><strong>對 Linux 還算熟悉，使用過其他 Linux
+發行版的人</strong></p>
+<p>Slackware 相對於其他發行版，對新手比較不友善，如果你是第一次裝 Linux
+我會推薦同樣好用但更適合新手的 <a href="linuxmint.com">Linux
+Mint</a>。</p></li>
+<li><p><strong>不介意編輯文字檔案以改變設定值</strong></p>
+<p>Slackware
+許多設定是以文字檔案儲存，因此想修改系統設定，如開機時啟動的服務、網路設定、滑鼠、觸控板設定等，往往會需要編輯文字檔（但還是有許多設定能用圖形介面改動）。</p></li>
+<li><p><strong>曾經被其他發行版的 dependency 搞過的人</strong></p>
+<p>Slackware 沒有處理 dependency
+的機制，如果你想解除安裝某桌面環境的一部分，不會像其他有 dependency
+處理機制的發行版，連著整個桌面環境一起移除。</p></li>
+<li><p><strong>還在使用 32-bit 架構（i686 + SSE2）的人</strong></p>
+<p>如果你還在用諸如 Intel Pentium 4、Intel Celeron、AMD Athlon 64 的 32
+位元 CPU，Slackware
+是能在這些架構上跑最新的軟體，為數不多的方法之一。</p></li>
+</ul>
+<p>喔對，其實還有：</p>
+<ul>
+<li><p><strong>英文有一定程度的人</strong></p>
+<p>Slackware
+的文字介面程式幾乎都沒有中文翻譯，有時候圖形介面程式也沒有完整翻譯，不管如何，英文是一定避免不了的。倒也不是需要多好的英文程度，只要看得懂常出現的詞（像是
+partition、service、bootloader、remove、install、view）就可以了。</p></li>
+</ul>
+<h3
+id="這東西感覺有搞頭要去哪裡下載">這東西感覺有搞頭，要去哪裡下載？</h3>
+<p>首先你需要選擇一個版本：Slackware 穩定版或是 -current。差別在於：</p>
+<ul>
+<li><p><strong>Slackware 穩定版</strong>：目前版本是 Slackware 15.0，是
+Slackware
+最穩定、最少更新的招牌分支。雖然說軟體不會更新，但定期會有安全性更新，因此不用為軟體的安全操心。適合要拿
+Slackware 來跑伺服器，或是需要極度穩定系統的人。</p>
+<p>下載網址：<a
+href="https://mirrors.slackware.com/slackware/slackware-iso/slackware-15.0-iso/">32-bit</a>
+<a
+href="https://mirrors.slackware.com/slackware/slackware-iso/slackware64-15.0-iso/">64-bit</a></p></li>
+<li><p><strong>Slackware -current</strong>：這是 Slackware 的
+rolling（持續更新）版本，與 Debian Sid 在 Debian 生態系中的角色類似，是
+Slackware 測試最新版軟體的地方。與其他 rolling distro
+不同的地方是，Slackware -current
+很少有軟體不穩定的情況發生，就算發生了，通常也會在下次更新解決。適合需要相對較新的軟體與開發環境的人。</p>
+<p>下載網址：<a
+href="https://slackware.nl/slackware/slackware-current-iso/">32-bit</a>
+<a
+href="https://slackware.nl/slackware/slackware64-current-iso/">64-bit</a></p></li>
+</ul>
+<p>如果要我推薦，我會推薦 Slackware -current 的 64-bit
+版本。因為它相對於其他發行版的穩定性，它很適合裝在筆電上，平常拿來工作用。</p>
+<h3 id="下載好了接下來呢">下載好了，接下來呢？</h3>
+<p>Slackware
+跟其他發行版一樣，支援用光碟或隨身碟進行安裝。只要把下載下來的 ISO
+映像檔寫到隨身碟或燒到光碟中，再去電腦的 BIOS / UEFI
+設定編輯開機順序，就可以開始安裝了。Mac 使用者可以在按下電源鍵後馬上按住
+Option，選擇要用什麼開機。</p>
+<details>
+<summary>如何將 ISO 檔寫到隨身碟</summary>
+TODO
+</details>
+
+<p>開機完、選完 keyboard map （用 default 就好）、用 root
+登入之後，我們要先設定分割區。這裡會遇到兩種狀況：</p>
+<ul>
+<li>你想要保留原本的系統。</li>
+<li>你想要直接砍了原本的系統，朝自由之路邁進。</li>
+</ul>
+<p>我們這邊直接假設你是第二種。（第一種需要另一篇文章專門說明分割區的設定，而且各個系統有不同的設定方法與問題）</p>
+<p>因此我們直接執行<code>cfdisk</code>，安排分割區如下：</p>
+<ul>
+<li>500 MB，拿來放開機檔案的分割區。Type 選 EFI System。</li>
+<li>剩下的空間減掉 RAM 的大小，拿來裝系統。</li>
+<li>RAM 的大小，拿來當 swap space。</li>
+</ul>
+<details>
+<summary>詳細執行步驟</summary>
+TODO，記得附圖！
+</details>
+
+<p>再來是安裝的部分。其實安裝過程大致上照螢幕上的說明，選擇完後一直按
+Enter 就可以了。比較特別的是，如果你想用 GRUB 代替 Slackware
+預設的開機引導程式 LILO / ELILO，可以參考 <a
+href="https://docs.slackware.com/howtos:slackware_admin:grub_on_first_install">Slackware
+Docs 中的說明</a>：</p>
+<ul>
+<li><p>在安裝完成後，不要重新開機，選擇「Shell」切到文字介面。</p></li>
+<li><p>先 chroot 到目標安裝資料夾：</p>
+<pre><code># chroot /mnt</code></pre></li>
+<li><p>再來安裝 GRUB:</p>
+<pre><code># grub-install /dev/sda
+# grub-mkconfig -o /boot/grub/grub.cfg</code></pre></li>
+</ul>
+<p>安裝完成後，將隨身碟拔除並重開機，應該就能直接進入 Slackware 了。</p>
+<h3 id="安裝完成的快感褪去之後">安裝完成的快感褪去之後…</h3>
+<p>…你會發現：</p>
+<ul>
+<li>沒辦法輸入中文。</li>
+<li>中文字型醜醜的。</li>
+<li>不知道去哪裡安裝新軟體。</li>
+</ul>
+<p>因此，接下來我們會將這些問題一一解決。首先，先從最容易的——</p>
+<h3 id="解除安裝中文字型">解除安裝中文字型</h3>
+<p>Slackware
+預裝的中文字型有好幾款，其中包括時下最流行的免費中文字型——思源黑體與思源明體。但在這兩套高品質開源中文字型出現之前，Linux
+使用者們想顯示中文，除了從 Windows 或 Mac OS
+複製字型來用（非法），只有幾種選擇：</p>
+<ul>
+<li>文鼎的四套開源字型，兩套繁體兩套簡體；有明體跟楷體可以使用。</li>
+<li>CwTeX
+系列字型。（後來爆出是由文鼎字型描邊重製而成，遊走法律邊緣）</li>
+<li>文泉驛的兩套字型：文泉驛正黑，與文泉驛微米黑。</li>
+</ul>
+<p>Slackware
+在思源系列字體推出之前就已經打滾多年，因此包含當時最沒有版權爭議的中文顯示字體——文泉驛正黑，也是再正常不過的事。不過，文泉驛正黑因為是由部件組字的關係，字型品質其實不怎麼好；既然有了思源黑體，就可以讓文泉驛正黑功成身退了。要解除安裝，直接打開一個新的終端機視窗，先輸入</p>
+<pre><code>sudo su</code></pre>
+<p>並輸入密碼以切換到 root 帳號。再來執行：</p>
+<pre><code>slackpkg remove wqy-zenhei-font-ttf</code></pre>
+<p>就可以將其移除。Slackware
+系統中同時存在一套品質也不怎麼好的日文字型，這邊一併移除：</p>
+<pre><code>slackpkg remove sazanami-fonts-ttf</code></pre>
+<p>最後為了防止它們在安裝更新時一起被裝回來，可以用你習慣的文字編輯器開啟
+<code>/etc/slackpkg/blacklist</code> 文字檔，並在檔案末端加入</p>
+<pre><code>wqy-zenhei-font-ttf
+sazanami-fonts-ttf</code></pre>
+<p>如此一來，重開機之後，介面的中文字應該都是以思源黑體顯示。</p>
+<p>再來在安裝軟體、輸入法之前，我們需要先設定第三方軟體源。</p>
+<h3 id="設定第三方套件庫">設定第三方套件庫</h3>
+<p>我們剛剛已經用過了 Slackware 內建的套件管理程式—— slackpkg，但
+slackpkg
+並不支援直接下載第三方套件，只能安裝從其他來源下載的套件。好在，一群
+Slackware 開發者維護了一個類似 Arch Linux 的
+AUR、拿來放編譯套件腳本的地方：<a
+href="https://slackbuilds.org">slackbuilds.org</a>。簡單來說，套件腳本會做的事就是使用原始碼壓縮檔（tarball），用特定的方式產生安裝套件。而許多人也開發了與這個套件庫互動的程式，如
+<a href="https://sbopkg.org">sbopkg</a>、<a
+href="https://pink-mist.github.io/sbotools/">sbotools</a> 或 <a
+href="https://github.com/montagdude/sboui">sboui</a>。我自己使用的是
+sboui，因此接下來會示範如何安裝與設定 sboui。</p>
+<p><strong>安裝</strong></p>
+<ul>
+<li>首先，先到 slackbuilds.org 搜尋 sboui。我們會到達這個頁面：</li>
+</ul>
+<details>
+<summary>slackbuilds.org 上的 sboui 頁面</summary>
+  ![slackbuilds.org sboui page](res/slacksboui.png)
+</details>
+
+<p>我們捲動到下面，點擊 Source Downloads 跟 Download SlackBuild
+下面的連結來下載原始碼檔案，分別是
+<code>sboui-&lt;版本&gt;.tar.gz</code> 跟
+<code>sboui.tar.gz</code>。在最下面可以看到 <strong>This requires:
+libconfig</strong>，這代表我們需要下載另一個套件—— libconfig
+的腳本。點一下連結，你會被帶到 libconfig 的下載頁面：</p>
+<details>
+<summary>slackbuilds.org 上的 libconfig 頁面</summary>
+  ![slackbuilds.org libconfig page](res/slacklibconfig.png)
+</details>
+
+<p>在這裡，我們一樣捲動到下面，點擊 Source Downloads 跟 Download
+SlackBuild 下面的連結，分別是 <code>libconfig-&lt;版本&gt;.tar.gz</code>
+跟 <code>libconfig.tar.gz</code>。</p>
+<ul>
+<li>下載完之後，先解壓縮 <code>sboui.tar.gz</code> 跟
+<code>libconfig.tar.gz</code>。要確定他們是解壓縮到各自的資料夾，而不是當前的資料夾。</li>
+<li>解壓縮完後，將 <code>sboui-&lt;版本&gt;.tar.gz</code> 移動到 sboui
+資料夾內，再把 <code>libconfig-&lt;版本&gt;.tar.gz</code> 移到 libconfig
+資料夾內。上述動作做完之後，Downloads
+資料夾應該會長這樣：（在我寫這篇文章的時候，<code>libconfig</code>
+的版本是 1.7.2，<code>sboui</code> 的版本是 2.3）
+<pre><code>$ tree ~/Downloads
+/home/ltlnx/Downloads/
+├── libconfig
+│   ├── README
+│   ├── libconfig-1.7.2.tar.gz
+│   ├── libconfig.SlackBuild
+│   ├── libconfig.info
+│   ├── remove_scanner.patch.gz
+│   └── slack-desc
+└── sboui
+    ├── README
+    ├── doinst.sh
+    ├── sboui-2.3.tar.gz
+    ├── sboui.SlackBuild
+    ├── sboui.info
+    └── slack-desc</code></pre></li>
+<li>再來，先到 libconfig
+資料夾內（<code>cd libconfig</code>），執行以下指令：
+<pre><code>$ chmod +x libconfig.SlackBuild
+$ su  # 切換到 root 帳號，如果有設定 sudo 也可以執行 sudo su
+# ./libconfig.SlackBuild</code></pre>
+到這邊，libconfig 就會開始編譯，跑完之後在 <code>/tmp</code>
+資料夾內會有包裝好的套件。</li>
+<li>再來安裝剛包裝好的套件：
+<pre><code>installpkg /tmp/libconfig-1.7.2-x86_64-2_SBo.tgz</code></pre>
+你看到的檔案名稱很可能會跟我的不同，但開頭一定是 libconfig。可以在打完
+<code>/tmp/libconfig</code> 後按一下 Tab 鍵以自動完成。</li>
+<li>最後，用一樣的方式安裝 sboui：
+<pre><code>$ dirs
+~/Downloads/libconfig
+$ cd ../sboui
+$ chmod +x sboui.SlackBuild
+$ su
+# ./sboui.SlackBuild
+# installpkg /tmp/sboui-2.3-x86_64-1_SBo.tgz</code></pre></li>
+</ul>
+<p>完成之後，可以試試看以 root 帳號在終端機執行
+<code>sboui --version</code>：</p>
+<pre><code># sboui --version
+sboui 2.3
+Copyright (C) 2016-2022 Daniel Prosser
+Expat/MIT License: https://opensource.org/licenses/MIT
+This is free software; you are free to change it and redistribute it.
+This software is presented &#39;as is&#39;, without warranty of any kind.</code></pre>
+<h3 id="安裝與啟用-fcitx-5">安裝與啟用 Fcitx 5</h3>
+<p>在安裝好第三方套件管理器之後，就可以安裝輸入法了。如果你選擇的是
+Slackware 15.0，我會建議將預設的 Fcitx 解除安裝，並從 sboui 安裝 Fcitx
+5：</p>
+<ul>
+<li>移除 fcitx：
+<pre><code>slackpkg remove fcitx*</code></pre></li>
+<li>安裝 fcitx 5：在 sboui 搜尋 fcitx，並安裝
+<ul>
+<li>fcitx5</li>
+<li>fcitx5-gtk</li>
+<li>fcitx5-qt</li>
+<li>fcitx5-chinese-addons</li>
+<li>fcitx5-chewing 如果使用的是
+sboui，應該會連相依套件一起安裝好，就不用擔心有什麼沒裝到。</li>
+</ul></li>
+</ul>
+<p><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>2023-03-21</p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/slackware-chinese-install-guide.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

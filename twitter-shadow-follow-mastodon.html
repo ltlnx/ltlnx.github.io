@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Follow Twitter Users on Mastodon (or any ActivityPub implementation) - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1
+id="follow-twitter-users-on-mastodon-or-any-activitypub-implementation">Follow
+Twitter Users on Mastodon (or any ActivityPub implementation)</h1>
+<blockquote>
+<p>Update 2024-04-21: bird.makeup doesn’t work as of now, because
+Twitter changed their API and the alternative API bird.makeup was using,
+Nitter, stopped updating some weeks ago.</p>
+</blockquote>
+<p>One day on Hacker News I found out the <a
+href="https://bird.makeup/">bird.makeup</a> site, which makes bot
+accounts of Twitter users to make them followable on ActivityPub
+implementations like Mastodon. If this sentence means nothing to you,
+let me explain some of the words:</p>
+<ul>
+<li><p>Twitter is a once-popular microblogging (a place to write
+short-form texts) service. It is in a continuous demise since the
+entrepreneur Elon Musk acquired it and screwed the platform.</p></li>
+<li><p>ActivityPub is a standard that allows different web services to
+interact with each other, and implements common social network
+activities such as following, liking, announcing, adding and blocking. A
+number of web services implement this protocol, like</p>
+<ul>
+<li>microblogging platforms Mastodon, Plemora and Misskey (think
+Twitter),</li>
+<li>media hosting sites Peertube (think Youtube), Pixelfed (think
+Instagram), and Funkwhale (think Spotify),</li>
+<li>blogging platforms like WriteFreely (think Blogger or Bear
+Blogs),</li>
+<li>and other services made for different use-cases.</li>
+</ul>
+<p>The nature of ActivityPub makes it possible to say, follow a Peertube
+account on Mastodon, which is unimaginable on other individual
+platforms.</p></li>
+<li><p>Mastodon is an implementation of ActivityPub that focuses on
+Twitter-like microblogging. People can set up “instances” of Mastodon
+with different rules, such as</p>
+<ul>
+<li>which servers to “federate” (recieve and send content) with,</li>
+<li>what types of content are allowed in the instance (like R18
+regulations),</li>
+<li>and what kinds of people are walcome on the instance in
+general.</li>
+</ul>
+<p>There are a range of instances that consist of different political
+views, regions or mindsets, and we can choose which public instance to
+join, or whether to host our own instance.</p></li>
+</ul>
+<p>I don’t know whether that explains it correctly; if not, there are
+definitely other people explaining these better.</p>
+<p>So on to bird.makeup…</p>
+<h3 id="how-the-site-works">How the site works</h3>
+<p>The site is as easy as it gets: type in the Twitter handle of whom
+you want to follow, and it will give you a corresponding
+<code>@&lt;account&gt;@bird.makeup</code> account. Open up your Mastodon
+(or Plemora, et al.) account and follow the bird.makeup account there.
+That’s it: you can now see all the account’s Twitter posts, in the
+comfort of your instance’s “Home” or account timeline.</p>
+<h3 id="why-is-this-interesting">Why is this interesting</h3>
+<p>Well, you can follow anyone on Twitter <em>without them knowing
+it</em>. That’s the interesting point about this service and the
+Fediverse in general: if the server doesn’t federate with your server,
+you can piggyback on their posts and reply all you want without their
+knowledge. It’s the modern version of talking behind people’s backs.</p>
+<p>This can raise problems such as commercial instances piggybacking on
+posts to serve ads, and lead to instance moderators blocking them, which
+in turn raises the burden of instance moderators. Although this might
+not be a problem for now, I see it being a huge issue in the future, as
+the Fediverse keeps growing.</p>
+<p>But in the meantime, Twitter isn’t going to implement ActivityPub and
+federate, so I dunno, just enjoy the service I guess :)</p>
+<p><em>Last updated: 2023-03-23</em></p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/twitter-shadow-follow-mastodon.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Microsoft Windows/Office Setup and Activation on (Slackware) Linux - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1
+id="microsoft-windowsoffice-setup-and-activation-on-slackware-linux">Microsoft
+Windows/Office Setup and Activation on (Slackware) Linux</h1>
+<blockquote>
+<p>Update 2024-01-09: Virtualbox 7.0.12 builds with some patches, see <a
+href="https://www.linuxquestions.org/questions/slackware-14/building-virtualbox-kernel-slackbuild-for-6-6-x-kernel-branch-4175731627/">this
+thread</a> on LinuxQuestions. For the end user using SBo, please wait
+until Heinz updates the Virtualbox-related SlackBuilds.</p>
+</blockquote>
+<p>So first, a disclaimer: The methods I list in this article are solely
+for educational purposes, and if you need the software legally, buy a
+license, or use free (or better, FOSS) counterparts.</p>
+<p>I was listening to a local podcast the other day, and the sponsor of
+that episode is a company that sells extension cables and whatnot. As
+they were talking about the product, a question arose: when would we
+<em>want to</em> buy extension cables? If we aren’t in need of it, we
+wouldn’t even think about it. The only moment people really want to buy
+them, is when they need the extension cables, but none of them are
+available. As a result they utilized this for pushing the holiday
+discount for the cables.</p>
+<p>In software, just like extension cables, there are some things I miss
+only when I need them. One of them is a working Windows virtual machine
+setup. I’ve avoided Windows- or Mac-only software for most of my
+university work, but sadly when I deal with classes from the business
+and administration departments, I’ve had less success. Time after time I
+encounter pieces of software that only have Windows and/or Mac OS
+versions. In those cases, having a Windows VM is pretty handy. (I had to
+edit Access databases for schoolwork, and clearly the easiest way to do
+that is with Microsoft Access. That prompted this article.)</p>
+<p>If you’re using Linux, or more specifically, Slackware, here’s what I
+chose to install, and how I installed them.</p>
+<h2 id="the-actual-tutorial-part">The Actual Tutorial Part</h2>
+<p><strong>Preparation</strong></p>
+<ul>
+<li>Download and install Virtualbox. For Slackware users, that means
+going to the SlackBuild manager of your choice to install
+<code>virtualbox-kernel</code> and <code>virtualbox</code>.</li>
+<li>Slackware-specific: Read the <code>README</code> and
+<code>README.Slackware</code> files, and do as they say before you start
+installing. This is important, <strong>especially adding the
+startup/shutdown routines</strong>, so that virtual machines would
+work.</li>
+<li>Start Virtualbox to make sure it’s installed correctly.</li>
+</ul>
+<p><strong>Download Parts</strong></p>
+<p>In this part, we are downloading Windows 10 LTSC, the Long Term
+Servicing Channel, to install less bloat in the first place. The Office
+version I chose is Office 2016, but feel free to download any later or
+earlier versions, though install procedures may differ.</p>
+<ul>
+<li>Go to <a href="https://massgrave.dev/windows_ltsc_links.html">the
+Windows LTSC Download page</a> on massgrave.dev to download Windows 10
+LTSC in the language of your choice.</li>
+<li>Go to the “Office MSI VL” link on <a
+href="https://massgrave.dev/genuine-installation-media.html">this
+page</a> to download Office 2016 in the language of your choice. (If you
+want to download later or earlier versions, the website has instructions
+on how to install and activate them.)</li>
+</ul>
+<p><strong>Installation</strong></p>
+<ul>
+<li>Open Virtualbox and add a new virtual machine. I’m not going into
+the details since the interface is self-explanatory, but if you’re new
+to virtual machines, I’d recommend allocating 40GB of disk space, and
+4GB or above for RAM.</li>
+<li><strong>[IMPORTANT]</strong> If you’re using Virtualbox 6.1.44,
+there’s a bug inhibiting mouse activity after going fullscreen, so after
+you finish setting up:
+<ul>
+<li>Go to Settings → User Interface</li>
+<li>Uncheck “Show in Full-screen/Seamless”</li>
+</ul></li>
+<li>Start the machine, and select the Windows 10 LTSC ISO file in the
+popup.</li>
+<li>Run<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+through the installer. For maximal comfortness, disable Internet access
+for the virtual machine by going to the bottom right → right-click on
+the “two screens” icon → click on “Connect Network Adapter”.</li>
+<li>After installing, you may want to backup the virtual hard disk in
+case something goes wrong. Here’s how you do it:
+<ul>
+<li>Power off the virtual machine.</li>
+<li>Go to Settings → Storage and select the one with a hard disk
+icon.</li>
+<li>Under “Information” in the right panel, there’s the location. Go to
+the location, duplicate the file and give it another name.</li>
+</ul></li>
+</ul>
+<p><strong>Office Installation</strong></p>
+<ul>
+<li>Copy the downloaded Office ISO to the machine. There are several
+methods:
+<ol style="list-style-type: decimal">
+<li>Install Virtualbox Additions by clicking on the relevant option in
+Virtualbox’s “Devices” menu, and following the instructions on-screen.
+Then set up a shared folder in the settings.</li>
+<li>For Linux users, open Powershell and use <code>scp</code> to copy
+the file. Or just use option 1.</li>
+</ol></li>
+<li>Double-click on the copied ISO file. This mounts it, and it appears
+in the left pane of Windows Explorer.</li>
+<li>Click on the mounted CD, and double click on the installer (the one
+with the Office icon). Follow the instructions on-screen.</li>
+</ul>
+<p><strong>Optimization</strong></p>
+<p>Here we’ll use <a href="https://christitus.com/windows-tool/">a tool
+by Chris Titus</a> to optimize our setup. This part is optional but if
+you want a better experience, here’s your chance.</p>
+<ul>
+<li>Remember to re-enable Internet access if you’ve disabled it in
+previous steps.</li>
+<li>Run the tool as per the instructions on the <a
+href="https://christitus.com/windows-tool/">page</a>.
+<ul>
+<li><strong>Do note that the command is the equivalent of
+<code>curl | sh</code> on Linux</strong>, so if the site starts showing
+the slightest bit of malice, skip this part and find better tools. Also
+contact me so that I could update this article.</li>
+</ul></li>
+<li>After the tool opens, apply tweaks as you please. I personally
+removed Edge and set up a delay in feature updates.</li>
+</ul>
+<p>The tool installs <code>winget</code>, a command-line package manager
+for Windows. If you’ve used package managers on Linux, it should feel
+familiar. I installed SumatraPDF, VLC, Librewolf and 7-Zip since they
+are essential to replace Edge functionality.</p>
+<p><strong>Activation</strong></p>
+<p>The tool we’ll use here is named “Microsoft Activation Scripts”, and
+it’s the single easiest way to activate Windows and Office I’ve ever
+seen. Kudos to the dev(s).</p>
+<ul>
+<li>Follow the instructions to launch MAS from <a
+href="https://massgrave.dev/index.html">its homepage</a>. Again, the
+warning for Chris Titus’s tool applies here.</li>
+<li>After the program starts, activate Windows and Office with the
+on-screen prompts. It really is that easy.</li>
+</ul>
+<p><strong>Final Touches</strong></p>
+<ul>
+<li>If you haven’t installed Virtualbox Additions, install it. The
+resize-with-window function is worth it alone.</li>
+<li>Back up the virtual hard disk once more. That way, you can swap in
+this backup disk if anything goes seriously wrong and is not recoverable
+within the virtual machine.</li>
+</ul>
+<p>– ltlnx 2024-01-05</p>
+<p><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Read <em>suffer</em>.<a href="#fnref1"
+class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/ms-activation.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

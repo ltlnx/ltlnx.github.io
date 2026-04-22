@@ -1,0 +1,20 @@
+html {
+    margin: auto;
+    max-width: 52rem;
+    font-family: "Noto Serif", Georgia, serif;
+    background: #020;
+    color: #090
+}
+a {color: #c80; text-decoration: none; text-underline-offset: 0.125em; text-decoration-thickness: 0.75px}
+a:hover {color: #ba0}
+body {overflow-x: hidden}
+h2 {font-size: 1.125rem}
+pre, blockquote {overflow-x: auto; background: #030; padding: 1em}
+blockquote {margin: 0; border-left: 0.75em solid}
+blockquote > * {margin: 0 0.25em 0.25em;}
+code {font-size: 1rem}
+pre code {font-size: 0.9rem}
+ul, ol {padding-left: 1em}
+hr {border: 0.75px solid}
+figure, img, video {width: 100%; max-width: 640px}
+@media print {#header, #footer {display: none} h1 {margin-top: 0}}

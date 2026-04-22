@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>New Blog Architecture, a Roadmap - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="new-blog-architecture-a-roadmap">New Blog Architecture, a
+Roadmap</h1>
+<blockquote>
+<p>Edit 2022-05-13: In the end I changed back to a simple list layout,
+for the sake of simplicity and mobile compability. In the future I may
+investigate in tables again and make better use of <code>@media</code>
+queries and css <code>display</code> options.</p>
+</blockquote>
+<p>I have been writing blogs on Github Pages (now Codeberg Pages) since
+2019, and I had always needed to add the sources and links myself,
+sometimes even hand-craft the HTML. For the new blog, I wish to blog
+completely in Markdown, and have an easy structure for conversion and
+the ability to automatically create the “Posts” page.</p>
+<p>Given the hirearchy:</p>
+<pre><code>    Posts/
+        無病呻吟/
+            0309-test1.md
+            0310-test2.md
+        科技相關/
+            0311-hello.md
+            0312-world.md</code></pre>
+<p>The conversion program should be able to create a table containing
+links to all of the posts, in markdown format:</p>
+<pre><code>  ------------------------------------------------------------------------
+               無病呻吟                             科技相關
+  ----------------------------------- ------------------------------------
+   [test1](無病呻吟/0309-test1.html)   [hello](科技相關/0311-hello.html)
+
+   [test2](無病呻吟/0310-test2.html)   [world](科技相關/0312-world.html)
+  ------------------------------------------------------------------------</code></pre>
+<p>On top of that, I may declare different headings, and introduction
+text on the posts page. I may also make new table rows or columns for
+clarity. In that case, I wish to have a editable template file, which
+has a hook in it to insert converted content; and when doing the
+conversion the program will insert the new table hirearchy into the
+template, thus creating the new posts page.</p>
+<p>All of these should be done in one script that I could run after
+finishing a piece of writing. Ideally it would also have a “Beta” hook
+which if I include in my source file, it wouldn’t parse the file. All
+resources should also be detected and put in their respective folders,
+relative to the post. Each post should be portable; that is, each post
+is a folder and contains the resources it needs, only referring to the
+stylesheet.</p>
+<p><em>Last updated: 2022-05-27</em></p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/new-blog-architecture.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

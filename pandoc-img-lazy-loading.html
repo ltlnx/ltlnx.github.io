@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>將 Pandoc 處理的 Markdown 圖片套上 lazy-loading 屬性 - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="將-pandoc-處理的-markdown-圖片套上-lazy-loading-屬性">將 Pandoc
+處理的 Markdown 圖片套上 lazy-loading 屬性</h1>
+<p>在寫上一篇 <a href="/haiku-betar5.md">Haiku Beta R5 試用</a>
+的時候，因為圖很多、不想影響載入速度，於是搜尋起了如何讓 Pandoc 在轉換
+Markdown 的時候套上 lazy-loading 的屬性。於是找到了這篇 Github Issue：<a
+href="https://github.com/jgm/pandoc/issues/6197">HTML5 feature: lazy
+loading images</a>，其中 jgm（Pandoc 維護者）提到，只要使用 3 行的 Lua
+過濾器就能輕鬆達成這個目的：</p>
+<pre><code>function Image(el)
+  el.attributes.loading = &quot;lazy&quot;
+  return el
+end</code></pre>
+<p>將這段程式碼存為 <code>lazy.lua</code>，並在執行 <code>pandoc</code>
+時使用：</p>
+<pre><code>pandoc --lua-filter lazy.lua</code></pre>
+<p>就能將所有圖片套上 lazy-loading
+屬性。在實際轉換文件時這會讓速度稍微慢一些。</p>
+<p>– ltlnx 2024-09-16</p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/pandoc-img-lazy-loading.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

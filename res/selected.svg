@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="198.58211mm"
+   height="56.663956mm"
+   viewBox="0 0 198.58211 56.663956"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.6176874,-63.281645)">
+    <rect
+       style="font-weight:900;font-size:11.1313px;font-family:'Zen Old Mincho';-inkscape-font-specification:'Zen Old Mincho Heavy';opacity:0.976139;fill:#000000;fill-opacity:1;stroke:none;stroke-width:13.0077;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="rect2336"
+       width="93.474854"
+       height="56.663948"
+       x="6.6176877"
+       y="63.281643" />
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:11.1313px;font-family:'Zen Old Mincho';-inkscape-font-specification:'Zen Old Mincho Heavy';opacity:0.976139;fill:#000000;fill-opacity:1;stroke:#193a40;stroke-width:7.73013;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="6.6245732"
+       y="71.461632"
+       id="text236"><tspan
+         sodipodi:role="line"
+         id="tspan234"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.73013;stroke-dasharray:none"
+         x="6.6245732"
+         y="71.461632"><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan2098">Name</tspan>          Price      </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.73013;stroke-dasharray:none"
+         x="6.6245732"
+         y="86.658333"
+         id="tspan238"><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan2212">-------------</tspan> ----------------</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.73013;stroke-dasharray:none"
+         x="6.6245732"
+         y="101.85503"
+         id="tspan240"><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan2220">Apples</tspan>        20</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.73013;stroke-dasharray:none"
+         x="6.6245732"
+         y="117.05173"
+         id="tspan242"><tspan
+   style="fill:#ffffff;fill-opacity:1"
+   id="tspan2226">Oranges</tspan>       50</tspan></text>
+  </g>
+</svg>

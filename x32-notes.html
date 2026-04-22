@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>音控幹訓筆記 Day 1 - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="音控幹訓筆記-day-1">音控幹訓筆記 Day 1</h1>
+<h3 id="音控角色">音控角色</h3>
+<ul>
+<li>音控有分：<strong>音控</strong> 跟 <strong>系統工程師</strong>
+<ul>
+<li>系統工程師負責調整音場聽起來舒服（每個地方聽起來差不多）</li>
+<li>音控負責台上聲音</li>
+</ul></li>
+</ul>
+<h3 id="設備">設備</h3>
+<ul>
+<li>MIC：分為電容與動圈
+<ul>
+<li>電容 MIC <strong>需要供電</strong>，動圈不用</li>
+</ul></li>
+<li>DI：將非平衡訊號轉為平衡訊號
+<ul>
+<li>主動式 DI：只要<strong>需要供電</strong>的都叫主動式</li>
+</ul></li>
+<li>X32：主要音控台，與 Stage Box、Input、Output 相連</li>
+<li>S16 / S32：Stage Box，需要軌數較多時使用，可以串接
+<ul>
+<li>與 X32 使用 <strong>AES50</strong> 相連</li>
+<li>AES50 有分 A/B 孔，在X32上兩個都可以接，但在Stage
+Box上<strong>一律接 AES50-A</strong></li>
+</ul></li>
+<li>喇叭：分為主動式與被動式
+<ul>
+<li>主動式喇叭本身要供電，擴大機在喇叭內</li>
+<li>被動式喇叭沒有外接電源，但需要<strong>擴大機</strong>推動</li>
+</ul></li>
+</ul>
+<h3 id="訊號從輸入到輸出">訊號從輸入到輸出</h3>
+<ul>
+<li>輸入
+<ul>
+<li>Input：任何輸入來源都叫 Input，需要先用 Routing
+對到實際的軌數上</li>
+<li>Channel：輸入後的訊號對到任意軌數上，那個軌數就叫 Channel</li>
+</ul></li>
+<li>訊號處理
+<ul>
+<li>Gain：調整訊號輸入大小</li>
+<li>Dynamics：調整<strong>在 Input 多少時要 Output 多少</strong>
+<ul>
+<li>Compressor：將較大的輸入大小「壓縮」，讓輸出不會太大或差太多</li>
+<li>各軌 Compressor 壓法：
+<ol style="list-style-type: decimal">
+<li>如果不需要特別
+Compress，每軌都開在該輸入<strong>可能會出現的最大音量</strong>，以保護輸出</li>
+<li>Compressor 的 Attack <strong>調成
+0</strong>，讓他在超過閥值時馬上作動</li>
+<li>Knee 是聲音調整的平滑度，建議開 1
+或不要開太大，以免在還沒到閥值時就被壓縮</li>
+</ol></li>
+<li>Compressor 的 Filter Frequency：調整<strong>哪些頻率不需要
+Compress</strong>，如Vocal可以做 Filter Frequency 的 Low Shelf 跟 High
+Shelf，防止 feed 跟讓聲音比較自然（note: 確定一下是不是 Shelf）</li>
+<li>Peak vs RMS Compression：Peak 代表只要有訊號超過閥值，就會被
+Compress；RMS 代表聲音的平均，只有在訊號超過閥值一段時間才會作動</li>
+<li>建議先將訊號源處理好再做 Dynamics</li>
+</ul></li>
+<li>EQ：調整各頻率的訊號大小</li>
+<li>Insert：將訊號送到外部處理後再送回，如 Effects
+<ul>
+<li>Insert 的 pre 是 pre-EQ，post 是 post-dynamics</li>
+</ul></li>
+</ul></li>
+<li>輸出
+<ul>
+<li>Bus（MixBus）：輸出到一個 Buffer，可以直接輸出也可以做其他用途
+<ul>
+<li>Bus 裡面的 Fader 大小是相對於外場聲音（0 就是跟外場相同）</li>
+<li>Bus 的 Pre-Fader 是 pre 外場的 Fader</li>
+</ul></li>
+<li>Main LR：主要輸出
+<ul>
+<li>通常 Main LR 都要開到 0，而且不會掛效果、EQ等，要拿到 Matrix
+再處理</li>
+</ul></li>
+<li>Matrix：喇叭輸出
+<ul>
+<li>用 Matrix 輸出的好處：可以個別調音響的 EQ 與輸出大小</li>
+<li>Matrix 可以送 Main，也可以送 Bus</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="試音方法">試音方法</h3>
+<ul>
+<li>一開始把 Routing 固定好後，先用 Sends on Fader 把各 Channel 送進 Bus
+中
+<ul>
+<li>如：調好貝斯後，問說「誰需要貝斯」然後一次送</li>
+</ul></li>
+<li>Channel 在定 Gain 時可以先把 Fader 調到 0</li>
+</ul>
+<h3 id="routing">Routing</h3>
+<ul>
+<li>DCA：將某些軌道或 Bus 連在一起，可以一起調整音量（或大小）
+<ul>
+<li>注意 Bus 跟 FX 都可以串 DCA</li>
+</ul></li>
+</ul>
+<h3 id="effects">Effects</h3>
+<ul>
+<li>X32 上 Effects 會分 Send 跟 Return，Send 的音就是所謂的 dry
+（還沒過效果器的），Return 則是 wet （過完效果器的），用法不同</li>
+<li>reverb、delay 主要需要調的參數：
+<ul>
+<li>pre-delay：多久之後效果器才會作動</li>
+<li>size：模擬的空間大小，太大會讓聲音不自然</li>
+<li>decay：效果器的效果要延續多久</li>
+</ul></li>
+</ul>
+<h3 id="未分類">未分類</h3>
+<ul>
+<li>下小鼓皮不可以反相，因為小鼓構造本身會讓低頻反相</li>
+<li>用低頻測相位：全放低頻（低頻的 sin wave）→ 需要調的音響開反相 →
+調到差異最大 → 關反相</li>
+<li>立體聲軌道送 Mono 或是 Pan 極左極右會多出 3dB</li>
+<li>2 倍音量是加 6dB （大概），10 倍是加 20dB （定義上）</li>
+</ul>
+<p><em>Last updated: 2023-04-23</em></p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/x32-notes.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

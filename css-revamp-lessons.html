@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>我在重寫網站 CSS 時發現的各種事 - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="我在重寫網站-css-時發現的各種事">我在重寫網站 CSS
+時發現的各種事</h1>
+<p>最近我重新寫過了整個網站的 CSS，讓網站煥然一新。我一直以來很欣賞像是
+<a href="http://www.slackware.com">Slackware 首頁</a> 或是一些 GNU
+說明文件網頁的風格，因此這次重寫就是以這幾個網頁為參考標準。</p>
+<p>但是重寫的過程中，總是有許多可怕的眉角等著絆倒你…</p>
+<h3 id="單位長度pxemrem">單位長度：px、em、rem</h3>
+<p>之前在網路上學 HTML / CSS 的時候，總會看到：盡量避免用 px，因為 px
+會隨著各個裝置螢幕大小而有所不同；如果想要設計適應性（能在電腦、平板跟手機上瀏覽的）網頁，要多用
+em 跟 rem。</p>
+<p>但這次我完全不遵照這個規定，一切以 px 為主，有必要時才使用
+rem，但還是能達成適應各種螢幕大小的目的。為什麼呢？因為在 CSS 中，px
+不是實際上的螢幕像素，而是「一個能舒適地用肉眼看見的大小，不會小到要瞇眼才能看得清楚，也不會大到看得到各個像素」（翻譯自<a
+href="https://hacks.mozilla.org/2013/09/css-length-explained/">這篇
+Mozilla Hacks 文章</a>）。因此用 px
+作為大小的基礎其實沒有想像中的糟，反而能完整反映讀者「看到的大小」會是多少。至於不用
+em 或 rem 的原因是，em
+其實沒有想像中的好控制，因為只要讀者設定不同的字體大小，版面就會跑掉。</p>
+<h3
+id="borderpaddingmargin-對於-width-跟-height-的影響">border、padding、margin
+對於 width 跟 height 的影響</h3>
+<p>在設計頁面的時候，為了讓一行不會長到影響閱讀，會需要控制最大寬度；但最大寬度這件事，跟許多
+CSS 中的排版設定有很大的關係。我發現：</p>
+<p><strong>border 跟 padding 不算在 max-width 內。</strong></p>
+<p>在寫這個網站的 sidebar 時出現了這個問題：sidebar
+如果要放左邊，真正的內容就要往右移；而這個寬度是：sidebar 的
+<code>width</code> + 兩邊 border 的寬度 + padding 的寬度 +
+空隙的距離。因此最後右移的大小是：</p>
+<pre><code>  112px（sidebar 寬度）
+   16px（兩邊 padding：8px*2）
+    4px（兩邊 border：2px*2）
++   8px（預留給空隙的寬度，等同於導覽列跟sidebar的距離）
+-------
+  140px</code></pre>
+<p>在算各種距離的時候，也同樣要把這套邏輯套上去，才能算出最適合的寬度。</p>
+<h3 id="行距line-height">行距（<code>line-height</code>）</h3>
+<p>行距在 CSS
+中的定義其實大有問題：他並不是單純在每行之間加入空白，而是將每行上下各加一點空白，讓文字在兩邊空白的中間。這個奇怪之處讓段落邊的空白很難拿捏，因為段落與段落間的空白視覺上會大於段落到邊界的空白。用文字很難描述這個現象，見下圖：</p>
+<p><img src="res/line-height-quirk.png" loading="lazy"
+alt="行距怪狀" /></p>
+<p>更大的問題是，這個問題似乎只存在於英文字上，中文字則沒這個問題，因此不能直接將第一行行距減少就拍拍屁股走人。目前還沒試到滿意且滿足兩種語言的作法，只好先擱著。</p>
+<p>這次更新還有動到其他部份，像是清單項目的行距；總而言之，整體調起來還算滿意。</p>
+<p><em>Last updated: 2023-03-19</em></p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/css-revamp-lessons.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

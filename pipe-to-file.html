@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Bash 中重新導向資料的危險性 - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="bash-中重新導向資料的危險性">Bash 中重新導向資料的危險性</h1>
+<p>在 Bash 中，如果你將輸入與輸出的檔案設為同一個，如下列這段程式：</p>
+<pre><code>cat test.txt | cut -d &#39;/&#39; -f 3 | sed &#39;s/file/doc/&#39; &gt; test.txt</code></pre>
+<p>在跑完之後，也許你會想打開檔案看看，但打開之後，有很高的機率你會發現，<strong>該檔案是空的</strong>。</p>
+<p>這是為什麼呢？因為 Bash 基於某種原因，會在跑指令<em>的同時</em>
+清空輸出要導向的檔案，這種情況下會產生「競賽條件」（race
+condition）：以上面的指令舉例，如果是 <code>cat test.txt</code>
+先被執行，檔案內容就會被保留，但如果 <code>&gt; test.txt</code>
+先被執行，檔案就會被清空。在我的經驗中，通常執行這類指令結果都是檔案被淨空，因此還是要先將輸出導向到不同名稱的檔案，再用這個檔案覆蓋過原檔。上面的指令就會變成：</p>
+<pre><code>cat test.txt | cut -d &#39;/&#39; -f 3 | sed &#39;s/file/doc/&#39; &gt; test.txt-tmp
+mv test.txt-tmp test.txt</code></pre>
+<p>—— ltlnx 2024-02-05</p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/pipe-to-file.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

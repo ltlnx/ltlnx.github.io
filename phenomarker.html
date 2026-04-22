@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>New Font: Pheno Marker - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="new-font-pheno-marker">New Font: Pheno Marker</h1>
+<p>Handwritten with a round-tip marker, vectorized with Inkscape and
+modified with Fontforge. The font currently only supports ASCII.
+Diacritics would (hopefully) be added later.</p>
+<p>The current version is <strong>Alpha 1</strong>.</p>
+<p><a
+href="https://codeberg.org/phenofoundry/PhenoMarker/releases/download/alpha1/PhenoMarker-Regular.ttf">Download
+latest release</a> | <a
+href="https://codeberg.org/phenofoundry/PhenoMarker">Source Repo</a></p>
+<p>Test the font below.</p>
+<p><button onclick=ts()>Toggle Settings</button>
+<button onclick="fr()">Reset</button></p>
+<div id="settings" style="display: none">
+
+<p>Font size (px):
+<button class="sb" onpointerdown="fsc(-2)" onpointerup="end()" onpointerleave="end()">−</button>
+<input type="number" id="fontsize" name="fontsize" value="24" min="2" max="999" onfocusin="fsii()" onfocusout="fsio()"/>
+<button class="sb" onpointerdown="fsc(2)" onpointerup="end()" onpointerleave="end()">+</button></p>
+<p>Load example text from excerpts of:</p>
+<p><button onclick="fle('g')">Google Fonts</button>
+<button onclick="fle('f')">Font Library</button>
+<button onclick="fle('h')">Hoefler’s Proof: Lowercase 1.0</button>
+<button onclick="fle('hu')">Hoefler’s Proof: Uppercase 1.0</button>
+<button onclick="fle('r')">Radiohead - Fake Plastic Trees</button></p>
+</div>
+
+<blockquote id="testarea" contenteditable="true" style="font-size: 24px;">
+Click or tap here to edit the text.
+</blockquote>
+
+<p>This font is licensed with the <a
+href="https://openfontlicense.org/">SIL OFL</a>.</p>
+<p><img src="/res/phenomarker-demo.png" loading="lazy"
+alt="Font Showcase" /></p>
+<p><img src="/res/phenomarker-examples.png" loading="lazy"
+alt="Font Examples" /></p>
+<p>Changelog:</p>
+<ul>
+<li>2025-02-03 Tagged Alpha 1</li>
+</ul>
+<p>– ltlnx 2025-02-04</p>
+<p><span class="tags">標籤：<a href="/tags/軟體.html">軟體</a>
+</span></p>
+<style>
+@font-face {
+  font-family: "PhenoMarker";
+  src:
+    local("Pheno Marker"),
+    url("/res/PhenoMarker-Regular.woff2") format("woff2");
+}
+blockquote {
+  font-family: "PhenoMarker";
+  padding: 24px;
+  border-left: none;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  max-height: clamp(1rem, 65vw, 28rem);
+}
+blockquote > * {margin: 0;}
+button {margin-bottom: 4px;}
+.sb {
+  margin: 0;
+  width: 40px;
+  height: 42px;
+  text-align: center;
+  line-height: 0;
+}
+@media(prefers-color-scheme: dark) {
+  img {filter: invert(1);};
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+
+<script>
+var iv, tm;
+var sa = document.getElementById('settings');
+var fsi = document.getElementById('fontsize');
+var tft = document.getElementById('testarea');
+var tfs = parseInt(tft.style.fontSize);
+const tfsr = tfs;
+const teo = tft.innerHTML;
+function fs(i) {
+  if (tfs != fsi.value) {
+    fsio();
+  }
+  if (tfs > 2) {
+    tfs += i;
+  } else if (i > 0) {
+    tfs += i;
+    tft.style.fontSize = tfs + 'px';
+  } else {
+    tfs = 2;
+  }
+  tft.style.fontSize = tfs + 'px';
+  fsi.value = tfs;
+}
+function fsc(n) {
+  fs(n);
+  tm = setTimeout(function() {
+    iv = setInterval(function() {
+      fs(n);
+    }, 50);
+  }, 400);
+}
+function end() {
+  clearInterval(iv);
+  clearTimeout(tm);
+}
+function fle(t) {
+  tft.innerHTML = te[t];
+}
+function fr() {
+  end();
+  tft.innerHTML = teo;
+  tft.style.fontSize = tfsr + 'px';
+  tfs = tfsr;
+  fsi.value = tfsr;
+}
+function ts() {
+  settings.style.display = settings.style.display == 'none' ? 'block' : 'none';
+}
+function fsii() {
+  fsi.select();
+}
+function fsio() {
+  if (!fsi.validity.valid) {
+    fsi.value = tfs;
+  } else {
+    tft.style.fontSize = fsi.value + 'px';
+    tfs = parseInt(fsi.value);
+  }
+}
+fsi.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      fsi.blur();
+    }
+});
+const te = {
+  g: 'Whereas recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world,<br><br>Whereas disregard and contempt for human rights have resulted in barbarous acts which have outraged the conscience of mankind, and the advent of a world in which human beings shall enjoy freedom of speech and belief and freedom from fear and want has been proclaimed as the highest aspiration of the common people,<br><br>Whereas it is essential, if man is not to be compelled to have recourse, as a last resort, to rebellion against tyranny and oppression, that human rights should be protected by the rule of law,',
+  f: "Somehow, although he is the smallest office boy around the place, none of the other lads pick on him. Scuffling and fighting almost has ceased since Kerensky came to work. That's only one of the nicknames of Leo Kobreen, and was assigned to him because of a considerable facial resemblance to the perpetually fleeing Russian statesman, and, too, because both wore quite formal standing collars.",
+  h: "Angel Adept Blind Bodice Clique Coast Dunce Docile Enact Eosin Furlong Focal Gnome Gondola Human Hoist Inlet Iodine Justin Jocose Knoll Koala Linden Loads Milliner Modal Number Nodule Onset Oddball Pneumo Poncho Quanta Qophs Rhone Roman Snout Sodium Tundra Tocsin Uncle Udder Vulcan Vocal Whale Woman Xmas Xenon Yunnan Young Zloty Zodiac.",
+  hu: 'ABIDE BENCH CENSUS DEMURE EBBING FEEDER GENDER HERALD IBSEN JENNIES KEEPER LENDER MENACE NEBULA OBSESS PENNIES QUANTA REDUCE SENIOR TENDON UNDER VERSED WENCH XENON YEOMAN ZEBRA',
+  r: "Her green plastic watering can<br> For her fake Chinese rubber plant<br> In the fake plastic earth<br> That she bought from a rubber man<br> In a town full of rubber plans<br> To get rid of itself<br> <br> It wears her out, it wears her out<br> It wears her out, it wears her out<br> <br> She lives with a broken man<br> A cracked polystyrene man<br> Who just crumbles and burns<br> He used to do surgery<br> For girls in the eighties<br> But gravity always wins<br> <br> It wears him out, it wears him out<br> It wears him out, it wears<br> <br> She looks like the real thing<br> She tastes like the real thing<br> My fake plastic love<br> But I can't help the feeling<br> I could blow through the ceiling<br> If I just turn and run<br> <br> And it wears me out, it wears me out<br> It wears me out, it wears me out<br> <br> If I could be who you wanted<br> If I could be who you wanted all the time<br> <br> All the time<br> All the time"
+}
+</script>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/phenomarker.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

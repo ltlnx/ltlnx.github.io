@@ -1,0 +1,38 @@
+<svg width="640" height="400" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="48" width="179.00001" y="34" x="28" stroke="#000" fill-opacity="0"/>
+  <text xml:space="preserve" text-anchor="start" font-size="24" stroke-width="0" id="svg_2" y="65" x="41" stroke="#000" fill="#000">Topmost Folder</text>
+  <rect id="svg_3" height="48" width="209.00001" y="34" x="252" stroke="#000" fill-opacity="0"/>
+  <text xml:space="preserve" text-anchor="start" font-size="24" stroke-width="0" id="svg_4" y="65" x="265" stroke="#000" fill="#000">Destination Folder</text>
+  <rect id="svg_5" height="153" width="164" y="107.00001" x="29" stroke="#000" fill-opacity="0"/>
+  <text xml:space="preserve" text-anchor="start" font-size="24" stroke-width="0" id="svg_6" y="138" x="42" stroke="#000" fill="#000">Source Folder</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-size="18" id="svg_7" y="166" x="43" stroke-width="0" stroke="#000" fill="#000">Files:</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_9" y="187" x="44" stroke-width="0" stroke="#000" fill="#000">header</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_10" y="205" x="44" stroke-width="0" stroke="#000" fill="#000">footer</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_11" y="222" x="44" stroke-width="0" stroke="#000" fill="#000">release-header</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_12" y="240" x="44" stroke-width="0" stroke="#000" fill="#000">release-footer</text>
+  <rect id="svg_13" height="118" width="185" y="107.00001" x="217" stroke="#000" fill-opacity="0"/>
+  <text xml:space="preserve" text-anchor="start" font-size="24" stroke-width="0" id="svg_14" y="138" x="230" stroke="#000" fill="#000">Category Folder</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-size="18" id="svg_15" y="165" x="231" stroke-width="0" stroke="#000" fill="#000">Files:</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_16" y="186" x="232" stroke-width="0" stroke="#000" fill="#000">post1.md</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_17" y="204" x="232" stroke-width="0" stroke="#000" fill="#000">post2.md</text>
+  <rect id="svg_20" height="118" width="185" y="107.00001" x="425" stroke="#000" fill-opacity="0"/>
+  <text xml:space="preserve" text-anchor="start" font-size="24" stroke-width="0" id="svg_21" y="138" x="438" stroke="#000" fill="#000">Resource Folder</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-size="18" id="svg_22" y="165" x="439" stroke-width="0" stroke="#000" fill="#000">Files:</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_23" y="186" x="440" stroke-width="0" stroke="#000" fill="#000">pic1.jpg</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_24" y="204" x="440" stroke-width="0" stroke="#000" fill="#000">pic2.png</text>
+  <rect id="svg_25" height="118" width="185" y="251.00001" x="217" stroke="#000" fill-opacity="0"/>
+  <text xml:space="preserve" text-anchor="start" font-size="24" stroke-width="0" id="svg_26" y="282" x="230" stroke="#000" fill="#000">Category Folder</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-size="18" id="svg_27" y="309" x="231" stroke-width="0" stroke="#000" fill="#000">Files:</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_28" y="330" x="232" stroke-width="0" stroke="#000" fill="#000">post3.md</text>
+  <text xml:space="preserve" text-anchor="start" font-size="18" id="svg_29" y="348" x="232" stroke-width="0" stroke="#000" fill="#000">post4.md</text>
+  <line id="svg_30" y2="107" x2="108" y1="82" x1="108" stroke="#000"/>
+  <line id="svg_31" y2="56" x2="252" y1="56" x1="207" stroke="#000"/>
+  <line id="svg_32" y2="168" x2="216" y1="168" x1="193" stroke="#000"/>
+  <line id="svg_33" y2="301" x2="204" y1="168" x1="204" stroke="#000"/>
+  <line id="svg_34" y2="301" x2="217" y1="301" x1="204" stroke="#000"/>
+  <line id="svg_35" y2="164" x2="424" y1="164" x1="402" stroke="#000"/>
+ </g>
+</svg>

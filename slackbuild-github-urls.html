@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Make Slackbuilds Work Well With Github - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="make-slackbuilds-work-well-with-github">Make Slackbuilds Work
+Well With Github</h1>
+<p>While writing a Slackbuild, I encountered a problem where I’m not
+sure how to work with Github Release tags. The problem goes as
+follows:</p>
+<blockquote>
+<p>Hello,</p>
+<p>I’ve encountered a problem when writing SlackBuilds for fcitx5 – the
+Github releases only has tags, not tarballs. However, tags downloaded
+from Github don’t have the package name in the filename. For example, if
+I want to download version 5.0.18 from their “Releases” page by clicking
+on “tar.gz” on the tag, the downloaded file would have the filename
+“5.0.18.tar.gz”, as opposed to “fcitx5-5.0.18.tar.gz”.</p>
+<p>In this case, should the Slackbuild assume the filename
+“fcitx5-5.0.18.tar.gz”? Or should I change it to only assume the version
+number (“5.0.18.tar.gz”)? TIA.</p>
+<p>Best regards, Wen-Wei Kao (ltlnx)</p>
+</blockquote>
+<p>I posted this to the SlackBuild-Users mailing list, and members
+Fernando and Alexander promptly replied with this link: <a
+href="https://slackbuilds.org/GITHUB_URLs.txt">https://slackbuilds.org/GITHUB_URLs.txt</a>.</p>
+<p>The document informs users how to download source files from Github
+in order to use the SlackBuilds. However this isn’t linked anywhere in
+the main <a href="https://slackbuilds.org">slackbuilds.org</a> site. So
+I’m keeping this here for reference.</p>
+<p><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>2022-07-24</p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/slackbuild-github-urls.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

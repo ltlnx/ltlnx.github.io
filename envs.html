@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>A Possible Fix for X11 Programs Refusing to Start on Wayland - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="a-possible-fix-for-x11-programs-refusing-to-start-on-wayland">A
+Possible Fix for X11 Programs Refusing to Start on Wayland</h1>
+<p>As Wayland and KDE on Wayland matures, I’ve switched my entire
+environment to KDE Wayland. Serious props to KDE developers — all of the
+Konsole and Kwin gliches I experienced in the early days are long
+gone.</p>
+<h3 id="a-short-aside-why-wayland">A short aside: Why Wayland?</h3>
+<p>As an end user of Slackware, KDE and related software, I find these
+advantages good enough to make me switch:</p>
+<ul>
+<li>Touchpad gestures. On Wayland three- and four-finger swipes are
+readily available, while on KDE X11 I’ll have to set up stuff like <a
+href="https://github.com/JoseExposito/touchegg">Touchegg</a>, and still
+it doesn’t integrate as well as KDE Wayland does.</li>
+<li>Correct scaling for mixed DPI situations. I have a Macbook set at
+150% scaling, and an external screen set at 100%. Wayland can do that
+without hacks.</li>
+<li>KDE supporting a global scale for all X11 and Wayland applications
+across GTK and Qt. Xlib and FLTK aside, no more scaling hacks.</li>
+</ul>
+<p>Things like Pipewire and XDG portals are still rough on the edges,
+and parts of the Wayland stack (libinput) is not as configurable as say,
+xf86-input-synaptics and synclient, but I’d say the status quo is good
+enough for laymen like me to make the switch.</p>
+<p>Enough rambling, let’s get on to the topic…</p>
+<h3 id="what-environment-variables">What environment variables?</h3>
+<p>When I started toying with KDE on Wayland (with
+<code>startkwayland</code> in Slackware), I had to run all KDE apps (KDE
+Gear they call it) under Wayland, otherwise they would look blurry.<a
+href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> Therefore
+I added the following to <code>/etc/environment</code>:</p>
+<pre><code>QT_QPA_PLATFORM=wayland</code></pre>
+<p>which makes Qt apps, which most KDE apps are, to use Wayland. Next up
+is to make GTK apps use Wayland too, so I added:</p>
+<pre><code>GDK_BACKEND=wayland</code></pre>
+<p>Also some documentation recommends setting the XDG session type to
+Wayland too, so:</p>
+<pre><code>XDG_SESSION_TYPE=wayland</code></pre>
+<p>Under Qt things are all good: If a Qt app only runs on X11, typically
+I don’t need additional configuration to make them start with Xwayland,
+the method to run X11 programs on Wayland. However with GTK it’s not the
+case, as when I try to start <a href="">Seamonkey</a> it errors out:</p>
+<pre><code>Error: cannot open display: :0</code></pre>
+<p>I’ve fiddled with the <code>DISPLAY</code> and
+<code>WAYLAND_DISPLAY</code> to no avail, and put the problem aside
+until I remembered the Wayland environment variables. So I tried
+<code>GDK_BACKEND=x11 seamonkey</code> and sure enough, Seamonkey
+started up.</p>
+<h3 id="onto-the-solution">Onto the solution</h3>
+<p>I’ve written this helper script to start programs with the correct
+variables set, named <code>xenv</code>:</p>
+<pre><code>#!/bin/sh
+# Set some environment variables to X11
+
+export GDK_BACKEND=x11
+export QT_QPA_PLATFORM=xcb
+export XDG_SESSION_TYPE=x11
+$@</code></pre>
+<p>Put this in your path and use as
+<code>xenv &lt;problematic_app&gt;</code>.</p>
+<p>Have fun!</p>
+<p><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>2023-10-25</p>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>This isn’t the case anymore, but still, running with
+native Wayland makes programs integrate better with the system.<a
+href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/envs.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

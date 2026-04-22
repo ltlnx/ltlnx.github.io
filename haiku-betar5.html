@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Haiku R1 Beta5 簡易評測 - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="haiku-r1-beta5-簡易評測">Haiku R1 Beta5 簡易評測</h1>
+<p>在看到 <a
+href="https://www.haiku-os.org/news/2024-09-13_haiku_r1_beta5/">Haiku
+釋出 R1 Beta5</a> 的消息後，就迫不及待地把 R1 Beta5
+下載下來準備試玩。上次碰 Haiku 已經是在 Beta 2
+推出的時候，那時候可以使用的應用程式還很少，在之前的電腦（Acer
+Aspire？）上可以開機但無法使用觸控板，在 Mac
+上則是連開機都無法開機。這次主要想測試在虛擬機跑起來的感覺，以及在實機上能不能使用。</p>
+<style>
+html {max-width: 1100px;}
+</style>
+
+<h2 id="虛擬機安裝">虛擬機安裝</h2>
+<p>前往 <a href="https://www.haiku-os.org/get-haiku/r1beta5/">Get
+Haiku</a> 下載頁面之後，我們能選取其中一個映像站下載 Haiku R1 Beta5 的
+ISO 映像檔。下載完之後，在 VirtualBox 新增虛擬機並選取下載好的 ISO
+作為開機媒體，就可以順利進入 Haiku 了。</p>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-start.png" loading="lazy"
+alt="Haiku 起始畫面" /></p>
+<p>在開機後，第一個畫面可以選取語言及要安裝還是直接測試。因為在一開始我已經新增硬碟了，在這裡我直接選取「Install
+Haiku」。再來會進入到格式化磁碟跟安裝的部分，這邊就不贅述，但只能說
+Haiku
+如其他國外的評測員所述，真的安裝很快，不下兩分鐘就完成、重開機。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-desktop.png" loading="lazy"
+alt="Haiku 桌面" /></p>
+<p>Haiku 重開機之後的桌面。右側是「Tracker」，相當於 Windows 與 Linux
+的工作列；桌面上有些圖示。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-vboxinstall.png" loading="lazy"
+alt="VirtualBox Guest Addons 安裝畫面" /></p>
+<p>首先我要安裝的是 VirtualBox Guest
+Addons，看看能不能自動調整螢幕畫素。因為之前安裝過
+Haiku，我知道負責安裝程式的是名為「HaikuDepot」的程式。開啟之後，搜尋
+VirtualBox Guest Addons，找到了套件但與我使用的版本不合（套件是
+6.1.26，我的版本是
+6.1.50），不過沒有關係，還是直接裝上去重開機看看。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-afterres.png" loading="lazy"
+alt="調整完螢幕畫素跟介面縮放係數的桌面" /></p>
+<p>重開機之後滑鼠變順暢了，但是螢幕似乎沒有跟著視窗放大縮小。沒關係，那我們直接進設定調整。Haiku
+調整介面縮放係數的方式比較特別，是透過直接調整「Appearance」中的字體大小來達成。調整完後重開機，整個介面也比較符合想像中的樣子。</p>
+</div>
+</div>
+<h2 id="第一印象">第一印象</h2>
+<p>從之前使用 Beta 2 時，就覺得 Haiku
+的介面獨特，而且自有自的美感。再加上它的視窗管理有許多特殊的地方，等等也可以來看看。</p>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-mail.png" loading="lazy"
+alt="剛設定好郵件信箱，跳出新郵件通知的畫面" /></p>
+<p>接下來先來測試一些內建的程式。我發現 Haiku
+特別的是，它的郵件是與檔案系統相掛勾的，因此在設定好郵件信箱之後，可以直接從檔案管理器檢視、收發信件。只有發信會用到
+Applications 中的 Mail 程式。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-mail2.png" loading="lazy"
+alt="透過檔案管理員收信" /></p>
+<p>透過檔案管理員收信。開啟信件後，信件也會出現在 Tracker
+選單中的「Recent Documents」。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-text.png" loading="lazy"
+alt="Haiku 中的文字編輯器" /></p>
+<p>Haiku 中有兩個文字編輯器，Pe 與
+StyledEdit。看起來一個是用來輸入程式碼與純文字的，另一個可以產生
+RTF（算是 Word 檔的前身）檔案。同時在 HaikuDepot 安裝 BeCJK
+之後，不用重新開機及多作設定，就可以輸入中文了。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-media.png" loading="lazy"
+alt="同時開啟 MP3 與 MP4" /></p>
+<p>Haiku 的前身 BeOS 就是處理媒體檔案的好手，果然在播放 MP3 與 MP4
+檔案時，我沒遇到任何問題。VirtualBox
+的音訊卡看來也有被偵測到，因為聽得到聲音。</p>
+</div>
+</div>
+<h2 id="wonderbrush">WonderBrush</h2>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-1.png" loading="lazy"
+alt="WonderBrush 的 HaikuPorts 頁面" /></p>
+<p>接下來我想試著安裝一些第三方程式。身為常常做平面設計的人，我會需要用到
+Inkscape 與 Krita，因此首先來試試看安裝這兩個程式。但在這之前，Haiku
+上似乎有個原生設計程式叫 Wonderbrush，來試用看看。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-2.png" loading="lazy"
+alt="WonderBrush 起始畫面" /></p>
+<p>WonderBrush
+這個程式蠻有趣的，它的敘述寫著自己是「融合了向量與點陣圖的繪圖工具」，因此等等要來試試的大概就是這句話的意思。從它的按鈕圖示可見，還是使用舊式的點陣圖圖示，因此可以推測該程式應該是在
+Haiku 統一用向量圖示之前寫成的。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-3.png" loading="lazy"
+alt="使用 WonderBrush 繪製工作室 Logo" /></p>
+<p>在使用 WonderBrush 繪製工作室 Logo
+之後，也大概抓到了這個程式的用法：首先先使用筆刷、文字工具繪製圖形，再選取並移動、縮放圖形。比較有趣的是，它的選取、縮放分成兩段，必須先使用選取工具選取，再使用縮放工具縮放與旋轉。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-4.png" loading="lazy"
+alt="重新繪製工作室 Logo" /></p>
+<p>在準備下一步時，WonderBrush 突然當掉，因此我帶著上次的經驗重畫了一次
+Logo。WonderBrush 是沒有自動儲存的設定的，因此要常常記得按下
+Alt+S。（Haiku 預設的加速鍵是 Alt。）</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-5.png" loading="lazy"
+alt="套用濾鏡與混合模式" /></p>
+<p>WonderBrush
+也支援濾鏡與混合模式，但濾鏡比較特別，是視為物件與其他物件一起排列的，也因此可以說它的濾鏡是「非破壞式」（Non-destructive）的。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-6.png" loading="lazy"
+alt="改變圖畫尺寸" /></p>
+<p>WonderBrush「向量」的地方在於，在圖片尺寸放大縮小時，物件還是會維持清晰。在「Canvas」選單中的「Resize」，我們可以將圖片尺寸放大到我們想要的樣子。（但最高可使用的畫素是4096x4096）</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-7.png" loading="lazy"
+alt="向量工具" /></p>
+<p>另外，WonderBrush
+也支援使用貝茲曲線繪製圖形，不過沒有布林運算工具可供使用。但因為路徑可以被反轉，能減輕這點的困擾。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-wonderbrush-8.png" loading="lazy"
+alt="最終成品" /></p>
+<p>最終的成品。私心覺得它的半色調處理得蠻好看的。</p>
+</div>
+</div>
+<p>截圖沒有截到，但 WonderBrush
+的另一個特點是，更改顏色要先在上面的調色盤調好後，再拖拉到左下角的「Color」那格；也可以從左下角拖曳顏色到右上角進行再調色。不太直覺但蠻酷的。</p>
+<h2 id="安裝與使用-inkscapekrita">安裝與使用 Inkscape、Krita</h2>
+<p>剛剛花太多時間在 WonderBrush
+上了，終於要來做點正事。但在這之前，我想先把剛剛完成的作品複製到主機上。這時候會先使用到
+<code>scp</code>，因此能順便看看 Haiku 的終端機。</p>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-terminal.png" loading="lazy"
+alt="Haiku 的終端機" /></p>
+<p>終端機就是終端機，沒什麼特別的。手癢測了一下有沒有
+Vim，答案是沒有。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-inkscape-1.png" loading="lazy"
+alt="安裝 Inkscape，爆量的依賴套件" /></p>
+<p>回到 HaikuPorts，我們來裝裝看
+Inkscape。這個依賴套件數量也太多了吧！</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-inkscape-2.png" loading="lazy"
+alt="Inkscape 介面" /></p>
+<p>開啟之後，就是熟悉的 Inkscape 介面，並沒有為了 Haiku
+進行介面的同化。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-inkscape-3.png" loading="lazy"
+alt="開啟之前的專案" /></p>
+<p>開啟之前的專案基本上也沒什麼問題。在操作上除了要把介面提到 Ctrl
+的地方換成 Alt，基本上沒什麼大問題。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-krita-1.png" loading="lazy"
+alt="Krita 起始畫面" /></p>
+<p>Krita
+在安裝時也拉了一大堆依賴套件進來，但裝好之後也能正常開啟。值得一提的是，Krita
+與其他 Qt 程式一樣，有對 Haiku 的介面做主題上的同化。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-krita-2.png" loading="lazy"
+alt="使用 Krita 開啟之前的專案" /></p>
+<p>開啟之前的專案也沒問題。除了字型跑掉了，但只是因為沒安裝相關字型。</p>
+</div>
+</div>
+<p>截至目前我已經確認平常用的繪圖程式都能使用，但有另一個常使用的程式還沒測試，就是瀏覽器。</p>
+<h2 id="瀏覽器測試">瀏覽器測試</h2>
+<p>Haiku 內建的瀏覽器，WebPositive，是使用 Webkit（Safari
+的瀏覽引擎）作為基底，因此開啟大部分網站應該沒問題。</p>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-webpositive-1.png" loading="lazy"
+alt="WebPositive 首頁" /></p>
+<p>開啟 WebPositive 之後，迎面而來的是 Haiku 使用者指南的第一頁。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-webpositive-2.png" loading="lazy"
+alt="使用 WebPositive 開啟這個網站" /></p>
+<p>開啟本網站當然沒問題，因為本網站對各種瀏覽器都進行過最佳化處理。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-webpositive-3.png" loading="lazy"
+alt="使用 WebPositive 開啟 GitLab" /></p>
+<p>另一個我常用瀏覽器做的工作就是協助 Inkscape
+專案整理、測試各個「議題」（問題回報）。WebPositive 在開啟 GitLab
+上看起來是沒什麼問題。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-webpositive-4.png" loading="lazy"
+alt="WebPositive 的書籤及開發者工具" /></p>
+<p>WebPositive
+的功能不多，但基本功能都有，也有粗淺的開發者工具可用。整體來說是堪用的瀏覽器。</p>
+</div>
+</div>
+<h2 id="haiku-特殊的視窗管理">Haiku 特殊的視窗管理</h2>
+<p>在開始實機測試前，先來截一些顯示 Haiku 視窗管理強大之處的截圖。</p>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-windowmgmt-1.png" loading="lazy"
+alt="Haiku 視窗疊合" /></p>
+<p>Haiku 中的視窗可以疊合，形成類似分頁的複合式視窗。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-windowmgmt-2.png" loading="lazy"
+alt="Haiku 視窗並排" /></p>
+<p>Haiku 中的視窗也可以並排，而這兩個可以一起使用。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-windowmgmt-3.png" loading="lazy"
+alt="Haiku 可以複製到桌面的程式" /></p>
+<p>另外 Haiku 中有許多程式右下方有小小的扳手圖示，拖曳那個圖示…</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-windowmgmt-4.png" loading="lazy"
+alt="Haiku 桌面複製品" /></p>
+<p>就能在桌面上形成「複製品」，讓這些小程式如同其他桌面的「小工具」（widget）般留在桌面上。</p>
+</div>
+</div>
+<p>接下來，玩了這麼多，終於要進行實機測試了。</p>
+<h2 id="實機測試">實機測試</h2>
+<p>我連上了常用的 USB、使用 <code>dd</code> 將 Haiku
+映像檔寫入隨身碟之後重開機，按著 Option 讓開機選單出現。（沒錯，我是用
+Macbook Pro）</p>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-baremetal-1.jpg" loading="lazy"
+alt="Mac 開機選單畫面" /></p>
+<p>Mac 開機選單畫面中，出現了可愛的 Haiku USB 開機選項。但在按下 Enter
+之後，並沒那麼輕易就能開機…</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-baremetal-2.jpg" loading="lazy"
+alt="Haiku 開機後破圖" /></p>
+<p>在開機畫面跑完之後，原以為會出現歡迎畫面，出現的卻只有破圖的顯示畫面。</p>
+</div>
+</div>
+<p>在多方查詢之後，看到 Haiku
+有自己的開機選單，可以在選取開機選項後按住空白鍵存取。但可能是因為顯示驅動程式有問題，連開機選單都顯示不出來，只好上網查詢開機選單的運作模式，盲按將「Use
+fail-safe graphics
+driver」開啟，再繼續開機。這部份因為沒畫面，自然沒有截圖。</p>
+<p>但這樣按一按還真的有效，我們成功進到了桌面：</p>
+<div class="cardblock">
+<div class="imgblock">
+<p><img src="/res/haiku-baremetal-3.png" loading="lazy"
+alt="在實機上的 Haiku 桌面" /></p>
+<p>成功開進桌面之後，第一個注意到的是，Haiku
+竟然因為偵測到高畫質螢幕，就自動將縮放係數調高，讓所有的物件都看得清楚。原本是沒有網路的、Wi-Fi
+也起不了作用，但在連接 Android 手機並開啟有線分享之後，Haiku
+成功地連上網路。</p>
+</div>
+<div class="imgblock">
+<p><img src="/res/haiku-baremetal-4.png" loading="lazy"
+alt="在實機上跑一些 Haiku 內建程式" /></p>
+<p>因為沒有真的要安裝 Haiku，就沒特別打開
+HaikuDepot，只開了一些內建程式過過乾癮。觸控板是有偵測到的，不過偵測成了滑鼠，因此沒有辦法開啟「觸碰以點擊」（Tap
+to
+click）。另外原本網路連得上，但在我斷連手機又連接回去之後，就算網路小工具顯示「已連線」，還是連不上網路。</p>
+</div>
+</div>
+<p>在 Haiku
+中逛一逛，逛差不多了就把截圖傳到原本的硬碟，再重開機。總結來說，感覺
+Haiku 又成熟了不少，至少在這次嘗試 Haiku
+只有在非常特定的情況下才會出現錯誤。硬體支援感覺也有提升。而介面沒變，也是這麼多人喜歡
+Haiku 的原因。</p>
+<p>– ltlnx 2024-09-16</p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+<!--
+COMMENTS: 113144105343978676
+-->
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/haiku-betar5.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+                    <button id="comment-toggle" onclick="btnClick()">顯示留言</button>
+        <div class="comments" data-url="https://g0v.social//113144105343978676">
+            <template>
+                <article class="comment">
+                    <div class="avatar"><img class="avatar"></div>
+                    <div class="header">
+                        <a class="user">
+                            <span class="displayname"></span>
+                            <span class="handle"></span>
+                        </a>
+                        <span class="timestamp"></span>
+                        <a class="link">
+                            <svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>External link</title><path d="m15 3c-0.5523 0-1 0.4477-1 1s0.4477 1 1 1h2.586l-7.293 7.293c-0.3905 0.3905-0.3905 1.024 0 1.414 0.3905 0.3905 1.024 0.3905 1.414 0l7.293-7.293v2.586c0 0.5523 0.4477 1 1 1s1-0.4477 1-1v-5c0-0.5523-0.4477-1-1-1h-5zm-10.12 2c-1.588 0-2.875 1.287-2.875 2.875v11.25c0 1.588 1.287 2.875 2.875 2.875h11.25c1.588 0 2.875-1.287 2.875-2.875v-5.625c0-0.5523-0.4477-1-1-1s-1 0.4477-1 1v5.625c0 0.4832-0.3918 0.875-0.875 0.875h-11.25c-0.4832 0-0.875-0.3918-0.875-0.875v-11.25c0-0.4832 0.3918-0.875 0.875-0.875h6.094c0.5523 0 1-0.4477 1-1 0-0.5523-0.4477-1-1-1h-6.094z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="content"></div>
+                    <div class="tidbits"></div>
+                </article>
+            </template>
+        </div>
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

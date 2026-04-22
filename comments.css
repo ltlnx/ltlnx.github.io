@@ -1,0 +1,86 @@
+div.comments {margin-bottom: 2em}
+div.comments ol {list-style-type: none; padding-left: 0}
+div.comments > ol > li > ol {padding: 2em}
+div.comments article.comment {
+  margin-top: 0.5em;
+  display: grid;
+  gap: .4em;
+  grid-template-columns: 3.5em 1fr
+}
+div.comments div.avatar {
+  grid-column:1;
+  grid-row:1 / 4
+}
+div.comments img.avatar {
+  width:3em;
+  aspect-ratio:1 / 1;
+  border-radius:50%;
+  margin: 0 auto;
+}
+div.comments .header {
+  grid-column:2;
+  grid-row:1;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap: 0 6px
+}
+div.comments .header .displayname {
+  font-weight:bold
+}
+div.comments .header .handle {
+  margin-left:.4em;
+  font-size:.8em
+}
+div.comments .header .timestamp {
+  opacity:.7;
+  font-size:.8em
+}
+div.comments div.content {
+  grid-column:2;
+  grid-row:2
+}
+div.comments picture.emoji {
+  vertical-align:baseline;
+  display: inline-block;
+}
+div.comments picture.emoji img {
+  width:1em;
+  aspect-ratio:1 / 1;
+  vertical-align:middle;
+  margin: 0
+}
+div.comments div.content p:first-child {
+  margin-top:0
+}
+div.comments div.content p:last-child {
+  margin-bottom:0
+}
+div.comments div.content .ellipsis::after {
+  content:'…'
+}
+div.comments a.link {
+  color:unset
+}
+div.comments a.link svg {
+  width:.8em;
+  fill:currentColor
+}
+div.comments .tidbits {
+  grid-column:2;
+  grid-row:3;
+  display:flex;
+  gap:1.2em;
+  flex-wrap:wrap;
+  font-size:.8em
+}
+div.comments .tidbits:empty {
+  display:none
+}
+div.comments .tidbits>* {
+  display:flex;
+  gap:.4em
+}
+@media screen and (max-width: 540px) {
+  div.comments > ol > li > ol {padding: 1em}
+}

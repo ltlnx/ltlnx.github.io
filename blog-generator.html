@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>ltlnx's Blog Updater - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="ltlnxs-blog-updater">ltlnx’s Blog Updater</h1>
+<p>This is ltlnx’s blog updater: it takes a source directory with
+Markdown files, a “header” and a “footer”, converts them to HTML, and
+copies them to the desired destination directory.</p>
+<p>A fully-fledged demo that uses this generator can be found at <a
+href="https://ltlnx.tw">https://ltlnx.tw</a>. (That’s the site you’re
+looking at!)</p>
+<p><a href="https://github.com/ltlnx/ltlnx-blog-updater">GitHub repo
+link</a> <a
+href="https://raw.githubusercontent.com/ltlnx/ltlnx-blog-updater/main/update.sh">Script
+direct download</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>any bourne-compatible shell (tested with ksh, bash, ash, dash, and
+sh)</li>
+<li>GNU grep (or a grep supporting <code>-P</code>)</li>
+<li>GNU sed</li>
+<li>Pandoc for Markdown conversion, or you can edit the
+<code>vmdconvcommand</code> to supplant with your own Markdown
+convertor.</li>
+</ul>
+<p>There may be something missing here but in general, a Linux system
+with pandoc installed would probably work. (If not, please create an
+issue.)</p>
+<h2 id="setup-on-linux">Setup (on Linux)</h2>
+<ol style="list-style-type: decimal">
+<li>Open a terminal and clone this repo.</li>
+<li>Go into the cloned directory:
+<code>cd ltlnx-blog-updater</code></li>
+<li>Make sure the script is executable:
+<code>chmod u+x update.sh</code></li>
+<li>Initialization: <code>./update.sh init</code>. At this point a
+minimal blog example would be created.</li>
+<li>Edit details in the <code>.updaterc</code> file as necessary.</li>
+<li>Run the script again.</li>
+<li>Copy the generated files to your web server directory, or if you
+have python3 installed, run <code>./update.sh serve</code> and go to <a
+href="http://0.0.0.0:8000">0.0.0.0:8000</a> with your preferred web
+browser.</li>
+</ol>
+<h2 id="editing-the-config-file">Editing the config file</h2>
+<p>The config file, <code>.updaterc</code>, contains all parameters the
+script needs. The comments in the file should be self-explanatory, but
+here are some tips:</p>
+<ul>
+<li>For <code>vroot</code>, if you plan to run the script from another
+directory, please substitute it with an <em>absolute</em> path (i.e.
+<code>/home/ltlnx/blog</code> instead of <code>.</code>).</li>
+<li>It would be beneficial to explore the different Markdown flavors
+pandoc supports, and determine the actual <code>vmdconvcommand</code>
+you want to use. For <a href="https://ltlnx.tw">https://ltlnx.tw</a> I
+use <code>pandoc -f commonmark-x -t html</code>.</li>
+</ul>
+<h2 id="writing-blog-posts-and-tag-descriptions">Writing blog posts and
+tag descriptions</h2>
+<p>Both blog posts and tag descriptions should be Markdown files in the
+source directory (<code>src</code> by default). Blog posts have the
+suffix <code>.md</code>, and descriptions have the suffix
+<code>.desc</code>. Say if you want to add a new tag named “tech”:</p>
+<ul>
+<li><p>Write a blog post and add <code>Tags: tech</code> at the end of
+the file (or anywhere beneath the title).</p></li>
+<li><p>In the source directory, add a file named
+<code>tech.desc</code>.</p></li>
+<li><p>Add to the file a description that looks like the following:</p>
+<pre><code># Tech-related stuff
+
+Here are all my tech-related stuff.</code></pre></li>
+<li><p>Rebuild the blog by running <code>update.sh</code>.</p></li>
+</ul>
+<p>After running, you should ba able to go to
+<code>dst/tags/tech.html</code> to make sure that it’s applied, and has
+a link to the blog post.</p>
+<h2 id="header-and-footer-files">Header and footer files</h2>
+<p>The <code>header</code> and <code>footer</code> files in the root
+directory is the HTML that would be added to the top and bottom of pages
+on the website, making the HTML complete. The <code>header</code> file
+should end with a opening tag (like <code>&lt;div id="main"&gt;</code>),
+and the <code>footer</code> file should start with a closing tag with
+the same type as the opening tag (like <code>&lt;/div&gt;</code>). The
+example <code>header</code> and <code>footer</code> files are minimal
+examples of what they look like.</p>
+<h2 id="dates">Dates</h2>
+<p>To specify the date of a post, you can do one of the following:</p>
+<ul>
+<li>Add a date on its own line, e.g. <code>2023-11-03</code></li>
+<li>Add a date after “Last updated: “, e.g.
+<code>Last updated: 2023-11-03</code></li>
+</ul>
+<p>Both would work equally fine. Just make sure that you don’t specify
+two dates for the same post, or the updater script would pick the first
+one.</p>
+<h2 id="sticky-posts">Sticky posts</h2>
+<p>If the post is in the <code>src/sticky</code> folder, it wouldn’t
+show up in the <code>archive.html</code> page but still show up in the
+tag pages. Useful for the homepage (<code>src/sticky/index.md</code>),
+about page (<code>src/sticky/about.md</code>) and the like.</p>
+<h2 id="theming">“Theming”</h2>
+<p>To “theme” your site, add a CSS file, preferably named
+<code>style.css</code>, in the source directory. A minimal example is
+included after you run <code>./update.sh init</code>. You can inspect
+the generated HTML (with Firefox’s inspector, a text editor or whatever)
+and determine which target to write styles for.</p>
+<p>Don’t forget to add a <code>&lt;link&gt;</code> attribute to the
+<code>header</code> file, which looks like such:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/style.css&quot;&gt;</code></pre>
+<h2 id="rss-atom-and-a-sitemap">RSS (Atom) and a sitemap</h2>
+<p>This script also generates an RSS feed named “atom.xml” in the
+destination directory. You can decide what to do with it. When deploying
+with the script, a “sitemap.xml” will be generated, or you can generate
+it manually by running <code>./update.sh gensitemap</code>.</p>
+<h2 id="contributing--bug-reports">Contributing / Bug reports</h2>
+<p>This script currently doesn’t accept pull requests, but you’re
+welcome to report bugs in Github Issues or directly to ltlnx dot tw at
+gmail dot com. Thanks for discovering and using my script!</p>
+<p>– ltlnx 2023-11-27</p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/blog-generator.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

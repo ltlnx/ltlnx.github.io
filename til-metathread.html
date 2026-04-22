@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Today I Learned Metathread - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="today-i-learned-metathread">Today I Learned Metathread</h1>
+<p>All things I learned that doesn’t count as a post, in reverse
+chronological order.</p>
+<p><em>Last updated: 2024-01-24</em></p>
+<h2 id="id_2024-01-24">2024-01-24</h2>
+<p>To clean up local git branches deleted on a remote upstream, Erik
+Schierboom provided <a
+href="https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/">a
+way to delete them at once</a>. To summarize, you can issue the
+following commands in the terminal:</p>
+<pre><code>git fetch -p &amp;&amp; \
+git for-each-ref --format &#39;%(refname:short) %(upstream:track)&#39; | \
+  awk &#39;$2 == &quot;[gone]&quot; {print $1}&#39; | \
+  xargs -r git branch -D</code></pre>
+<p>The linked article above also lists another command that aliases the
+process to <code>git gone</code>:</p>
+<pre><code>git config --global alias.gone &quot;! git fetch -p &amp;&amp; git for-each-ref --format &#39;%(refname:short) %(upstream:track)&#39; | awk &#39;\$2 == \&quot;[gone]\&quot; {print \$1}&#39; | xargs -r git branch -D&quot;</code></pre>
+<h2 id="id_2023-11-30">2023-11-30</h2>
+<p>Some days ago I was merging two audio tracks and combining them with
+a video, and pleasantly found out that <code>.mov</code> extensions can
+have <code>.wav</code> (<code>pcm_s16e</code>) as the audio track
+format, while <code>.mp4</code>s cannot. So I can extract the audio,
+edit them in Ardour, export them into wav, and combine with video into a
+mov container <em>without any proprietary aac stuff involved</em>. Which
+means I don’t need another version of ffmpeg, and can use the
+system-provided one.</p>
+<p>Most phones play .mov anyway, so what’s to lose?</p>
+<h2 id="id_2023-11-28">2023-11-28</h2>
+<p>I just came across <a href="https://rys.io/en/index.html">Michał
+“rysiek” Woźniak’s blog</a> which has this gorgeous black-orange style
+and curved lines. The placement of the menu is <em>chef’s kiss</em> too,
+as it just blends into the header and feels super natural. Definitely an
+inspiration if I were to overhaul the visuals of this blog.</p>
+<h2 id="id_2023-05-29">2023-05-29</h2>
+<p><strong>Linux quick fix: how to connect to a previously connected
+network without waiting</strong></p>
+<p>If you’re using the <code>wl</code> driver on Macs like me, you may
+know that the driver more than ofter has problems with establishing
+connections. The reproducible solution to quickly connect to a
+previously connected network while connected to another Wi-Fi is the
+following:</p>
+<p>(Do note that I’m using KDE Plasma. Procedures may differ on other
+setups)</p>
+<ol style="list-style-type: decimal">
+<li>Press “connect” on the Wi-Fi you are to connect to.</li>
+<li>Wait for about 2 seconds (with the dialog saying “Establishing
+connection…”).</li>
+<li>Disable Wi-Fi.</li>
+<li>Re-enable Wi-Fi. It may start to try connecting to another network
+(if the network is present).</li>
+<li>Press connect on the desired Wi-Fi SSID again.</li>
+</ol>
+<p>Profit.</p>
+<h2 id="id_2023-05-28">2023-05-28</h2>
+<p><a href="https://github.com/simonsmh/notocjk">NotoCJK</a><br />
+Android Magisk module patching Noto Sans &amp; Serif CJK to support all
+weights.</p>
+<h2 id="id_2023-05-17">2023-05-17</h2>
+<p><a href="https://www.freestompboxes.org/">FreeStompBoxes</a><br />
+A Guitar / Bass pedals DIY forum.</p>
+<h2 id="id_2023-04-11">2023-04-11</h2>
+<p><a href="https://docs.appimage.org/user-guide/portable-mode.html">Use
+Appimages in portable mode</a></p>
+<p><span class="tags">標籤：<a href="/tags/本日新知.html">本日新知</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/til-metathread.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

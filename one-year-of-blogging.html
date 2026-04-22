@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>One Year of Blogging - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="one-year-of-blogging">One Year of Blogging</h1>
+<p>I just realized that it’s been over one year since I scrapped the old
+site and started a new one, and rolled my own Bash script to convert and
+update the files. Maybe it’s time for a retrospective into the
+website!</p>
+<hr />
+<h3 id="before-i-ended-up-here">Before I ended up here</h3>
+<p>When I was in elementary school, something called “class sites” are
+all the rage: the idea is, every class has a site, where teachers put
+homework assessments, announcements and whatnot, and students have their
+personal minisites with a “status line”, blog posting functionality, and
+other social-related activities. That was before megacorp social media
+sites like Facebook, Instagram and Twitter shook the way online
+socializing works.</p>
+<p>At the time, we are taught basic HTML and CSS in computer class. We
+learnt about headings, paragraphs, tables and iframes, and basic CSS
+attributes like <code>background-color</code> and <code>color</code>,
+<code>font-face</code>, <code>font-size</code>, etc., so that we could
+make a basic site as homework. Looking back, I’m grateful that the class
+happened and we were taught to write <em>pure HTML</em> instead of
+plunging into some Javascript framework, so that I know how the building
+blocks work and not be dazzled by modern web development.</p>
+<p>It was about the same timeframe that iGoogle (<a
+href="https://en.wikipedia.org/wiki/IGoogle">remember that?</a>) died
+and I started using Linux, so I grabbed widgets like <a
+href="https://chrome.google.com/webstore/detail/ab-hamster/jnpagnhcemblbjmaodhdeopdaoifdeag">the
+hamster</a> and <a
+href="https://chrome.google.com/webstore/detail/ab-fish/afimbdjeknokdnhccecbkonhehohkbpa">the
+fish</a> iframes, added a clock and made a small “dashboard” site
+running locally.</p>
+<p>In 2018, I opened up my first “blog” on Blogger, mainly for
+preserving forum posts of instructions that are otherwise hard to find.
+Stuff like <a
+href="https://litelinux0.blogspot.com/2018/12/geexbox-network.html">setting
+up Internet access for GeeXboX</a>, <a
+href="https://litelinux0.blogspot.com/2018/12/winnt-351-install_8.html">installing
+Windows NT 3.51</a> and <a
+href="https://litelinux0.blogspot.com/2019/01/everywindowsdownloadiso.html">Windows
+ISO links</a>. The funny thing is, since Blogger has analytics enabled
+by default, I found out that my posts still get views up to this day.
+Especially the Windows ISO post, which got 65 thousand views since I
+posted it in 2019.</p>
+<p>In 2021 I posted “New place” (新地方), marking my departure from
+Blogger. In the post I mentioned the reason for leaving is because
+Google became a company too large to trust and reason with. Therefore I
+moved to the next place people think about for “open source blogging”:
+Github Pages.</p>
+<h3 id="github-pages-ssgs-and-hand-crafting-html">Github Pages, SSGs and
+hand-crafting HTML</h3>
+<!-- TODO add how SSGs and Github cooperate -->
+
+<p>I’ve been toying around Static Site Generators, or SSGs, around 2021.
+The first one I tried is <a href="https://hexo.io/">Hexo</a>, where I
+had a taste of the horrible NPM ecosystem. It dumps files at all sorts
+of places, and the files quickly became unmanageable. Then I tried <a
+href="https://gohugo.io/">Hugo</a> (which ended up being the first
+generation of my blog, as seen in <a
+href="https://github.com/ltlnx/ltlnx.github.io/commit/963020b9be5615059180dd5438521af28cf45e98">this
+commit</a>). The build system is a lot cleaner, but the generated
+content is still too heavy for my taste. I need something easier to
+maintain, and be more flexible without the concept of “themes”.</p>
+<p>So I retracted to what I have done since elementary school: write my
+own HTML and CSS. As seen with <a
+href="https://github.com/ltlnx/ltlnx.github.io/commit/a8ed238de2392297104738acbf4c0ccddc31d29b">this
+commit</a>, I deleted everything and added my own homepage, and started
+writing content in HTML (with <code>&lt;p&gt;</code> tags and
+everything!). At first I tried to make the text vertical since the
+content was written in Chinese, but ran into all sorts of compability
+problems including Chrome insisting on starting the page on the left
+(instead of the right, where vertical Chinese text usually start from,
+and Firefox gets it right). I changed it back to a horizontal layout and
+everything seemed good.</p>
+<p>There was a problem though — the friction of writing a post is a bit
+too high. I have to write the HTML, write additional layout CSS for
+pictures, and update the homepage <em>manually</em>. That was a lot of
+work to do, and it’s one of the reasons I don’t push out posts on a
+regular basis.</p>
+<p>In early 2022, I moved the site from Github to Codeberg, because of
+Github’s take on AI training and megacorp stuff. It was about the same
+time I met <a href="https://pandoc.org/">Pandoc</a> and its
+webpage-creating capabilities (with <code>-s</code>). Hey, I thought,
+now I could prepare a folder of Markdown files, run them through Pandoc
+with a script, then upload them to Codeberg pages. <a
+href="https://codeberg.org/ltlnx/pages/commit/da5c49ac93f7c6473920902735a1cf0cfb3bcea2">That’s
+what I did</a> on April 2022: write a script to automate blog building.
+As time passed I added more functionality, and the script eventually
+grew into <a href="https://github.com/ltlnx/ltlnx-blog-updater">the
+300-line behemoth it is today</a>.</p>
+<h3 id="codeberg-pages-and-onward">Codeberg Pages and onward</h3>
+<p>The site had some build modifications and several CSS revisions, but
+the format largely stayed the same: a homepage with the first 10 links
+of a category shown, several category pages, and post content pages.
+Currently some pages need an update (like the FAQ page, the Blogs I Read
+page, among others), and I need to embed sitemap creation into the main
+script, but yeah, I’m pretty content with what I have now. No Wordpress
+or complicated build systems, only files and a script I wrote myself.
+Maybe I should consider adding analytics in the Bear Blog “toast” style,
+so I don’t feel so lonely writing and maintaining these pages. However
+the site will always be as simple as possible, until I no longer
+maintain the site or give up on the web entirely (one reason may be the
+<a
+href="https://www.theregister.com/2023/07/25/google_web_environment_integrity/">Web
+Environment Integrity proposal</a>) and move to <a
+href="https://gemini.circumlunar.space/">Gemini</a> or something
+similar.</p>
+<p><em>Last updated: 2023-08-01</em></p>
+<p><span class="tags">標籤：<a href="/tags/隨想.html">隨想</a>
+</span></p>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/one-year-of-blogging.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>

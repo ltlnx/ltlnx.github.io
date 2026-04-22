@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-hant" xml:lang="zh-hant">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Slackware - Blog of ltlnx</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="icon" href="data:," />
+        <link rel="alternate" type="application/atom+xml" title="ltlnx 的網誌 —— 所有頁面" href="/rssfeed.xml" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <a href="/index.html" id="sitename"><strong>ltlnx 的網誌</strong></a>
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            </div>
+            <div id="main">
+<h1 id="slackware-相關">Slackware 相關</h1>
+<p>因為使用 <a href="http://slackware.com">Slackware</a>
+為主要發行版的緣故，我有不少相關事情想分享。它們被收集在這裡。</p>
+<div class="postcardblock">
+<div id="拯救-slackware-系統大作戰" class="postblock">
+<h2><a href="/save-the-system.html">拯救 Slackware 系統大作戰</a></h2>
+<p><span class="date">2024-04-22</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>為什麼會有這篇部落格文章呢？沒錯，又是下錯指令惹的禍。原本想說在
+<code>rc.local</code> （Slackware 的自訂啟動指令稿）加入刪除
+<code>/tmp</code>
+中部分檔案的指令，結果不曉得是指令下錯還是什麼的，開機時顯示「無法刪除
+/boot/efi:
+存取遭拒」之類的錯誤訊息，馬上發覺大事不妙，只得用力按住關機鍵強制關機。果然再開機時，系統直接顯示找不到開機裝置。</p>
+</div>
+<div id="debug-suspend-issues-in-certain-macbooks" class="postblock">
+<h2><a href="/macbook-suspend.html">Debug Suspend Issues in Certain
+Macbooks</a></h2>
+<p><span class="date">2024-04-21</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>Since updating to kernel version 5.15 on Slackware, my Macbook Pro
+(model A1398) takes a long time, or simply wouldn’t wake up from
+suspend. To try to figure out where the problem lies, I ran Intel’s <a
+href="https://github.com/intel/pm-graph">pm-graph</a>, but the logs
+didn’t yield anything interesting. At the time I switched the lid close
+action to hibernate and ignored the problem.</p>
+</div>
+<div id="解決-pipewire-偵測不到裝置的問題" class="postblock">
+<h2><a href="/sound.html">解決 Pipewire 偵測不到裝置的問題</a></h2>
+<p><span class="date">2024-04-12</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>在 Slackware 下因為沒有正式的依賴套件解決方案，有時 SBo（<a
+href="https://slackbuilds.org">slackbuilds.org</a>）會含有 Slackware
+本身就有的套件，但版本不一樣，因此會互相覆蓋。Lua 就是一個例子：SBo 中的
+Lua 版本為 5.1.5（可能是維護人沒更新、也可能是有套件依賴這個版本），但
+Slackware 本身的為 5.4.6，所以在 SBo
+安裝套件時要特別小心不要蓋過原有的套件。</p>
+</div>
+<div
+id="microsoft-windowsoffice-setup-and-activation-on-slackware-linux"
+class="postblock">
+<h2><a href="/ms-activation.html">Microsoft Windows/Office Setup and
+Activation on (Slackware) Linux</a></h2>
+<p><span class="date">2024-01-05</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>So first, a disclaimer: The methods I list in this article are solely
+for educational purposes, and if you need the software legally, buy a
+license, or use free (or better, FOSS) counterparts.</p>
+</div>
+<div id="a-possible-fix-for-x11-programs-refusing-to-start-on-wayland"
+class="postblock">
+<h2><a href="/envs.html">A Possible Fix for X11 Programs Refusing to
+Start on Wayland</a></h2>
+<p><span class="date">2023-10-25</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>As Wayland and KDE on Wayland matures, I’ve switched my entire
+environment to KDE Wayland. Serious props to KDE developers — all of the
+Konsole and Kwin gliches I experienced in the early days are long
+gone.</p>
+</div>
+<div id="slackware-links" class="postblock">
+<h2><a href="/slacklinks.html">Slackware Links</a></h2>
+<p><span class="date">2023-04-19</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>First of all, this wouldn’t be a Slackware Links page without a link
+to…</p>
+</div>
+<div id="寫給中文使用者的-slackware-安裝指南" class="postblock">
+<h2><a href="/slackware-chinese-install-guide.html">寫給中文使用者的
+Slackware 安裝指南</a></h2>
+<p><span class="date">2023-03-21</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>Slackware
+是持續更新的發行版中，最早出現的發行版，以穩定、保守、「最接近
+UNIX」聞名。適合使用 Slackware 的有下列這幾種人：</p>
+</div>
+<div id="install-and-boot-the-linux-mint-kernel-on-slackware"
+class="postblock">
+<h2><a href="/kernel-swap.html">Install and Boot the Linux Mint Kernel
+on Slackware</a></h2>
+<p><span class="date">2022-11-28</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<blockquote>
+
+</blockquote>
+</div>
+<div id="make-slackbuilds-work-well-with-github" class="postblock">
+<h2><a href="/slackbuild-github-urls.html">Make Slackbuilds Work Well
+With Github</a></h2>
+<p><span class="date">2022-07-24</span><span class="tags">標籤：<a href="/tags/slackware.html">slackware</a>
+</span></p>
+<p>While writing a Slackbuild, I encountered a problem where I’m not
+sure how to work with Github Release tags. The problem goes as
+follows:</p>
+</div>
+</div>
+                <p><em>如果想讓我知道您看過這個頁面，請點擊<a href="https://ltlnx.goatcounter.com/count?p=/tags/slackware.html">這個連結</a>。<a href="/viewcount.html">運作原理</a>。</em></p>
+            </div>
+            {{COMMENTS}}
+            <div id="footer">
+                <div class='links'>
+                    <a href='/archive.html'>庫存</a>
+                    <a href='/about.html'>關於</a>
+                    <a href='/links.html'>連結</a>
+                    <a href='/blogroll.html'>部落滾</a>
+                    <a href='/rss.html'>訂閱</a>
+                    <a rel='me' href='https://g0v.social/@ltlnx'>聯邦</a>
+                </div>
+            <small>© ltlnx 2022–2024. 使用 CC BY-SA 4.0 授權。如果要在其他網頁上轉載，請附上原文連結。</small>
+            </div>
+        </div>
+        <script src="/res/comments.js" type="text/javascript"></script>
+    </body>
+</html>
